@@ -1,0 +1,50 @@
+{
+    "version": "1.0.0",
+    "lasttime": "2021-04-05 00:36:27",
+    "author": "申龙",
+    "className": "basics",
+    "module": [
+        {
+            "classId": "idm.componet.basics.attrdemo",
+            "comName": "属性",
+            "className": "Demo",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.basics.text",
+            "comName": "文本",
+            "className": "IText",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.basics.iimage",
+            "comName": "图片",
+            "className": "IImage",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.basics.ibutton",
+            "comName": "按钮",
+            "className": "IButton",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.basics.iicon",
+            "comName": "图标",
+            "className": "IIcon",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.basics.ilink",
+            "comName": "链接",
+            "className": "ILink",
+            "comType": "common",
+            "comLangue": "vue"
+        }
+    ]
+}

@@ -1,0 +1,531 @@
+{
+    "code":"200",
+    "type":"success",
+    "message":"操作成功",
+    "metadata":null,
+    "token":"",
+    "data":[
+        {
+            "groupId":"1",
+            "groupTitle":"可拼装组件",
+            "componentList":[
+              {
+                "comId":"SearchComponents",
+                "comName":"搜索栏",
+                "comType":"vue",
+                "asName":"搜索栏",
+                "classId":"idm.componet.mobileimg.SearchComponents",
+                "className":"SearchComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/SearchComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"NoticeComponents",
+                "comName":"通知公告",
+                "comType":"vue",
+                "asName":"通知公告",
+                "classId":"idm.componet.mobileimg.NoticeComponents",
+                "className":"NoticeComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/NoticeComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"MenuComponents",
+                "comName":"应用菜单",
+                "comType":"vue",
+                "asName":"应用菜单",
+                "classId":"idm.componet.mobileimg.MenuComponents",
+                "className":"MenuComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/MenuComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"TodoCenterComponents",
+                "comName":"待办中心",
+                "comType":"vue",
+                "asName":"待办中心",
+                "classId":"idm.componet.mobileimg.TodoCenterComponents",
+                "className":"TodoCenterComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/TodoCenterComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"ScheduleReminderComponents",
+                "comName":"日程提醒",
+                "comType":"vue",
+                "asName":"日程提醒",
+                "classId":"idm.componet.mobileimg.ScheduleReminderComponents",
+                "className":"ScheduleReminderComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/ScheduleReminderComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"ApplicationCenterComponents",
+                "comName":"应用中心",
+                "comType":"vue",
+                "asName":"应用中心",
+                "classId":"idm.componet.mobileimg.ApplicationCenterComponents",
+                "className":"ApplicationCenterComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/ApplicationCenterComponents.png",
+                        "width":1500,
+                        "height":1650,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
+              {
+                "comId":"CarouselComponents",
+                "comName":"轮播",
+                "comType":"vue",
+                "asName":"轮播",
+                "classId":"idm.componet.mobileimg.CarouselComponents",
+                "className":"CarouselComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/CarouselComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              }
+          ]
+        },
+        {
+          "groupId":"2",
+          "groupTitle":"全屏组件",
+          "componentList":[
+            {
+              "comId":"MeetingCenterComponents",
+              "comName":"会议中心",
+              "comType":"vue",
+              "asName":"会议中心",
+              "classId":"idm.componet.mobileimg.MeetingCenterComponents",
+              "className":"MeetingCenterComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/MeetingCenterComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"ScheduleCenterComponents",
+              "comName":"日程中心",
+              "comType":"vue",
+              "asName":"日程中心",
+              "classId":"idm.componet.mobileimg.ScheduleCenterComponents",
+              "className":"ScheduleCenterComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/ScheduleCenterComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"NoteComponents",
+              "comName":"便笺",
+              "comType":"vue",
+              "asName":"便笺",
+              "classId":"idm.componet.mobileimg.NoteComponents",
+              "className":"NoteComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/NoteComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"AddressListComponents",
+              "comName":"通讯录",
+              "comType":"vue",
+              "asName":"通讯录",
+              "classId":"idm.componet.mobileimg.AddressListComponents",
+              "className":"AddressListComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/AddressListComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"MyInfoComponents",
+              "comName":"我的",
+              "comType":"vue",
+              "asName":"我的",
+              "classId":"idm.componet.mobileimg.MyInfoComponents",
+              "className":"MyInfoComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/MyInfoComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"CommonListComponents",
+              "comName":"通用列表",
+              "comType":"vue",
+              "asName":"通用列表",
+              "classId":"idm.componet.mobileimg.CommonListComponents",
+              "className":"CommonListComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/CommonListComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"ExternalLinksComponents",
+              "comName":"外部链接",
+              "comType":"vue",
+              "asName":"外部链接",
+              "classId":"idm.componet.mobileimg.ExternalLinksComponents",
+              "className":"ExternalLinksComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/demo/default_image.svg",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"TodoCenterAllScreenComponents",
+              "comName":"待办中心",
+              "comType":"vue",
+              "asName":"待办中心",
+              "classId":"idm.componet.mobileimg.TodoCenterAllScreenComponents",
+              "className":"TodoCenterAllScreenComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/TodoCenterAllScreenComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"TabListComponents",
+              "comName":"标签式列表",
+              "comType":"vue",
+              "asName":"标签式列表",
+              "classId":"idm.componet.mobileimg.TabListComponents",
+              "className":"TabListComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/TabListComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            },
+            {
+              "comId":"ListMessageComponents",
+              "comName":"列表式消息",
+              "comType":"vue",
+              "asName":"列表式消息",
+              "classId":"idm.componet.mobileimg.ListMessageComponents",
+              "className":"ListMessageComponents",
+              "iconClass":"idmicon idm-icon-rongqi4",
+              "type":"platform",
+              "imgList":[
+                    {
+                      "src":"~/static/img/mobileimg/ListMessageComponents.png",
+                      "width":120,
+                      "height":120,
+                      "size":"113664"
+                    }
+                ],
+                "lastVersion":{
+                  "version":"1.0.0",
+                  "codeSrc":"mobileimg/1.0.0/static/main.js",
+                  "datetime":"2021-03-23 12:50:14"
+                },
+                "versionList":[
+                    {
+                      "version":"1.0.0",
+                      "codeSrc":"mobileimg/1.0.0/static/main.js",
+                      "datetime":"2021-03-23 12:50:14"
+                    }
+                ]
+            }
+          ]
+        }
+    ]
+}

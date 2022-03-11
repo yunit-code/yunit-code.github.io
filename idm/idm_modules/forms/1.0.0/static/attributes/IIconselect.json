@@ -1,0 +1,849 @@
+{
+    "classId": "idm.componet.forms.iiconselect",
+    "comName": "图标选择",
+    "className": "IIconselect",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "标题",
+                    "bindKey": "label",
+                    "default": "字体图标"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示标题",
+                    "bindKey": "labelDisplay",
+                    "default": true
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "提示文字",
+                    "bindKey": "placeholder",
+                    "placeholder": "请输入"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "默认值",
+                    "bindKey": "defaultValue",
+                    "default": ""
+                },
+                {
+                    "type": "inputNumberUnit",
+                    "layoutType": "inline",
+                    "text": "最大宽度",
+                    "bindKey": "maxWidth",
+                    "dictionary": [
+                        {
+                            "label": "auto",
+                            "value": "auto"
+                        },
+                        {
+                            "label": "px",
+                            "value": "px"
+                        },
+                        {
+                            "label": "%",
+                            "value": "%"
+                        },
+                        {
+                            "label": "rem",
+                            "value": "rem"
+                        },
+                        {
+                            "label": "em",
+                            "value": "em"
+                        }
+                    ],
+                    "default": 0
+                },
+                {
+                    "type": "inputNumberUnit",
+                    "layoutType": "inline",
+                    "text": "最小宽度",
+                    "bindKey": "minWidth",
+                    "dictionary": [
+                        {
+                            "label": "auto",
+                            "value": "auto"
+                        },
+                        {
+                            "label": "px",
+                            "value": "px"
+                        },
+                        {
+                            "label": "%",
+                            "value": "%"
+                        },
+                        {
+                            "label": "rem",
+                            "value": "rem"
+                        },
+                        {
+                            "label": "em",
+                            "value": "em"
+                        }
+                    ],
+                    "default": 0
+                },
+                {
+                    "type": "inputNumberUnit",
+                    "layoutType": "inline",
+                    "text": "右边距",
+                    "bindKey": "rightPaddingNumber",
+                    "dictionary": [
+                        {
+                            "label": "auto",
+                            "value": "auto"
+                        },
+                        {
+                            "label": "px",
+                            "value": "px"
+                        },
+                        {
+                            "label": "%",
+                            "value": "%"
+                        },
+                        {
+                            "label": "rem",
+                            "value": "rem"
+                        },
+                        {
+                            "label": "em",
+                            "value": "em"
+                        }
+                    ],
+                    "default": 0
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "标题排列",
+                    "bindKey": "labelLayout",
+                    "dictionary": [
+                        {
+                            "label": "横向排列",
+                            "value": "horizontal"
+                        },
+                        {
+                            "label": "纵向排列",
+                            "value": "vertical"
+                        }
+                    ],
+                    "default": "horizontal"
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "尺寸",
+                    "bindKey": "size",
+                    "dictionary": [
+                        {
+                            "label": "小",
+                            "value": "small"
+                        },
+                        {
+                            "label": "中",
+                            "value": "default"
+                        },
+                        {
+                            "label": "大",
+                            "value": "large"
+                        }
+                    ],
+                    "default": "default"
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "栅格布局",
+                    "bindKey": "gridLayout",
+                    "dictionary": [
+                        {
+                            "label": "无",
+                            "value": "close"
+                        },
+                        {
+                            "label": "6:12",
+                            "value": "6:12"
+                        },
+                        {
+                            "label": "6:18",
+                            "value": "6:18"
+                        },
+                        {
+                            "label": "12:12",
+                            "value": "12:12"
+                        }
+                    ],
+                    "default": "close",
+                    "display": "@[labelLayout=='horizontal']"
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "默认状态",
+                    "bindKey": "defaultStatus",
+                    "dictionary": [
+                        {
+                            "label": "普通",
+                            "value": "default"
+                        },
+                        {
+                            "label": "禁用",
+                            "value": "disabled"
+                        },
+                        {
+                            "label": "只读",
+                            "value": "readonly"
+                        },
+                        {
+                            "label": "隐藏",
+                            "value": "hidden"
+                        }
+                    ],
+                    "default": "default"
+                },
+                {
+                    "type": "richText",
+                    "layoutType": "inline",
+                    "text": "描述内容",
+                    "bindKey": "descContent"
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "描述位置",
+                    "bindKey": "descPosition",
+                    "dictionary": [
+                        {
+                            "label": "横向",
+                            "value": "horizontal"
+                        },
+                        {
+                            "label": "纵向",
+                            "value": "vertical"
+                        }
+                    ],
+                    "default": "vertical",
+                    "display": "@[gridLayout=='6:12']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "图标URL",
+                    "bindKey": "iconfonturl",
+                    "desc": "从iconfont下载的图标库文件夹地址，不需要具体到文件，比如：图标css文件的路径是【/project/font_1248060_zpcega7i6m9/iconfont.css】，我们这里只需要填写【/project/font_1248060_zpcega7i6m9/】，注意：里面的文件建议不要做任何修改，否则可能读取不正确",
+                    "placeholder": "请输入"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "是否多选",
+                    "bindKey": "multipleSelect",
+                    "default": false
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "多选数量",
+                    "bindKey": "multipleMaxCount",
+                    "desc": "多选情况下最多不能超过的数量",
+                    "placeholder": "请输入",
+                    "display": "@[multipleSelect]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "校验占位",
+                    "desc":"是否预留校验信息空间，开启将会在底部占用25px空白预留给校验信息使用",
+                    "bindKey": "retainBottomHeight",
+                    "default": true
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "校验",
+            "desc": "提供校验输入内容格式设置",
+            "children": [
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "必填",
+                    "bindKey": "required"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "必填错误提示",
+                    "bindKey": "requiredText",
+                    "default": "",
+                    "display": "@[required]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "自定义函数",
+                    "bindKey": "customFun"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "函数代码",
+                    "bindKey": "customFunCode",
+                    "display": "@[customFun]",
+                    "default": "function(value){return true}"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "自定义函数错误提示",
+                    "bindKey": "customFunText",
+                    "default": "",
+                    "display": "@[customFun]"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "样式设置",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "标题文字",
+                    "bindKey": "labelFont"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "错误提示文字",
+                    "bindKey": "errorMsgFont"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "按钮文字",
+                    "bindKey": "contentBtnFont",
+                    "desc": "编辑状态下的按钮文字样式设置"
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "主题颜色",
+                    "bindKey": "mainColor",
+                    "placeholder": "请选择",
+                    "desc": "弹出层选择图标的主题颜色",
+                    "default": {}
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "内容图标（编辑）",
+                    "bindKey": "contentEditFont",
+                    "desc": "编辑状态下的图标样式设置"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "内容图标（只读）",
+                    "bindKey": "contentReadFont",
+                    "desc": "只读情况下的图标样式设置"
+                },
+                {
+                    "type": "group",
+                    "text": "默认状态样式",
+                    "desc": "默认情况下的样式设置",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "box",
+                            "layoutType": "block",
+                            "text": "内外边距",
+                            "bindKey": "box"
+                        },
+                        {
+                            "type": "border",
+                            "layoutType": "block",
+                            "text": "边框设置",
+                            "bindKey": "borderDefault"
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColor",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "背景图片",
+                            "bindKey": "bgImgUrl",
+                            "placeholder": "可输入图片地址或直接上传"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "横向偏移",
+                            "bindKey": "positionX",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "纵向偏移",
+                            "bindKey": "positionY",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "背景大小",
+                            "bindKey": "bgSize",
+                            "dictionary": [
+                                {
+                                    "label": "裁切显示",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "完全显示",
+                                    "value": "contain"
+                                },
+                                {
+                                    "label": "自定义",
+                                    "value": "custom"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "宽度",
+                            "bindKey": "bgSizeWidth",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "高度",
+                            "bindKey": "bgSizeHeight",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "平铺模式",
+                            "bindKey": "bgRepeat",
+                            "dictionary": [
+                                {
+                                    "label": "双向重复",
+                                    "value": "repeat"
+                                },
+                                {
+                                    "label": "水平重复",
+                                    "value": "repeat-x"
+                                },
+                                {
+                                    "label": "垂直重复",
+                                    "value": "repeat-y"
+                                },
+                                {
+                                    "label": "不重复",
+                                    "value": "no-repeat"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "背景模式",
+                            "bindKey": "bgAttachment",
+                            "dictionary": [
+                                {
+                                    "label": "固定",
+                                    "value": "fixed"
+                                },
+                                {
+                                    "label": "滚动",
+                                    "value": "scroll"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "错误状态样式",
+                    "desc": "校验未通过的错误情况下的样式设置",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "border",
+                            "layoutType": "block",
+                            "text": "边框设置",
+                            "bindKey": "borderError"
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColorError",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "背景图片",
+                            "bindKey": "bgImgUrlError",
+                            "placeholder": "可输入图片地址或直接上传"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "横向偏移",
+                            "bindKey": "positionXError",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrlError]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "纵向偏移",
+                            "bindKey": "positionYError",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrlError]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "背景大小",
+                            "bindKey": "bgSizeError",
+                            "dictionary": [
+                                {
+                                    "label": "裁切显示",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "完全显示",
+                                    "value": "contain"
+                                },
+                                {
+                                    "label": "自定义",
+                                    "value": "custom"
+                                }
+                            ],
+                            "display": "@[bgImgUrlError]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "宽度",
+                            "bindKey": "bgSizeWidthError",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSizeError=='custom']"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "高度",
+                            "bindKey": "bgSizeHeightError",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSizeError=='custom']"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "平铺模式",
+                            "bindKey": "bgRepeatError",
+                            "dictionary": [
+                                {
+                                    "label": "双向重复",
+                                    "value": "repeat"
+                                },
+                                {
+                                    "label": "水平重复",
+                                    "value": "repeat-x"
+                                },
+                                {
+                                    "label": "垂直重复",
+                                    "value": "repeat-y"
+                                },
+                                {
+                                    "label": "不重复",
+                                    "value": "no-repeat"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrlError]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "背景模式",
+                            "bindKey": "bgAttachmentError",
+                            "dictionary": [
+                                {
+                                    "label": "固定",
+                                    "value": "fixed"
+                                },
+                                {
+                                    "label": "滚动",
+                                    "value": "scroll"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrlError]"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "表单标识",
+                    "bindKey": "formFiledKey",
+                    "desc": "如果为空则会提交表单时用唯一标识作为key",
+                    "default": ""
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "分组标识",
+                    "bindKey": "formGroupKey",
+                    "desc": "表单分组标识，用于批量提交分组标识相同的表单控件值，减少提交控件一个一个选择控件的范围",
+                    "default": "formGroupKey"
+                },
+                {
+                    "type":"group",
+                    "text":"回显与状态",
+                    "desc":"用于回显控件的结果值与控件的状态控制，共四种状态：（编辑：default）、（禁用：disabled）、（只读：readonly）、（隐藏：hidden）",
+                    "children":[
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "结果集名",
+                            "bindKey": "echoDataName",
+                            "desc": "页面接口设定的结果集名称，位置为：页面设置》高级设置》页面接口",
+                            "default": "",
+                            "placeholder": "示例：resultData"
+                        },
+                        {
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "回显方式",
+                            "bindKey": "echoType",
+                            "dictionary": [
+                                {
+                                    "label": "同表单标识",
+                                    "value": "equalFormKey"
+                                },
+                                {
+                                    "label": "自定义字段",
+                                    "value": "customFiled"
+                                },
+                                {
+                                    "label": "自定义函数",
+                                    "value": "customFunction"
+                                }
+                            ],
+                            "default": "equalFormKey"
+                        },
+                        {
+                            "type": "textarea",
+                            "layoutType": "inline",
+                            "text": "回显字段",
+                            "bindKey": "echoDataFiled",
+                            "desc": "根据接口返回数据格式指定结果集的字段，比如结果集名为resultData且它的值为{data:{filedName:'1000'}}，则这里应该填写data.filedName",
+                            "default": "",
+                            "placeholder": "示例：data.filedName 或者 [0].data[0].filedName",
+                            "display":"@[echoType=='customFiled']"
+                        },
+                        {
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "回显自定义函数",
+                            "bindKey": "echoFunction",
+                            "desc": "回显值时会调用此处设置的方法返回控件需要的回显值，接收参数格式为{...自定义的,...结果集名对象}",
+                            "multiple": false,
+                            "display":"@[echoType=='customFunction']"
+                        },
+                        {
+                            "type": "textarea",
+                            "layoutType": "inline",
+                            "text": "控件状态",
+                            "bindKey": "stateDataFiled",
+                            "desc": "主要用于控制控件的显示状态。根据接口返回数据格式指定结果集的字段，比如结果集名为resultData且它的值为{data:{filedName:'1000'}}，则这里应该填写data.filedName，值必须为指定的四种（编辑：default）、（禁用：disabled）、（只读：readonly）、（隐藏：hidden）",
+                            "default": "",
+                            "placeholder": "示例：data.filedName 或者 [0].data[0].filedName"
+                        },
+                        {
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "控件状态自定义函数",
+                            "bindKey": "stateFunction",
+                            "desc": "要用于控制控件的显示状态。加载时会调用此处设置的方法返回控件需要的控件状态值，接收参数格式为{...自定义的,...结果集名对象}，返回值必须为指定的四种（编辑：default）、（禁用：disabled）、（只读：readonly）、（隐藏：hidden）",
+                            "multiple": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

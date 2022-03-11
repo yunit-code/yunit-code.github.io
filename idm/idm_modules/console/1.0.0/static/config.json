@@ -1,0 +1,100 @@
+{
+    "version": "1.0.0",
+    "lasttime": "2021年8月4日09:56:27",
+    "author": "申龙",
+    "className": "console",
+    "desc": "",
+    "module": [
+        {
+            "classId": "idm.componet.console.inavigationbar",
+            "comName": "导航栏",
+            "className": "INavigationBar",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.inotice",
+            "comName": "公告",
+            "className": "INotice",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.istatisticscard",
+            "comName": "数字统计卡片",
+            "className": "IStatisticsCard",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.iulog",
+            "comName": "日志监控",
+            "className": "IUlog",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.iscaffolddownload",
+            "comName": "组件脚手架下载",
+            "className": "IScaffoldDownload",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.iversioninfo",
+            "comName": "版本信息",
+            "className": "IVersionInfo",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.ionlineupgrade",
+            "comName": "在线升级",
+            "className": "IOnlineUpgrade",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.icodepackagelist",
+            "comName": "代码包列表",
+            "className": "ICodePackageList",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.ifiltercondition",
+            "comName": "过滤条件",
+            "className": "IFilterCondition",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.ipagingcontainer",
+            "comName": "分页容器",
+            "className": "IPagingContainer",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.icomponentcarditem",
+            "comName": "组件Item卡片",
+            "className": "IComponentCardItem",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.icomponentselecteddisplay",
+            "comName": "组件已选卡片",
+            "className": "IComponentSelectedDisplay",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.console.ilayoutcomponentcarditem",
+            "comName": "布局Item卡片",
+            "className": "ILayoutComponentCardItem",
+            "comType": "common",
+            "comLangue": "vue"
+        }
+    ]
+}

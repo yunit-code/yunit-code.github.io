@@ -1,0 +1,78 @@
+{
+    "version": "1.0.0",
+    "lasttime": "2021年8月12日18:46:37",
+    "author": "申龙",
+    "className": "forms",
+    "module": [
+        {
+            "classId": "idm.componet.forms.iinput",
+            "comName": "单行输入框",
+            "className": "IInput",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.iselect",
+            "comName": "选择框",
+            "className": "ISelect",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.icommitbutton",
+            "comName": "提交按钮",
+            "className": "ICommitButton",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.iradio",
+            "comName": "单选框",
+            "className": "IRadio",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.inumber",
+            "comName": "数字输入框",
+            "className": "INumber",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.iiconselect",
+            "comName": "图标选择",
+            "className": "IIconselect",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.iuploadimg",
+            "comName": "上传图片",
+            "className": "IUploadImg",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.iresetbutton",
+            "comName": "重置按钮",
+            "className": "IResetButton",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.itextarea",
+            "comName": "多行输入框",
+            "className": "ITextarea",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.itreeselect",
+            "comName": "树选择框",
+            "className": "ITreeSelect",
+            "comType": "common",
+            "comLangue": "vue"
+        }
+    ]
+}

@@ -1,0 +1,1366 @@
+{
+  "code": "200",
+  "type": "success",
+  "message": "操作成功",
+  "metadata": null,
+  "token": "",
+  "data": [
+    {
+      "groupId": "1",
+      "groupTitle": "布局组件",
+      "componentList": [
+        {
+          "comId": "1",
+          "comName": "容器",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "容器",
+          "classId": "idm.componet.layout.container",
+          "className": "Container",
+          "iconClass": "idmicon idm-icon-rongqi4",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/v1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "hanneirongqi",
+          "comName": "行内容器",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "行内容器",
+          "classId": "idm.componet.layout.inlinecontainer",
+          "className": "InlineContainer",
+          "iconClass": "idmicon idm-icon-line-layoutleft",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "2",
+          "comName": "分栏",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "分栏",
+          "classId": "idm.componet.layout.igrid",
+          "className": "IGrid",
+          "iconClass": "idmicon idm-icon-fenlan",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/leftmenu.jpg",
+              "width": 228,
+              "height": 344,
+              "size": "16179"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/v1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "dialogid1234",
+          "comName": "Dialog",
+          "comType": "dialog",
+          "comLangue": "vue",
+          "asName": "模态窗口",
+          "classId": "idm.componet.layout.idialog",
+          "className": "IDialog",
+          "iconClass": "idmicon idm-icon-Dialog",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/leftmenu.jpg",
+              "width": 228,
+              "height": 344,
+              "size": "16179"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iiframe11234",
+          "comName": "iFrame",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "iFrame",
+          "classId": "idm.componet.layout.iiframe",
+          "className": "IIframe",
+          "iconClass": "idmicon idm-icon-iframe1",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "itabs11234",
+          "comName": "选项卡",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "选项卡",
+          "classId": "idm.componet.layout.itabs",
+          "className": "ITabs",
+          "iconClass": "idmicon idm-icon-xuanxiangqia",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ifullscreenlayout11234",
+          "comName": "全屏布局",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "全屏布局",
+          "classId": "idm.componet.layout.ifullscreenlayout",
+          "className": "IFullScreenLayout",
+          "iconClass": "idmicon idm-icon-iframe",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "2",
+      "groupTitle": "基础组件",
+      "componentList": [
+        {
+          "comId": "20",
+          "comName": "属性",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "属性大全",
+          "classId": "idm.componet.basics.attrdemo",
+          "className": "Demo",
+          "iconClass": "idmicon idm-icon-wenben",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "21",
+          "comName": "文本",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "文本",
+          "classId": "idm.componet.basics.text",
+          "className": "IText",
+          "iconClass": "idmicon idm-icon-wenben",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iimage22",
+          "comName": "图片",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "图片",
+          "classId": "idm.componet.basics.iimage",
+          "className": "IImage",
+          "iconClass": "idmicon idm-icon-tupian",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/default_image.svg",
+              "width": 120,
+              "height": 120,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iicon4444",
+          "comName": "图标",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "图标",
+          "classId": "idm.componet.basics.iicon",
+          "className": "IIcon",
+          "iconClass": "idmicon idm-icon-icon_xiaolian-xian",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/default_image.svg",
+              "width": 120,
+              "height": 120,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ibutton3333",
+          "comName": "按钮",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "按钮",
+          "classId": "idm.componet.basics.ibutton",
+          "className": "IButton",
+          "iconClass": "idmicon idm-icon-anniu",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/default_image.svg",
+              "width": 120,
+              "height": 120,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ilink44444455",
+          "comName": "链接",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "链接",
+          "classId": "idm.componet.basics.ilink",
+          "className": "ILink",
+          "iconClass": "idmicon idm-icon-link",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/default_image.svg",
+              "width": 120,
+              "height": 120,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "basics/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "3",
+      "groupTitle": "表单组件",
+      "componentList": [
+        {
+          "comId": "input123",
+          "comName": "文本框",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "单行输入框",
+          "classId": "idm.componet.forms.iinput",
+          "className": "IInput",
+          "iconClass": "idmicon idm-icon-danhangshurukuang",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "itextarea123",
+          "comName": "文本框",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "多行输入框",
+          "classId": "idm.componet.forms.itextarea",
+          "className": "ITextarea",
+          "iconClass": "idmicon idm-icon-duohangshurukuang",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "number123",
+          "comName": "数字框",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "数字输入框",
+          "classId": "idm.componet.forms.inumber",
+          "className": "INumber",
+          "iconClass": "idmicon idm-icon-fuhao-shuzishurukuang",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iiconselect123",
+          "comName": "图标选择",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "图标选择",
+          "classId": "idm.componet.forms.iiconselect",
+          "className": "IIconselect",
+          "iconClass": "idmicon idm-icon-duobianxingxuanze",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iuploadimg123",
+          "comName": "上传图片",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "上传图片",
+          "classId": "idm.componet.forms.iuploadimg",
+          "className": "IUploadImg",
+          "iconClass": "idmicon idm-icon-ic_image_upload",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "select123",
+          "comName": "选择",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "选择框",
+          "classId": "idm.componet.forms.iselect",
+          "className": "ISelect",
+          "iconClass": "idmicon idm-icon-xialadanxuan",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "radio123",
+          "comName": "选择",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "单选框",
+          "classId": "idm.componet.forms.iradio",
+          "className": "IRadio",
+          "iconClass": "idmicon idm-icon-danxuan",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "itreeselect123",
+          "comName": "树选择",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "树选择框",
+          "classId": "idm.componet.forms.itreeselect",
+          "className": "ITreeSelect",
+          "iconClass": "idmicon idm-icon-shuxuanzeqi",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "icommitbutton123",
+          "comName": "提交按钮",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "提交按钮",
+          "classId": "idm.componet.forms.icommitbutton",
+          "className": "ICommitButton",
+          "iconClass": "idmicon idm-icon-anniu",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iresetbutton123",
+          "comName": "重置按钮",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "重置按钮",
+          "classId": "idm.componet.forms.iresetbutton",
+          "className": "IResetButton",
+          "iconClass": "idmicon idm-icon-anniu",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "forms/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "forms/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "advanced",
+      "groupTitle": "高级组件",
+      "componentList": [
+        {
+          "comId": "ieasytablelist123",
+          "comName": "表格列表",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "表格列表",
+          "classId": "idm.componet.advanced.ieasytablelist",
+          "className": "IEasyTableList",
+          "iconClass": "idmicon idm-icon-biaoge",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "advanced/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "advanced/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "icontrolsettingpanel123",
+          "comName": "属性面板",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "属性面板",
+          "classId": "idm.componet.controlCenter.icontrolsettingpanel",
+          "className": "IControlSettingPanel",
+          "iconClass": "idmicon idm-icon-shuxing",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "controlCenter/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "controlCenter/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "isteps123",
+          "comName": "步骤条",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "步骤条",
+          "classId": "idm.componet.advanced.isteps",
+          "className": "ISteps",
+          "iconClass": "idmicon idm-icon-buzhoutiao1",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "advanced/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "advanced/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "groupId": "4",
+      "groupTitle": "框架组件",
+      "componentList": []
+    },
+    {
+      "groupId": "5",
+      "groupTitle": "卡片组件",
+      "componentList": []
+    },
+    {
+      "groupId": "6",
+      "groupTitle": "控制台组件",
+      "componentList": [
+        {
+          "comId": "topbar123",
+          "comName": "导航栏",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "顶部导航栏",
+          "classId": "idm.componet.console.inavigationbar",
+          "className": "INavigationBar",
+          "iconClass": "idmicon idm-icon-header",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "notice123",
+          "comName": "公告栏",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "控制台公告卡片",
+          "classId": "idm.componet.console.inotice",
+          "className": "INotice",
+          "iconClass": "idmicon idm-icon-gonggao",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "istatisticscard123",
+          "comName": "统计卡片",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "组件统计卡片",
+          "classId": "idm.componet.console.istatisticscard",
+          "className": "IStatisticsCard",
+          "iconClass": "idmicon idm-icon-tongji",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iulog12334",
+          "comName": "表格列表",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "监控日志表格",
+          "classId": "idm.componet.console.iulog",
+          "className": "IUlog",
+          "iconClass": "idmicon idm-icon-dangjian_caozuorizhi-25",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iscaffolddownload12334",
+          "comName": "下载列表",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "组件脚手架下载",
+          "classId": "idm.componet.console.iscaffolddownload",
+          "className": "IScaffoldDownload",
+          "iconClass": "idmicon idm-icon-zujian",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iversioninfo12334",
+          "comName": "版本信息",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "版本信息",
+          "classId": "idm.componet.console.iversioninfo",
+          "className": "IVersionInfo",
+          "iconClass": "idmicon idm-icon-jurassic_version",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ifiltercondition12334",
+          "comName": "过滤条件",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "过滤条件",
+          "classId": "idm.componet.console.ifiltercondition",
+          "className": "IFilterCondition",
+          "iconClass": "idmicon idm-icon-guolvqi",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ipagingcontainer12334",
+          "comName": "分页容器",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "分页容器",
+          "classId": "idm.componet.console.ipagingcontainer",
+          "className": "IPagingContainer",
+          "iconClass": "idmicon idm-icon-m-fenye",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "icomponentcarditem12334",
+          "comName": "组件Item",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "组件Item卡片",
+          "classId": "idm.componet.console.icomponentcarditem",
+          "className": "IComponentCardItem",
+          "iconClass": "idmicon idm-icon-tubiao-qiapian",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ionlineupgrade12334",
+          "comName": "代码包上传",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "在线升级",
+          "classId": "idm.componet.console.ionlineupgrade",
+          "className": "IOnlineUpgrade",
+          "iconClass": "idmicon idm-icon-shengji",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "icodepackagelist12334",
+          "comName": "代码包列表",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "代码包列表",
+          "classId": "idm.componet.console.icodepackagelist",
+          "className": "ICodePackageList",
+          "iconClass": "idmicon idm-icon-liebiao1",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "icomponentselecteddisplay12334",
+          "comName": "已选卡片",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "组件已选卡片",
+          "classId": "idm.componet.console.icomponentselecteddisplay",
+          "className": "IComponentSelectedDisplay",
+          "iconClass": "idmicon idm-icon-tubiaojihe04",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "ilayoutcomponentcarditem12334",
+          "comName": "布局Item卡片",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "布局Item卡片",
+          "classId": "idm.componet.console.ilayoutcomponentcarditem",
+          "className": "ILayoutComponentCardItem",
+          "iconClass": "idmicon idm-icon-tubiao-qiapian",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "console/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "console/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

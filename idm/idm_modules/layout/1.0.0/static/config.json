@@ -1,0 +1,60 @@
+{
+    "version": "1.0.0",
+    "lasttime": "2021-04-05 00:36:27",
+    "author": "申龙",
+    "className": "layout",
+    "module": [
+        {
+            "classId": "idm.componet.layout.container",
+            "comName": "容器",
+            "className": "Container",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.layout.inlinecontainer",
+            "comName": "行内容器",
+            "className": "InlineContainer",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.layout.igrid",
+            "comName": "栅格",
+            "className": "IGrid",
+            "comType": "common",
+            "comLangue": "vue",
+            "innerComName": "格子"
+        },
+        {
+            "classId": "idm.componet.layout.idialog",
+            "comName": "模态窗口",
+            "className": "IDialog",
+            "comType": "dialog",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.layout.iiframe",
+            "comName": "iFrame",
+            "className": "IIframe",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.layout.itabs",
+            "comName": "选项卡",
+            "className": "ITabs",
+            "comType": "common",
+            "comLangue": "vue",
+            "innerComName": "容器"
+        },
+        {
+            "classId": "idm.componet.layout.ifullscreenlayout",
+            "comName": "全屏布局",
+            "className": "IFullScreenLayout",
+            "comType": "common",
+            "comLangue": "vue",
+            "innerComName": "格子"
+        }
+    ]
+}

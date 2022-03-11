@@ -1,0 +1,202 @@
+{
+    "code":"200",
+    "type":"success",
+    "message":"操作成功",
+    "metadata":null,
+    "token":"",
+    "data":{
+        "id": "abc1234",
+        "pageBaseInfo": {
+            "title": "页面标题",
+            "version": "1.0.0"
+        },
+        "dragAreaSizeInfo": {
+            "key": "1",
+            "width": 346,
+            "height": 802,
+            "showText": "适应当前",
+            "type": 1,
+            "subKey": null
+        },
+        "page": {
+            "componentsMap": [
+                {
+                    "id": "abc1234",
+                    "packageid": "abc1234",
+                    "comId": "0",
+                    "comName": "页面",
+                    "asName": "页面",
+                    "classId": "idm.componet.root",
+                    "iconClass": "idmicon idm-icon-rongqi",
+                    "className": "root",
+                    "comType": "vue",
+                    "type": "platform",
+                    "imgList": [
+                        {
+                            "src": "~/static/img/page_default.jpg",
+                            "width": 370,
+                            "height": 270,
+                            "size": "187298"
+                        }
+                    ],
+                    "currentVersion": {
+                        "version": "1.0.0",
+                        "codeSrc": "",
+                        "datetime": "2021-03-23 12:50:14"
+                    },
+                    "props": {
+                        "compositeAttr": {
+                            "backgroundColor": "#fff",
+                            "padding": "20px"
+                        },
+                        "dataAttr": {}
+                    },
+                    "globalId": "abc1234"
+                },
+                {
+                    "comId": "1",
+                    "comName": "容器",
+                    "comType": "vue",
+                    "asName": "容器",
+                    "classId": "idm.componet.layout.container",
+                    "className": "Container",
+                    "iconClass": "idmicon idm-icon-rongqi4",
+                    "type": "platform",
+                    "imgList": [
+                        {
+                            "src": "~/static/img/demo/dbtablist.jpg",
+                            "width": 1127,
+                            "height": 673,
+                            "size": "113664"
+                        }
+                    ],
+                    "lastVersion": {
+                        "version": "1.0.0",
+                        "codeSrc": "layout/v1_0_0/static/main.js",
+                        "datetime": "2021-03-23 12:50:14"
+                    },
+                    "versionList": [
+                        {
+                            "version": "1.0.0",
+                            "codeSrc": "layout/v1_0_0/static/main.js",
+                            "datetime": "2021-03-23 12:50:14"
+                        },
+                        {
+                            "version": "1.1.0",
+                            "codeSrc": "layout/v1_1_0/static/main.js",
+                            "datetime": "2021-03-23 12:50:14"
+                        }
+                    ],
+                    "packageid": "component_L67dhUY8Z3Q13kKB",
+                    "id": "component_L67dhUY8Z3Q13kKB_inner",
+                    "relationType": "bottom",
+                    "relationId": "abc1234",
+                    "env": "develop",
+                    "props": {
+                        "compositeAttr": {}
+                    },
+                    "currentVersion": {
+                        "version": "1.0.0",
+                        "codeSrc": "layout/v1_0_0/static/main.js",
+                        "datetime": "2021-03-23 12:50:14"
+                    },
+                    "globalId": "abc1234.component_L67dhUY8Z3Q13kKB",
+                    "attrSetting": {
+                        "compositeAttr": []
+                    }
+                }
+            ],
+            "layout": {
+                "id": "abc1234",
+                "packageid": "abc1234",
+                "comId": "0",
+                "comName": "页面",
+                "asName": "页面",
+                "classId": "idm.componet.root",
+                "iconClass": "idmicon idm-icon-rongqi",
+                "className": "root",
+                "comType": "vue",
+                "type": "platform",
+                "imgList": [
+                    {
+                        "src": "~/static/img/page_default.jpg",
+                        "width": 370,
+                        "height": 270,
+                        "size": "187298"
+                    }
+                ],
+                "currentVersion": {
+                    "version": "1.0.0",
+                    "codeSrc": "",
+                    "datetime": "2021-03-23 12:50:14"
+                },
+                "attrSetting": {
+                    "compositeAttr": [],
+                    "dataAttr": []
+                },
+                "props": {
+                    "compositeAttr": {
+                        "backgroundColor": "#fff",
+                        "padding": "20px"
+                    },
+                    "dataAttr": {}
+                },
+                "children": [
+                    {
+                        "comId": "1",
+                        "comName": "容器",
+                        "comType": "vue",
+                        "asName": "容器",
+                        "classId": "idm.componet.layout.container",
+                        "className": "Container",
+                        "iconClass": "idmicon idm-icon-rongqi4",
+                        "type": "platform",
+                        "imgList": [
+                            {
+                                "src": "~/static/img/demo/dbtablist.jpg",
+                                "width": 1127,
+                                "height": 673,
+                                "size": "113664"
+                            }
+                        ],
+                        "lastVersion": {
+                            "version": "1.0.0",
+                            "codeSrc": "layout/v1_0_0/static/main.js",
+                            "datetime": "2021-03-23 12:50:14"
+                        },
+                        "versionList": [
+                            {
+                                "version": "1.0.0",
+                                "codeSrc": "layout/v1_0_0/static/main.js",
+                                "datetime": "2021-03-23 12:50:14"
+                            },
+                            {
+                                "version": "1.1.0",
+                                "codeSrc": "layout/v1_1_0/static/main.js",
+                                "datetime": "2021-03-23 12:50:14"
+                            }
+                        ],
+                        "packageid": "component_L67dhUY8Z3Q13kKB",
+                        "id": "component_L67dhUY8Z3Q13kKB_inner",
+                        "relationType": "bottom",
+                        "relationId": "abc1234",
+                        "env": "develop",
+                        "props": {
+                            "compositeAttr": {}
+                        },
+                        "currentVersion": {
+                            "version": "1.0.0",
+                            "codeSrc": "layout/v1_0_0/static/main.js",
+                            "datetime": "2021-03-23 12:50:14"
+                        },
+                        "globalId": "abc1234.component_L67dhUY8Z3Q13kKB",
+                        "attrSetting": {
+                            "compositeAttr": []
+                        }
+                    }
+                ],
+                "globalId": "abc1234"
+            }
+        }
+    }
+}

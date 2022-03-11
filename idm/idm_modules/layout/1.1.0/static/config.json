@@ -1,0 +1,26 @@
+{
+    "version":"1.1.0",
+    "lasttime":"2021-04-05 00:36:27",
+    "author":"申龙",
+    "className":"layout",
+    "module":[
+        {
+            "classId":"idm.componet.layout.demo",
+            "comName":"组件名称",
+            "className":"HelloWorld",
+            "comType":"vue",
+            "compositeAttr":[
+
+            ]
+        },
+        {
+            "classId":"idm.componet.layout.container",
+            "comName":"容器",
+            "className":"Container",
+            "comType":"vue",
+            "compositeAttr":[
+
+            ]
+        }
+    ]
+}
