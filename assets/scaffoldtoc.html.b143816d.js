@@ -1,0 +1,1 @@
+const e={key:"v-0bc768c4",path:"/moduledevelop/scaffoldtoc.html",title:"\u811A\u624B\u67B6\u7ED3\u6784",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:2,title:"idm-module-vue",slug:"idm-module-vue",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"moduledevelop/scaffoldtoc.md"};export{e as data};

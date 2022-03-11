@@ -1,0 +1,1 @@
+const e={key:"v-83261abc",path:"/guide/extenddevelop.html",title:"\u4E8C\u6B21\u5F00\u53D1",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:null,contributors:[]},filePathRelative:"guide/extenddevelop.md"};export{e as data};
