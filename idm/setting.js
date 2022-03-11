@@ -11,8 +11,7 @@ window.$$IDMSetting = {
         //组件市场地址，带分组结构的
         // componentMarketUrl: "/ctrl/api/frame/getMenuInfo"
         allCodepackageUrl:"",
-        savePageSettingUrl:"",
-        saveMarkDownFileUrl:""
+        savePageSettingUrl:""
     },
     /**
      * mockdata地址，只有对应的API地址为空的时候才会使用这里的数据
@@ -99,6 +98,17 @@ window.$$IDMSetting = {
          * 开发工具菜单栏中的组件开发地址，前缀同理上面
          */
         devComponentUrl: "https://yunit-code.github.io/zh/moduledevelop/introduce.html",
+    },//文档管理工具配置
+    document:{
+        /**
+         * 根据前端的配置保存md文件到对应的目录中
+         * 接收以下参数：
+         * mdPath:md对应要生成的文件地址
+         * type:code代表未代码包的路径，module代表组件的文档路径
+         * moduleClassName:组件的类名
+         * mdContent:md文档的内容
+         */
+        saveMarkDownFileUrl:""
     },
     //应用程序综合配置
     applications:{
