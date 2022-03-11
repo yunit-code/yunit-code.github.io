@@ -1,5 +1,11 @@
 //此处可覆盖核心框架的默认配置文件
 window.$$IDMSetting = {
+    webRoot: {
+        default: "/",
+        platformNo:"",
+        projectNo:"",
+        moduleAbsoluteDir:"/idm/idm_modules/"
+    },
     // api地址
     api: {
         //组件市场地址，带分组结构的
@@ -81,9 +87,18 @@ window.$$IDMSetting = {
          * 拖拽区域大小默认值key，url中传入dragSizeKey也会有效
          * 默认为1：代表适应当前尺寸
          */
-        dragAreaSizeDefaultKey:"1"
+        dragAreaSizeDefaultKey:"1",
+        /**
+         * 开发工具菜单栏中的帮助文档地址，前缀同理上面
+         */
+        helpDocumentUrl: "https://yunit-code.github.io/zh/",
+        /**
+         * 开发工具菜单栏中的组件开发地址，前缀同理上面
+         */
+        devComponentUrl: "https://yunit-code.github.io/zh/moduledevelop/introduce.html",
     },
     //应用程序综合配置
     applications:{
+        useProjectNoSetting:false,
     }
 };
