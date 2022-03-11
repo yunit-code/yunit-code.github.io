@@ -10,6 +10,8 @@ window.$$IDMSetting = {
     api: {
         //组件市场地址，带分组结构的
         // componentMarketUrl: "/ctrl/api/frame/getMenuInfo"
+        allCodepackageUrl:"",
+        savePageSettingUrl:""
     },
     /**
      * mockdata地址，只有对应的API地址为空的时候才会使用这里的数据
