@@ -925,7 +925,41 @@
     {
       "groupId": "5",
       "groupTitle": "卡片组件",
-      "componentList": []
+      "componentList": [
+        {
+          "comId": "itodotabslist123",
+          "comName": "多页签待办列表组件",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "多页签待办列表组件",
+          "classId": "idm.componet.todotabs.itodotabslist",
+          "className": "ITodoTabsList",
+          "iconClass": "idmicon idm-icon-gonggao",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "todotabs/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "todotabs/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
     },
     {
       "groupId": "6",
