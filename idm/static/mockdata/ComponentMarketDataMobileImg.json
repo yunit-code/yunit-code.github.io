@@ -8,7 +8,36 @@
         {
             "groupId":"1",
             "groupTitle":"可拼装组件",
-            "componentList":[
+            "componentList":[{
+                "comId":"ApplicationHeaderComponents",
+                "comName":"头部组件",
+                "comType":"vue",
+                "asName":"头部组件",
+                "classId":"idm.componet.mobileimg.ApplicationHeaderComponents",
+                "className":"ApplicationHeaderComponents",
+                "iconClass":"idmicon idm-icon-rongqi4",
+                "type":"platform",
+                "imgList":[
+                      {
+                        "src":"~/static/img/mobileimg/ApplicationHeaderComponents.png",
+                        "width":120,
+                        "height":120,
+                        "size":"113664"
+                      }
+                  ],
+                  "lastVersion":{
+                    "version":"1.0.0",
+                    "codeSrc":"mobileimg/1.0.0/static/main.js",
+                    "datetime":"2021-03-23 12:50:14"
+                  },
+                  "versionList":[
+                      {
+                        "version":"1.0.0",
+                        "codeSrc":"mobileimg/1.0.0/static/main.js",
+                        "datetime":"2021-03-23 12:50:14"
+                      }
+                  ]
+              },
               {
                 "comId":"SearchComponents",
                 "comName":"搜索栏",

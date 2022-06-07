@@ -259,6 +259,39 @@
       "groupTitle": "基础组件",
       "componentList": [
         {
+          "comId": "2000",
+          "comName": "react组件",
+          "comType": "common",
+          "comLangue": "react",
+          "asName": "react组件",
+          "classId": "idm.component.react.demoText",
+          "className": "DemoText",
+          "iconClass": "idmicon idm-icon-wenben",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.0",
+            "projectNo": "p1000",
+            "codeSrc": "react/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "react/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
           "comId": "20",
           "comName": "属性",
           "comType": "common",
@@ -920,7 +953,41 @@
     {
       "groupId": "4",
       "groupTitle": "框架组件",
-      "componentList": []
+      "componentList": [
+        {
+          "comId": "applicationcenter123",
+          "comName": "应用中心",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "应用中心",
+          "classId": "idm.componet.mobilewechat.applicationcenter",
+          "className": "IApplicationCenter",
+          "iconClass": "idmicon idm-icon-header",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.3",
+            "projectNo": "p1000",
+            "codeSrc": "mobileWechat/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.3",
+              "projectNo": "p1000",
+              "codeSrc": "mobileWechat/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        }
+      ]
     },
     {
       "groupId": "5",
