@@ -1,0 +1,2271 @@
+{
+  "classId": "idm.componet.basics.text",
+  "comName": "文本",
+  "className": "IText",
+  "comType": "common",
+  "comLangue": "vue",
+  "compositeAttr": [
+    {
+      "type": "input",
+      "layoutType": "inline",
+      "text": "唯一标识",
+      "bindKey": "ctrlId",
+      "disabled": true,
+      "default": "@[packageid]",
+      "desc": "",
+      "helpUrl": ""
+    },
+    {
+      "type": "group",
+      "text": "基本属性",
+      "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+      "children": [
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "页签来源",
+          "desc": "用于设置页签数据来源，动态属性：使用控制中心设置返回的数据源（支持用户个性化定制和排序），综合属性：直接通过属性设置数据源，无法实现定制和排序",
+          "bindKey": "tabDataType",
+          "dictionary": [
+            {
+              "label": "动态属性",
+              "value": "dynamic"
+            },
+            {
+              "label": "综合属性",
+              "value": "static"
+            }
+          ],
+          "default": "static"
+        },
+        {
+          "type": "textarea",
+          "layoutType": "block",
+          "text": "数量接口(平台)",
+          "desc": "用于查询页签数量的接口，更多详细使用点击？查看",
+          "bindKey": "countUrl"
+        },
+        {
+          "type": "textarea",
+          "layoutType": "block",
+          "text": "列表接口(平台)",
+          "desc": "用于查询列表数据的接口，更多详细使用点击？查看",
+          "bindKey": "listUrl"
+        },
+        {
+          "type": "textarea",
+          "layoutType": "block",
+          "text": "数量接口(扩展)",
+          "desc": "用于查询页签数量的接口，更多详细使用点击？查看",
+          "bindKey": "countUrlExtend"
+        },
+        {
+          "type": "textarea",
+          "layoutType": "block",
+          "text": "列表接口(扩展)",
+          "desc": "用于查询列表数据的接口，更多详细使用点击？查看",
+          "bindKey": "listUrlExtend"
+        },
+        {
+          "type": "group",
+          "text": "动态属性标识配置",
+          "desc": "用于设置组件功能所用到的动态属性标识，点击可查看更详细说明",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "自动隐藏",
+              "bindKey": "dynamicAttrAutoHiddenKeyName",
+              "desc": "用于设置tab无提醒数字时候自动隐藏不显示，默认为：autoHiddenTab，属性设置的值如果为true才显示，其他为不显示",
+              "default": "autoHiddenTab",
+              "placeholder": "例如：autoHiddenTab"
+            }
+          ]
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "显示搜索",
+          "desc": "设置右上角的搜索是否显示",
+          "bindKey": "showSearch",
+          "default": true
+        },
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "响应方式",
+          "desc": "用于设置组件高度的响应方式，如果是不适配响应父容器选择固定值就好，如果需要适配父容器(或其他)组件传递的具体值则选择适应容器即可",
+          "bindKey": "HeightType",
+          "dictionary": [
+            {
+              "label": "固定值",
+              "value": "fixed"
+            },
+            {
+              "label": "适应容器",
+              "value": "adaptive"
+            }
+          ],
+          "default": "fixed"
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "高度(px)",
+          "bindKey": "moduleHeight",
+          "desc": "用于设置组件的具体高度px值",
+          "maxLength": 10000,
+          "minLength": 0,
+          "default": 500
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "钉钉程序",
+          "desc": "设置此应用程序是否钉钉内集成的程序",
+          "bindKey": "isDingDingApp",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "页签属性",
+      "desc": "提供设置组件的页签属性设置信息",
+      "children": [
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "页签大小",
+          "bindKey": "size",
+          "dictionary": [
+            {
+              "label": "小",
+              "value": "small"
+            },
+            {
+              "label": "中",
+              "value": "default"
+            },
+            {
+              "label": "大",
+              "value": "large"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "页签位置",
+          "bindKey": "tabPosition",
+          "dictionary": [
+            {
+              "label": "top",
+              "value": "top"
+            },
+            {
+              "label": "right",
+              "value": "right"
+            },
+            {
+              "label": "bottom",
+              "value": "bottom"
+            },
+            {
+              "label": "left",
+              "value": "left"
+            }
+          ],
+          "default": "top"
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "页签间距",
+          "bindKey": "tabBarGutter",
+          "maxLength": 999,
+          "minLength": 0,
+          "default": 32
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "左内边距",
+          "desc": "每个页签的左内边距，一般建议横向tab才设置",
+          "bindKey": "tabLeftPadding",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "em",
+              "value": "em"
+            }
+          ]
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "右内边距",
+          "desc": "每个页签的右内边距，一般建议横向tab才设置",
+          "bindKey": "tabRightPadding",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "em",
+              "value": "em"
+            }
+          ]
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "上内边距",
+          "desc": "每个页签的上内边距，一般建议竖向tab才设置",
+          "bindKey": "tabTopPadding",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "em",
+              "value": "em"
+            }
+          ]
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "下内边距",
+          "desc": "每个页签的下内边距，一般建议竖向tab才设置",
+          "bindKey": "tabBottomPadding",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            },
+            {
+              "label": "em",
+              "value": "em"
+            }
+          ]
+        },
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "风格样式",
+          "bindKey": "type",
+          "dictionary": [
+            {
+              "label": "line",
+              "value": "line"
+            },
+            {
+              "label": "card",
+              "value": "card"
+            }
+          ],
+          "default": "line"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "切换动画",
+          "desc": "是否使用动画切换 Tabs，在 页签位置=顶部|底部 时有效",
+          "bindKey": "animated",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "选中加粗",
+          "bindKey": "tabActiveBold",
+          "default": false
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "文字",
+          "bindKey": "tabFont"
+        },
+        {
+          "type": "group",
+          "text": "角标样式",
+          "desc": "提供设置组件的页签上面的角标属性设置信息",
+          "children": [
+            {
+              "type": "inlineGroup",
+              "text": "角标偏移",
+              "children": [
+                {
+                  "type": "inputNumber",
+                  "layoutType": "block",
+                  "text": "偏移(X)",
+                  "desc": "单位为px，默认为跟在文字的后面，可以通过调整此数值来改变横向的偏移位置",
+                  "bindKey": "remindOffsetX",
+                  "width": "60px",
+                  "default": 0
+                },
+                {
+                  "type": "inputNumber",
+                  "layoutType": "block",
+                  "text": "偏移(Y)",
+                  "desc": "单位为px，默认为顶部对齐，可以通过调整此数值来改变纵向的偏移位置",
+                  "bindKey": "remindOffsetY",
+                  "width": "60px",
+                  "default": 0
+                }
+              ]
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "角标颜色",
+              "bindKey": "remindBgColor",
+              "placeholder": "请选择颜色",
+              "default": {
+                "hex": "#ec4519",
+                "hex8": "#ec4519FF"
+              }
+            },
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "显示红点",
+              "bindKey": "remindShowDot",
+              "desc": "设置未选中的tab是否显示红点不显示具体的数值",
+              "default": true
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "数字Max",
+              "desc": "角标数字显示的最大值，如果超过这个值则会显示+号",
+              "bindKey": "remindNumberMax",
+              "default": 99
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "分割线样式",
+          "desc": "提供设置组件的页签之间的分割线属性设置信息",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "显示分割",
+              "bindKey": "tabShowDivider",
+              "default": true
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "高度占比",
+              "desc": "单位为%，默认为100撑满，只能填写基于tab高度的百分比",
+              "bindKey": "dividerHeightNumber",
+              "display": "@[tabShowDivider]",
+              "default": 100
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "偏移值(Y)",
+              "desc": "单位为%，默认为顶部对齐，只能填写基于tab高度的百分比",
+              "bindKey": "dividerTopNumber",
+              "display": "@[tabShowDivider]",
+              "default": 0
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "偏移值(X)",
+              "desc": "单位为px，默认线为文字的右边，如果要tab之间可以参考页签间距的二分之一的大小",
+              "bindKey": "dividerRightNumber",
+              "display": "@[tabShowDivider]",
+              "default": -16
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "分线颜色",
+              "bindKey": "dividerBgColor",
+              "display": "@[tabShowDivider]",
+              "placeholder": "请选择颜色",
+              "default": {
+                "hex": "#e8e8e8",
+                "hex8": "#e8e8e8FF"
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "大标题属性",
+          "desc": "提供设置组件的页签前的大标题设置信息，当前仅在页签位置为顶部或底部时有效。",
+          "display": "@[tabPosition=='top'||tabPosition=='bottom']",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "标题内容",
+              "desc": "设置标签左侧的大标题内容，为空则不展示大标题",
+              "bindKey": "headLine",
+              "default": ""
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "占据宽度",
+              "desc": "设置标题在页签左侧占据的宽度，单位为px",
+              "bindKey": "headLineWidth",
+              "default": 100,
+              "display": "@[headLine]"
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "左侧距离",
+              "desc": "设置标题离左侧的距离，单位为px",
+              "bindKey": "headLineLeft",
+              "default": 0,
+              "display": "@[headLine]"
+            },
+            {
+              "type": "font",
+              "layoutType": "block",
+              "text": "文字",
+              "bindKey": "headLineFont",
+              "display": "@[headLine]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "动态页签设置",
+      "desc": "提供设置组件的页签属性设置信息",
+      "display": "@[tabDataType=='dynamic']",
+      "children": [
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "属性标识",
+          "bindKey": "dynamicAttrKeyName",
+          "desc": "填写动态属性标识，用于设置页签数据源来源于动态属性的哪个标识用户设置的属性值，所以属性值则必须为字符串的数组格式，详细点击查看更多",
+          "default": "tabsData"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "标识字段",
+          "desc": "tab标识key要获取的字段表达式，后端获取列表以及数量都是依据此值来接口获取的",
+          "bindKey": "dynamicKeyName",
+          "placeholder": "示例：key 或者 [0].key"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示字段",
+          "desc": "tab文字显示要获取的字段表达式，前端显示的名称都是依据此表达式来显示的",
+          "bindKey": "dynamicShowName",
+          "placeholder": "示例：showName 或者 [0].showName"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "懒加载",
+          "bindKey": "forceRender",
+          "desc": "选用此项则被隐藏的tab默认不渲染dom，点击的时候第一次去渲染tab",
+          "default": true
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "静态页签选项设置",
+      "bindKey": "staticTabPaneList",
+      "tabText": "页签[index]",
+      "display": "@[tabDataType=='static']",
+      "children": [
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "tab标识",
+          "bindKey": "key"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "tab文字",
+          "bindKey": "tab"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "tab显示自定义函数",
+          "bindKey": "tabSlotFunction",
+          "desc": "tab页签内容自定义函数，支持返回HTML格式字符串，接收参数为格式为{...自定义的,当前页签数据对象}，返回html字符串",
+          "multiple": false
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "默认选中",
+          "bindKey": "defaultActiveKey",
+          "default": false
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "懒加载",
+          "bindKey": "forceRender",
+          "desc": "选用此项则被隐藏的tab默认不渲染dom，点击的时候第一次去渲染tab",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "页签右边扩展按钮属性",
+      "desc": "提供设置组件的页签右边扩展按钮设置信息",
+      "children": [
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "按钮间距",
+          "bindKey": "extraBtnGutter",
+          "desc": "按钮间距的数值是会平均分配给每个按钮的左右两边的内边距的，建议设置数值为偶数",
+          "maxLength": 50,
+          "minLength": 0,
+          "default": 20
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "文字大小",
+          "bindKey": "extraBtnFontSize",
+          "desc": "按钮文字大小，包括图标的大小",
+          "maxLength": 30,
+          "minLength": 11,
+          "default": 14
+        },
+        {
+          "type": "colorPicker",
+          "layoutType": "inline",
+          "text": "默认颜色",
+          "bindKey": "extraBtnFontColor",
+          "desc": "按钮文字和图标的默认颜色，默认会以透明度0.7的比例显示，请合理填写",
+          "placeholder": "请选择颜色",
+          "default": {
+            "hex": "#999999",
+            "hex8": "#999999FF"
+          }
+        },
+        {
+          "type": "table",
+          "text": "扩展按钮设置",
+          "bindKey": "extraBtnList",
+          "tabText": "操作[index]",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "按钮标识",
+              "desc": "主要用于标识按钮，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者按钮的英文、拼音作为标识",
+              "bindKey": "key"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示名称",
+              "desc": "按钮要显示的名称",
+              "bindKey": "name"
+            },
+            {
+              "type": "iconSelect",
+              "layoutType": "inline",
+              "text": "显示图标",
+              "bindKey": "icon",
+              "desc": "按钮显示名称的图标显示",
+              "placeholder": "请选择"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "悬浮提示",
+              "desc": "鼠标放到按钮上显示的提示",
+              "bindKey": "tip"
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "showType",
+              "desc": "可以根据切换显示方式对每个按钮进行更高级的控制，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "始终显示",
+                  "value": "default"
+                },
+                {
+                  "label": "切换依据显示",
+                  "value": "toggle"
+                },
+                {
+                  "label": "动态属性依据显示",
+                  "value": "dynamic"
+                },
+                {
+                  "label": "自定义函数显示",
+                  "value": "custom"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "属性标识",
+              "bindKey": "dynamicAttrKeyName",
+              "display": "@[showType=='dynamic']",
+              "desc": "填写动态属性标识，用于获取的哪个标识用户设置的属性值，所有结果值都是为字符串形式的，详细点击查看更多",
+              "default": ""
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "比较方式",
+              "bindKey": "dynamicCompareType",
+              "display": "@[showType=='dynamic']",
+              "desc": "可以根据切换显示方式对每个按钮进行更高级的控制，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "结果值比较",
+                  "value": "result"
+                },
+                {
+                  "label": "自定义函数比较",
+                  "value": "function"
+                }
+              ],
+              "default": "result"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "结果值",
+              "desc": "此处填的字符串形式的值，因为动态属性返回的设置值都是以字符串返回的",
+              "bindKey": "dynamicCompareResult",
+              "display": "@[showType=='dynamic'&&dynamicCompareType=='result']",
+              "placeholder": "示例：true"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示依据",
+              "desc": "当显示方式为“切换依据显示”的时候代表页签选项卡切换的时候会根据当前填写的依据字段来去匹配结果值，为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+              "bindKey": "dataFiled",
+              "display": "@[showType=='toggle']",
+              "placeholder": "示例：moreUrl 或者 [0].showSetting"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义函数依据显示",
+              "bindKey": "dataFunction",
+              "display": "@[showType=='custom'||(showType=='dynamic'&&dynamicCompareType=='function')]",
+              "desc": "切换选项卡、数据勾选等动作会触发回调来控制是否显示，动态属性模式下也会调用此函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey,actionType:动作类型,otherData}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "点击事件",
+              "bindKey": "clickType",
+              "desc": "设置按钮点击响应事件的类型，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "不响应",
+                  "value": "none"
+                },
+                {
+                  "label": "自定义动作函数",
+                  "value": "customFunction"
+                },
+                {
+                  "label": "打开控制中心",
+                  "value": "openCtrlCenter"
+                },
+                {
+                  "label": "打开新建页面",
+                  "value": "openNewFileUrl"
+                }
+              ],
+              "default": "customFunction"
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "打开方式",
+              "bindKey": "openNewFileType",
+              "desc": "设置点击事件为打开新建页面的时候打开的方式",
+              "display":"@[clickType=='openNewFileUrl']",
+              "dictionary": [
+                {
+                  "label": "弹窗",
+                  "value": "popup"
+                },
+                {
+                  "label": "新页面",
+                  "value": "_blank"
+                },
+                {
+                  "label": "内部页签",
+                  "value": "addtab"
+                }
+              ],
+              "default": "_blank"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "点击自定义函数",
+              "bindKey": "clickCustomFunction",
+              "display": "@[clickType=='customFunction']",
+              "desc": "当点击按钮时候会调用此函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey,actionType:动作类型,allTabDataList}",
+              "multiple": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "批量按钮属性",
+      "desc": "提供设置组件的批量按钮属性信息",
+      "children": [
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "按钮间距",
+          "bindKey": "checkboxBtnGutter",
+          "desc": "按钮间距的数值是会平均分配给每个按钮的左右两边的内边距的，建议设置数值为偶数",
+          "maxLength": 50,
+          "minLength": 0,
+          "default": 20
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "文字大小",
+          "bindKey": "checkboxBtnFontSize",
+          "desc": "按钮文字大小",
+          "maxLength": 30,
+          "minLength": 11,
+          "default": 14
+        },
+        {
+          "type": "table",
+          "text": "批量按钮设置",
+          "bindKey": "checkboxBtns",
+          "tabText": "操作[index]",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "按钮标识",
+              "desc": "主要用于标识按钮，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者按钮的英文、拼音作为标识",
+              "bindKey": "key"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "按钮名称",
+              "desc": "按钮名称",
+              "bindKey": "name"
+            },
+            {
+              "type": "textarea",
+              "layoutType": "inline",
+              "text": "关联页签",
+              "desc": "决定此按钮在哪些页签展示，请填写页签的key值，多个请用英文逗号隔开,例：todo,invoice",
+              "bindKey": "keyList"
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "displayMode",
+              "desc": "控制按钮的展示方式，一直展示，显示隐藏间切换，置灰可点击间切换",
+              "dictionary": [
+                {
+                  "label": "有选择项时展示",
+                  "value": "hidden"
+                },
+                {
+                  "label": "有选择项时可点击",
+                  "value": "disabled"
+                },
+                {
+                  "label": "始终显示",
+                  "value": "always"
+                }
+              ],
+              "default": "hidden"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "显示自定义函数",
+              "bindKey": "customCheckboxBtnsFN",
+              "desc": "当预设的显示方式不满足时，可使用此函数定义，要求返回对象类型，且包含showStatus和disabledStatus，接收参数为格式为{commonParam:url参数,customParam:自定义的,activeKey:当前页签的key,activeTab:当前页签项,listData:当前页签下的数据源,selectedListData:选中的数据源}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "点击事件",
+              "bindKey": "clickType",
+              "desc": "选择点击事件",
+              "dictionary": [
+                {
+                  "label": "无事件",
+                  "value": "none"
+                },
+                {
+                  "label": "批量发送",
+                  "value": "send"
+                },
+                {
+                  "label": "批量阅毕",
+                  "value": "read"
+                },
+                {
+                  "label": "自定义函数",
+                  "value": "custom"
+                }
+              ],
+              "default": "none"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "点击自定义函数",
+              "bindKey": "customclickFN",
+              "display": "@[clickType=='custom']",
+              "desc": "当点击按钮时候会调用此函数，接收参数为格式为{commonParam:url参数,customParam:自定义的,activeKey:当前页签的key,activeTab:当前页签项,listData:当前页签下的数据源,selectedListData:选中的数据源,reloadTabInfo:重新加载页签下数据的函数，调用时请传页签的key，多个请用英文逗号隔开}",
+              "multiple": false
+            },
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "重新加载",
+              "desc": "当按钮操作成功后是否重新加载组件的数量提醒数据以及已经加载的列表数据，如果要加载指定tab的请在下面加载tab属性中填写tab的标识",
+              "bindKey": "isReloadTabInfo",
+              "display": "@[clickType!='none'&&clickType!='custom']",
+              "default": true
+            },
+            {
+              "type": "textarea",
+              "layoutType": "block",
+              "text": "加载页签",
+              "desc": "设置按钮操作成功后要重新加载哪些页签，如果不需要重新加载则不需要填写，此处填写tab的key标识，用逗号分隔即可，例如：todo,invoice",
+              "bindKey": "reloadTabKeys",
+              "display": "@[clickType!='none'&&clickType!='custom'&&isReloadTabInfo]",
+              "placeholder": "请输入页签的key，用逗号分隔，例：todo,invoice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "悬浮容器属性",
+      "desc": "提供设置组件的悬浮容器属性设置信息",
+      "children": [
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "悬浮容器",
+          "desc": "是否使用悬浮容器",
+          "bindKey": "showDragContainer",
+          "default": false
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "坐标(X)",
+          "desc": "对应left属性，以组件左上角为起点，可填%，px",
+          "bindKey": "dragContainerX",
+          "default": "60%"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "坐标(Y)",
+          "desc": "对应top属性，以组件左上角为起点，可填%，px",
+          "bindKey": "dragContainerY",
+          "default": "8px"
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "显示方式",
+          "bindKey": "dragContainerShowType",
+          "desc": "可以根据切换显示方式对悬浮容器进行更高级的控制，更多使用方法请点击参考更详细的说明",
+          "dictionary": [
+            {
+              "label": "始终显示",
+              "value": "default"
+            },
+            {
+              "label": "切换依据显示",
+              "value": "toggle"
+            },
+            {
+              "label": "动态属性依据显示",
+              "value": "dynamic"
+            },
+            {
+              "label": "自定义函数显示",
+              "value": "custom"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "属性标识",
+          "bindKey": "dragContainerDynamicAttrKeyName",
+          "display": "@[dragContainerShowType=='dynamic']",
+          "desc": "填写动态属性标识，用于获取的哪个标识用户设置的属性值，所有结果值都是为字符串形式的，详细点击查看更多",
+          "default": ""
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "比较方式",
+          "bindKey": "dragContainerDynamicCompareType",
+          "display": "@[dragContainerShowType=='dynamic']",
+          "desc": "可以根据切换比较方式对动态属性的比对做控制",
+          "dictionary": [
+            {
+              "label": "结果值比较",
+              "value": "result"
+            },
+            {
+              "label": "自定义函数比较",
+              "value": "function"
+            }
+          ],
+          "default": "result"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "结果值",
+          "desc": "此处填的字符串形式的值，因为动态属性返回的设置值都是以字符串返回的",
+          "bindKey": "dragContainerDynamicCompareResult",
+          "display": "@[dragContainerShowType=='dynamic'&&dragContainerDynamicCompareType=='result']",
+          "placeholder": "示例：true"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示依据",
+          "desc": "当显示方式为“切换依据显示”的时候代表页签选项卡切换的时候会根据当前填写的依据字段来去匹配结果值，为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+          "bindKey": "dragContainerDataFiled",
+          "display": "@[dragContainerShowType=='toggle']",
+          "placeholder": "示例：moreUrl 或者 [0].showSetting 或者 key==1(页签tab标识，而非索引)"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数依据显示",
+          "bindKey": "dragContainerDataFunction",
+          "display": "@[dragContainerShowType=='custom'||(dragContainerShowType=='dynamic'&&dragContainerDynamicCompareType=='function')]",
+          "desc": "切换选项卡、数据勾选等动作会触发回调来控制是否显示，动态属性模式下也会调用此函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey,actionType:动作类型,otherData}",
+          "multiple": false
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "基础样式",
+      "desc": "点击？查看样式设置用法指南",
+      "helpUrl": "",
+      "children": [
+        {
+          "type": "box",
+          "layoutType": "block",
+          "desc": "组件的最外围的内外边距设置",
+          "text": "组件内外边距",
+          "bindKey": "box",
+          "default": {
+            "marginTopVal": "5px",
+            "marginRightVal": "5px",
+            "marginBottomVal": "5px",
+            "marginLeftVal": "5px",
+            "paddingTopVal": "",
+            "paddingRightVal": "20px",
+            "paddingBottomVal": "",
+            "paddingLeftVal": "20px"
+          }
+        },
+        {
+          "type": "box",
+          "layoutType": "block",
+          "desc": "组件的tab页签下面的列表容器的内外边距设置",
+          "text": "列表容器内外边距",
+          "bindKey": "innerBox"
+        },
+        {
+          "type": "inlineGroup",
+          "text": "宽高",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "宽",
+              "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+              "bindKey": "width",
+              "width": "60px",
+              "default": "auto"
+            },
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "高",
+              "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+              "bindKey": "height",
+              "width": "60px",
+              "default": "auto"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "背景设置",
+          "desc": "点击？查看背景设置用法指南",
+          "helpUrl": "",
+          "children": [
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "背景色",
+              "bindKey": "bgColor",
+              "placeholder": "请选择颜色",
+              "default": {}
+            },
+            {
+              "type": "uploadImage",
+              "layoutType": "inline",
+              "text": "背景图片",
+              "bindKey": "bgImgUrl",
+              "placeholder": "可输入图片地址或直接上传"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "横向偏移",
+              "bindKey": "positionX",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "纵向偏移",
+              "bindKey": "positionY",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "radio",
+              "layoutType": "block",
+              "text": "背景大小",
+              "bindKey": "bgSize",
+              "dictionary": [
+                {
+                  "label": "裁切显示",
+                  "value": "cover"
+                },
+                {
+                  "label": "完全显示",
+                  "value": "contain"
+                },
+                {
+                  "label": "自定义",
+                  "value": "custom"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "宽度",
+              "bindKey": "bgSizeWidth",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgSize=='custom']"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "高度",
+              "bindKey": "bgSizeHeight",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgSize=='custom']"
+            },
+            {
+              "type": "radio",
+              "layoutType": "block",
+              "text": "平铺模式",
+              "bindKey": "bgRepeat",
+              "dictionary": [
+                {
+                  "label": "双向重复",
+                  "value": "repeat"
+                },
+                {
+                  "label": "水平重复",
+                  "value": "repeat-x"
+                },
+                {
+                  "label": "垂直重复",
+                  "value": "repeat-y"
+                },
+                {
+                  "label": "不重复",
+                  "value": "no-repeat"
+                },
+                {
+                  "label": "继承",
+                  "value": "inherit"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "radio",
+              "layoutType": "inline",
+              "text": "背景模式",
+              "bindKey": "bgAttachment",
+              "dictionary": [
+                {
+                  "label": "固定",
+                  "value": "fixed"
+                },
+                {
+                  "label": "滚动",
+                  "value": "scroll"
+                },
+                {
+                  "label": "继承",
+                  "value": "inherit"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "阴影样式",
+          "desc": "填写格式如下：10px 10px 5px #888888，更多请点击查看详细填写说明",
+          "bindKey": "boxShadow",
+          "default": "0px 0px 3px rgba(0,0,0,0.1)"
+        },
+        {
+          "type": "border",
+          "layoutType": "block",
+          "text": "边框",
+          "bindKey": "border"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "文字",
+          "bindKey": "font"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "主题设置",
+      "desc": "点击？查看主题设置用法指南",
+      "bindKey": "themeList",
+      "tabText": "主题[index]",
+      "children": [
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "主题标识",
+          "bindKey": "key",
+          "desc": "用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里填写为blue",
+          "default": "",
+          "placeholder": "例如：blue"
+        },
+        {
+          "type": "colorPicker",
+          "layoutType": "inline",
+          "text": "主要颜色",
+          "bindKey": "mainColor",
+          "desc": "主题的主要颜色",
+          "placeholder": "请选择颜色",
+          "display": "@[key]",
+          "default": {
+            "hex": "#1890FF",
+            "hex8": "#1890FFFF"
+          }
+        },
+        {
+          "type": "colorPicker",
+          "layoutType": "inline",
+          "text": "次要颜色",
+          "bindKey": "minorColor",
+          "desc": "主题的次要颜色",
+          "placeholder": "请选择颜色",
+          "display": "@[key]",
+          "default": {
+            "hex": "#e6f7ff",
+            "hex8": "#e6f7ffFF"
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "列表模板样式",
+      "desc": "点击？查看列表样式设置用法指南",
+      "helpUrl": "",
+      "children": [
+        {
+          "type": "group",
+          "text": "模板通用样式",
+          "desc": "所有的列表模板通用样式设置，点击？查看列表样式设置用法指南",
+          "helpUrl": "",
+          "children": [
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "每页大小",
+              "bindKey": "listPageSize",
+              "desc": "列表滚动加载每页的大小数量，建议根据行高计算组件最高的情况下的最少条数，否则会影响第一次加载没出滚动条就无法触发后续的分页加载",
+              "maxLength": 100,
+              "minLength": 5,
+              "default": 30
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "图标间距",
+              "bindKey": "iconListGutter",
+              "desc": "图标间距的数值是对右侧的外边距",
+              "maxLength": 100,
+              "minLength": 0,
+              "default": 0
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "按钮间距",
+              "bindKey": "buttonListGutter",
+              "desc": "按钮间距的数值是会平均分配给每个按钮的左右两边的内边距的，建议设置数值为偶数",
+              "maxLength": 300,
+              "minLength": 0,
+              "default": 20
+            },
+            {
+              "type": "font",
+              "layoutType": "block",
+              "text": "加载提示字体设置",
+              "bindKey": "diverseLoadingFont"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "加载文案",
+              "desc": "正在加载的提示文案，例如：正在加载中...",
+              "bindKey": "diverseLoadingText",
+              "default": "正在加载中..."
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "完成文案",
+              "desc": "加载完成的提示文案，例如：已全部加载完成",
+              "bindKey": "diverseLoadedText",
+              "default": "已全部加载完成"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "暂无数据自定义显示函数",
+              "bindKey": "diverseNoDataFunction",
+              "desc": "不设置则默认为“暂无数据”，如果需要更加灵活自定义显示内容(支持html)，可以使用此设置自定义函数实现，接收参数为格式为{customParam:自定义的,currentKey,tabObject}",
+              "multiple": false
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "默认行高",
+              "bindKey": "diverseDefaultLineHeight",
+              "desc": "Diverse列表未悬浮状态下的列表行高和Table列表的列表行高",
+              "maxLength": 999,
+              "minLength": 12,
+              "default": 40
+            },
+            {
+              "type": "box",
+              "layoutType": "block",
+              "desc": "列表容器的最外围的内外边距设置",
+              "text": "外层容器边距",
+              "bindKey": "diverseDefaultBox"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "Diverse模板样式",
+          "desc": "多样化的列表模板样式设置，点击？查看列表样式设置用法指南",
+          "helpUrl": "",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "显示悬浮",
+              "desc": "设置为不显示的话鼠标移上去的悬浮状态会消失",
+              "bindKey": "diverseHoverShow",
+              "default": true
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "悬浮背景",
+              "bindKey": "diverseHoverBgColor",
+              "desc": "悬浮条的背景颜色",
+              "placeholder": "请选择颜色",
+              "display": "@[diverseHoverShow]",
+              "default": {
+                "hex": "#FFFFFF",
+                "hex8": "#FFFFFFFF"
+              }
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "悬浮阴影",
+              "desc": "填写格式如下：10px 10px 5px #888888，更多请点击查看详细填写说明",
+              "bindKey": "diverseHoverShadow",
+              "display": "@[diverseHoverShow]",
+              "default": "0 0 30px 10px rgba(4, 29, 88, 0.15)"
+            },
+            {
+              "type": "box",
+              "layoutType": "block",
+              "desc": "Diverse列表悬浮条的内外边距设置",
+              "text": "悬浮容器边距",
+              "display": "@[diverseHoverShow]",
+              "bindKey": "diverseHoverBox"
+            },
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "通用事件",
+              "desc": "设置点击悬浮是否调用通用待办点击打开事件，如果不符合需求可以选择关闭然后使用自定义点击函数",
+              "bindKey": "diverseHoverClickToDo",
+              "default": false
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "悬浮点击自定义函数",
+              "bindKey": "diverseHoverClickCustomFunction",
+              "display": "@[diverseHoverShow]",
+              "desc": "当点击悬浮条的时候会调用此函数，接收参数为格式为{customParam:自定义的,currentKey,itemObject:整条数据对象}",
+              "multiple": true
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "Table模板样式",
+          "desc": "传统化的列表模板样式设置，点击？查看列表样式设置用法指南",
+          "helpUrl": "",
+          "children": [
+            {
+              "type": "font",
+              "layoutType": "block",
+              "text": "表头文字",
+              "desc": "此处设置的text-align无效，会应用每个字段设置的text-align",
+              "bindKey": "tableTitleFont"
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "表头背景",
+              "bindKey": "tableTitleBgColor",
+              "desc": "表头的背景颜色",
+              "placeholder": "请选择颜色",
+              "default": {
+                "hex": "#fafafa",
+                "hex8": "#fafafaFF"
+              }
+            },
+            {
+              "type": "textarea",
+              "layoutType": "block",
+              "text": "应用页签",
+              "desc": "设置此模板应用于那些页签，如果填写了则会使用Table表格模板样式，否则会使用Diverse模板（默认），此处填写tab的key标识，用逗号分隔即可，例如：todo,invoice",
+              "bindKey": "useTableTabArrayStr",
+              "placeholder": "请输入页签的key，用逗号分隔，例：todo,invoice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "Diverse模板字段配置",
+      "bindKey": "diverseFiledList",
+      "tabText": "字段[index]",
+      "children": [
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "关联页签",
+          "bindKey": "bindTabKeyList",
+          "desc": "此项可控制当前字段要在哪个页签下展示，没有关联的页签则不会展示当前字段",
+          "default": "",
+          "placeholder": "填写页签的key值，多个请用英文逗号隔开，如：todo,toread。空值则在所有页签下都显示"
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "字段位置",
+          "bindKey": "dataFiledPosition",
+          "desc": "设置字段显示的位置，更多详细解释请点击？查看",
+          "dictionary": [
+            {
+              "label": "默认状态位置",
+              "value": "default"
+            },
+            {
+              "label": "悬浮图标位置",
+              "value": "hoverIcon"
+            },
+            {
+              "label": "悬浮标题位置",
+              "value": "hoverTitle"
+            },
+            {
+              "label": "悬浮意见位置",
+              "value": "hoverOpinion"
+            },
+            {
+              "label": "悬浮字段位置",
+              "value": "hoverField"
+            },
+            {
+              "label": "悬浮操作位置",
+              "value": "hoverHandle"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示字段",
+          "desc": "设置每行数据对象中的要显示的字段名称",
+          "bindKey": "dataFiled",
+          "placeholder": "示例：title"
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "宽度占比",
+          "bindKey": "width",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            }
+          ]
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义显示函数",
+          "bindKey": "customShowFunction",
+          "desc": "如果需要更加灵活自定义显示内容(支持html)，可以使用此设置自定义函数实现，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前字段的配置数据,itemObject:整条数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "显示模式",
+          "bindKey": "iconType",
+          "desc": "可以在字段前面显示图标的显示模式切换，此处控制显示的图标、操作等类型，更多解释点击？查看帮助",
+          "dictionary": [
+            {
+              "label": "只显示字段结果",
+              "value": "none"
+            },
+            {
+              "label": "显示图标配置",
+              "value": "config"
+            },
+            {
+              "label": "显示操作按钮",
+              "value": "button"
+            },
+            {
+              "label": "自定义选择图标",
+              "value": "select"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "iconSelect",
+          "layoutType": "inline",
+          "text": "显示图标",
+          "bindKey": "icon",
+          "desc": "按钮显示名称的图标显示",
+          "placeholder": "请选择",
+          "display": "@[iconType=='select']"
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "左内边距",
+          "bindKey": "fieldLeftPadding",
+          "desc": "字段的左内边距px值大小",
+          "maxLength": 300,
+          "minLength": 0,
+          "default": 0
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "右内边距",
+          "bindKey": "fieldRightPadding",
+          "desc": "字段的右内边距px值大小",
+          "maxLength": 300,
+          "minLength": 0,
+          "default": 0
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "默认文字",
+          "bindKey": "defaultFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "已读文字",
+          "bindKey": "readFont"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "已读判断",
+          "desc": "已读判断表达式,不需要根据已读变化直接为空即可，表达式结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+          "bindKey": "readExpression",
+          "placeholder": "示例：isRead 或者 isRead=='1'"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "通用事件",
+          "desc": "设置点击是否调用通用待办点击打开事件，如果不符合需求可以选择关闭然后使用自定义点击函数",
+          "bindKey": "clickToDo",
+          "default": false
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "点击自定义函数",
+          "bindKey": "clickCustomFunction",
+          "desc": "当点击字段单元格的时候会调用此函数，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前字段的配置数据,itemObject:整条数据对象}",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "Table模板字段配置",
+      "bindKey": "tableFiledList",
+      "tabText": "字段[index]",
+      "children": [
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "关联页签",
+          "bindKey": "bindTabKeyList",
+          "desc": "此项可控制当前字段要在哪个页签下展示，没有关联的页签则不会展示当前字段",
+          "default": "",
+          "placeholder": "填写页签的key值，多个请用英文逗号隔开，如：todo,toread。空值则在所有页签下都显示"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "列头文字",
+          "desc": "设置每列列头要显示的文字",
+          "bindKey": "dataTitle",
+          "placeholder": "示例：标题"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示字段",
+          "desc": "设置每行数据对象中的要显示的字段名称",
+          "bindKey": "dataFiled",
+          "placeholder": "示例：title"
+        },
+        {
+          "type": "inputNumberUnit",
+          "layoutType": "inline",
+          "text": "宽度占比",
+          "bindKey": "width",
+          "dictionary": [
+            {
+              "label": "px",
+              "value": "px"
+            },
+            {
+              "label": "%",
+              "value": "%"
+            }
+          ]
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义显示函数",
+          "bindKey": "customShowFunction",
+          "desc": "如果需要更加灵活自定义显示内容(支持html)，可以使用此设置自定义函数实现，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前字段的配置数据,itemObject:整条数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "显示模式",
+          "bindKey": "iconType",
+          "desc": "可以在字段前面显示图标的显示模式切换，此处控制显示的图标、操作等类型，更多解释点击？查看帮助",
+          "dictionary": [
+            {
+              "label": "只显示字段结果",
+              "value": "none"
+            },
+            {
+              "label": "显示图标配置",
+              "value": "config"
+            },
+            {
+              "label": "显示操作按钮",
+              "value": "button"
+            },
+            {
+              "label": "自定义选择图标",
+              "value": "select"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "iconSelect",
+          "layoutType": "inline",
+          "text": "显示图标",
+          "bindKey": "icon",
+          "desc": "按钮显示名称的图标显示",
+          "placeholder": "请选择",
+          "display": "@[iconType=='select']"
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "左内边距",
+          "bindKey": "fieldLeftPadding",
+          "desc": "字段的左内边距px值大小",
+          "maxLength": 300,
+          "minLength": 0,
+          "default": 0
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "右内边距",
+          "bindKey": "fieldRightPadding",
+          "desc": "字段的右内边距px值大小",
+          "maxLength": 300,
+          "minLength": 0,
+          "default": 0
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "默认文字",
+          "bindKey": "defaultFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "已读文字",
+          "bindKey": "readFont"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "已读判断",
+          "desc": "已读判断表达式,不需要根据已读变化直接为空即可，表达式结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+          "bindKey": "readExpression",
+          "placeholder": "示例：isRead 或者 isRead=='1'"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "通用事件",
+          "desc": "设置点击是否调用通用待办点击打开事件，如果不符合需求可以选择关闭然后使用自定义点击函数",
+          "bindKey": "clickToDo",
+          "default": false
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "点击自定义函数",
+          "bindKey": "clickCustomFunction",
+          "desc": "当点击字段单元格的时候会调用此函数，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前字段的配置数据,itemObject:整条数据对象}",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "图标显示选项设置",
+      "bindKey": "iconOptionList",
+      "tabText": "图标[index]",
+      "children": [
+        {
+          "type": "uploadImage",
+          "layoutType": "inline",
+          "text": "图标地址",
+          "bindKey": "iconImgUrl",
+          "placeholder": "可输入图片地址或直接上传"
+        },
+        {
+          "type": "inlineGroup",
+          "text": "宽高",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "宽",
+              "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+              "bindKey": "iconWidth",
+              "width": "60px",
+              "default": "auto"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "高",
+              "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+              "bindKey": "iconHeight",
+              "width": "60px",
+              "default": "auto"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "显示方式",
+          "bindKey": "iconShowType",
+          "desc": "可以根据切换显示方式对每个图标进行更高级的控制，更多使用方法请点击参考更详细的说明",
+          "dictionary": [
+            {
+              "label": "始终显示",
+              "value": "default"
+            },
+            {
+              "label": "数据字段依据显示",
+              "value": "field"
+            },
+            {
+              "label": "自定义函数显示",
+              "value": "custom"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示依据",
+          "desc": "当显示方式为“数据字段依据显示”的时候可以在此处填写表达式，表达式可以使用每行的数据对象，返回结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+          "bindKey": "iconDataFiled",
+          "display": "@[iconShowType=='field']",
+          "placeholder": "示例：isShow 或者 [0].isShow"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数依据显示",
+          "bindKey": "iconDataFunction",
+          "display": "@[iconShowType=='custom']",
+          "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前图标配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "提示信息",
+          "desc": "设置鼠标悬浮到图标上的提示信息，如果设置了自定义函数提示信息则此处无效",
+          "bindKey": "iconTip",
+          "placeholder": "示例：机密"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数提示信息",
+          "bindKey": "iconTipFunction",
+          "desc": "当数据加载的时候会调用此处自定义函数返回要提示的内容，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前图标配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "点击自定义函数",
+          "bindKey": "clickCustomFunction",
+          "desc": "当点击图标的时候会调用此函数，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前图标配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象}",
+          "multiple": true
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "text": "操作按钮选项设置",
+      "bindKey": "buttonOptionList",
+      "tabText": "按钮[index]",
+      "children": [
+        {
+          "type": "iconSelect",
+          "layoutType": "inline",
+          "text": "按钮图标",
+          "bindKey": "iconSvg",
+          "desc": "设置按钮的图标",
+          "placeholder": "请选择"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "按钮文字",
+          "desc": "设置按钮显示的文字",
+          "bindKey": "buttonText",
+          "placeholder": "示例：发送"
+        },
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "排列方式",
+          "bindKey": "buttonLayout",
+          "desc": "按钮排列方式，垂直：图标和文字垂直对齐，水平：图标和文字水平对齐",
+          "dictionary": [
+            {
+              "label": "垂直",
+              "value": "vertical"
+            },
+            {
+              "label": "水平",
+              "value": "horizontal"
+            }
+          ],
+          "default": "vertical"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "图标字体设置",
+          "bindKey": "iconSvgFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "按钮文字字体",
+          "bindKey": "buttonTextFont"
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "显示方式",
+          "bindKey": "buttonShowType",
+          "desc": "可以根据切换显示方式对每个按钮进行更高级的控制，更多使用方法请点击参考更详细的说明",
+          "dictionary": [
+            {
+              "label": "始终显示",
+              "value": "default"
+            },
+            {
+              "label": "数据字段依据显示",
+              "value": "field"
+            },
+            {
+              "label": "自定义函数显示",
+              "value": "custom"
+            }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "显示依据",
+          "desc": "当显示方式为“数据字段依据显示”的时候可以在此处填写表达式，表达式可以使用每行的数据对象，返回结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+          "bindKey": "buttonDataFiled",
+          "display": "@[buttonShowType=='field']",
+          "placeholder": "示例：isShow 或者 [0].isShow"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数依据显示",
+          "bindKey": "buttonDataFunction",
+          "display": "@[buttonShowType=='custom']",
+          "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前图标配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "提示信息",
+          "desc": "设置鼠标悬浮到按钮上的提示信息，如果设置了自定义函数提示信息且返回了不为空的内容则此处无效",
+          "bindKey": "buttonTip",
+          "placeholder": "示例：发送"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数提示信息",
+          "bindKey": "buttonTipFunction",
+          "desc": "当数据加载的时候会调用此处自定义函数返回要提示的内容，接收参数为格式为{customParam:自定义的,currentKey,configObject:当前图标配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象,tabObject:当前tab数据对象}",
+          "multiple": false
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "事件类型",
+          "bindKey": "buttonHandleType",
+          "desc": "点击按钮触发的操作类型，可以选择内置的处理函数，也可以使用自定义编写函数",
+          "dictionary": [
+            {
+              "label": "无事件",
+              "value": "none"
+            },
+            {
+              "label": "发送",
+              "value": "send"
+            },
+            {
+              "label": "退回",
+              "value": "sendBack"
+            },
+            {
+              "label": "阅毕",
+              "value": "readed"
+            },
+            {
+              "label": "收藏",
+              "value": "favorite"
+            },
+            {
+              "label": "取消收藏",
+              "value": "unfavorite"
+            },
+            {
+              "label": "报名",
+              "value": "enroll"
+            },
+            {
+              "label": "自定义函数",
+              "value": "custom"
+            }
+          ],
+          "default": "none"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "事件自定义函数",
+          "bindKey": "buttonCustomFunction",
+          "display": "@[buttonHandleType=='custom']",
+          "desc": "当点击按钮的时候会调用此函数，接收参数格式为{customParam:自定义的,currentKey,configObject:当前按钮配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象,callback:处理完成要刷新tab的回调方法，调用并传reloadTabKeys即可刷新指定的tab}",
+          "multiple": true
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "重新加载",
+          "desc": "当按钮操作成功后是否重新加载组件的数量提醒数据以及已经加载的列表数据，如果要加载指定tab的请在下面加载tab属性中填写tab的标识",
+          "bindKey": "isReloadTabInfo",
+          "display": "@[buttonHandleType!='none']",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "layoutType": "block",
+          "text": "加载页签",
+          "desc": "设置按钮操作成功后要重新加载哪些页签，如果不需要重新加载则不需要填写，此处填写tab的key标识，用逗号分隔即可，例如：todo,invoice",
+          "bindKey": "reloadTabKeys",
+          "display": "@[buttonHandleType!='none'&&isReloadTabInfo]",
+          "placeholder": "请输入页签的key，用逗号分隔，例：todo,invoice"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "功能接口",
+      "desc": "点击？查看功能接口用法指南",
+      "children": [
+        {
+          "type": "input",
+          "layoutType": "block",
+          "text": "收藏接口",
+          "desc": "设置收藏和取消收藏的接口，如果设置了为空则默认为：ctrl/favorite/enshrine",
+          "bindKey": "favoriteApiUrl",
+          "placeholder": "示例：ctrl/favorite/enshrine",
+          "default": "ctrl/favorite/enshrine"
+        },
+        {
+          "type": "input",
+          "layoutType": "block",
+          "text": "阅毕接口",
+          "desc": "设置阅毕的接口，如果设置了为空则默认为：ctrl/shareRead/readedIds",
+          "bindKey": "readedApiUrl",
+          "placeholder": "示例：ctrl/shareRead/readedIds",
+          "default": "ctrl/shareRead/readedIds"
+        },
+        {
+          "type": "input",
+          "layoutType": "block",
+          "text": "查询待办接口",
+          "desc": "设置退回所需要的查询待办的接口，如果设置了为空则默认为：ctrl/officeInfo/getTodo",
+          "bindKey": "sendBackApiUrl",
+          "placeholder": "示例：ctrl/officeInfo/getTodo",
+          "default": "ctrl/officeInfo/getTodo"
+        },
+        {
+          "type": "input",
+          "layoutType": "block",
+          "text": "查询单位选择接口",
+          "desc": "设置页签右边扩展按钮触发的点击事件为打开新建页面的事件查询是否需要弹出单位选择的列表查询接口，如果设置了为空则默认为：ctrl/formControl/getDraftXForm",
+          "bindKey": "newFileUrlHasDeptSelectUrl",
+          "placeholder": "示例：ctrl/formControl/getDraftXForm",
+          "default": "ctrl/formControl/getDraftXForm"
+        },
+        {
+          "type": "input",
+          "layoutType": "block",
+          "text": "新建页面通用地址",
+          "desc": "设置页签右边扩展按钮触发的点击事件为打开新建页面的事件弹出来的新建页面的地址，如果设置了为空则默认为：ctrl/formControl/form?moduleId=@[newFileUrl]&draftOrgId=@[orgObj.id]，此地址支持表达式，更多详细设置请点击？查看帮助文档",
+          "bindKey": "newFileCommonPageUrl",
+          "placeholder": "示例：ctrl/formControl/form?moduleId=@[newFileUrl]&draftOrgId=@[orgObj.id]",
+          "default": ""
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "高级",
+      "desc": "点击？查看高级设置用法指南",
+      "children": [
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "切换面板的回调自定义函数",
+          "bindKey": "changeFunction",
+          "desc": "切换面板的回调，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey}",
+          "multiple": true
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "next按钮点击自定义函数",
+          "bindKey": "nextClickFunction",
+          "desc": "next 按钮被点击的回调，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey}",
+          "multiple": true
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "prev按钮点击自定义函数",
+          "bindKey": "prevClickFunction",
+          "desc": "prev 按钮点击自定义函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey}",
+          "multiple": true
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "tab被点击自定义函数",
+          "bindKey": "tabClickFunction",
+          "desc": "tab 被点击的回调函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey}",
+          "multiple": true
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "列表数据加载结束自定义函数",
+          "bindKey": "listLoadedFunction",
+          "desc": "列表数据每次加载结束后会调用此处的设置，接收参数为格式为{customParam:自定义的,currentKey,tabObject,allList,currentList}",
+          "multiple": true
+        },
+        {
+          "type": "select",
+          "layoutType": "inline",
+          "text": "刷新KEY",
+          "bindKey": "messageRefreshKey",
+          "desc": "根据组件接收到的消息KEY来刷新数据，可选择多个",
+          "default": [
+            "info",
+            "inbox",
+            "distribt",
+            "remind",
+            "notice",
+            "meeting",
+            "collect",
+            "remoteDoc",
+            "remoteFeedBack"
+          ],
+          "placeholder": "请选择刷新KEY",
+          "multiple": true,
+          "ctrlAttrObject": {
+            "mode": "tags"
+          },
+          "dictionary": [
+            {
+              "label": "info",
+              "value": "info"
+            },
+            {
+              "label": "inbox",
+              "value": "inbox"
+            },
+            {
+              "label": "distribt",
+              "value": "distribt"
+            },
+            {
+              "label": "remind",
+              "value": "remind"
+            },
+            {
+              "label": "notice",
+              "value": "notice"
+            },
+            {
+              "label": "meeting",
+              "value": "meeting"
+            },
+            {
+              "label": "collect",
+              "value": "collect"
+            },
+            {
+              "label": "remoteDoc",
+              "value": "remoteDoc"
+            },
+            {
+              "label": "remoteFeedBack",
+              "value": "remoteFeedBack"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

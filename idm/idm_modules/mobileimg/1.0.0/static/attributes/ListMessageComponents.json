@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.ListMessageComponents",
+    "comName": "列表式消息",
+    "className": "ListMessageComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

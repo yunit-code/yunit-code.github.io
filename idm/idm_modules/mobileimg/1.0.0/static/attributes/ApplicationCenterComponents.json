@@ -1,0 +1,59 @@
+{
+    "classId": "idm.componet.mobileimg.ApplicationCenterComponents",
+    "comName": "应用中心",
+    "className": "ApplicationCenterComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "switch",
+            "layoutType": "block",
+            "text": "是否显示栏目前图标",
+            "desc": "设置是否显示栏目前的块状图标",
+            "bindKey": "showIcon",
+            "default": true
+        },
+        {
+            "type": "select",
+            "layoutType": "block",
+            "text": "手机端每行显示个数",
+            "bindKey": "mobileRowNumber",
+            "placeholder": "请选择",
+            "dictionary": [
+                {
+                    "label": "3",
+                    "value": "3"
+                },
+                {
+                    "label": "4",
+                    "value": "4"
+                },
+                {
+                    "label": "5",
+                    "value": "5"
+                }
+            ]
+        },
+        {
+            "type": "select",
+            "layoutType": "block",
+            "text": "PAD端每行显示个数",
+            "bindKey": "padRowNumber",
+            "placeholder": "请选择",
+            "dictionary": [
+                {
+                    "label": "3",
+                    "value": "3"
+                },
+                {
+                    "label": "4",
+                    "value": "4"
+                },
+                {
+                    "label": "5",
+                    "value": "5"
+                }
+            ]
+        }
+    ]
+}

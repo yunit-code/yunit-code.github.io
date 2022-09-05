@@ -54,6 +54,99 @@
                         }
                     ],
                     "default": "close"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "适配菜单",
+                    "bindKey": "fitMenu",
+                    "desc": "设置是否适配菜单",
+                    "default": false
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "隐藏容器",
+                    "bindKey": "displayContainer",
+                    "desc": "设置是否显示隐藏的布局容器，此属性只作用与页面配置的，在预览时候无效。作用是能配置隐藏的组件，在当用户要个性化定制的时候可以使用这里隐藏域配置的组件进行切换显示",
+                    "default": false
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "展开宽度",
+                    "bindKey": "menuWidthMax",
+                    "desc":"菜单展开的宽度，用于适配菜单展开收缩效果",
+                    "display": "@[fitMenu]",
+                    "default": "230px"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "收缩宽度",
+                    "bindKey": "menuWidthMin",
+                    "desc":"菜单收缩的宽度，用于适配菜单展开收缩效果",
+                    "display": "@[fitMenu]",
+                    "default": "64px"
+                },
+                {
+                    "type": "table",
+                    "text": "适配布局",
+                    "desc": "点击？查看主题设置用法指南",
+                    "bindKey": "chooseGridMediaList",
+                    "tabText": "页签[index]",
+                    "default": [],
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "宽",
+                            "desc": "单位为px，默认为1600*800",
+                            "bindKey": "w",
+                            "default": 1600
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "高",
+                            "desc": "单位为px，默认为1600*800",
+                            "bindKey": "h",
+                            "default": 800
+                        },
+                        {
+                            "type": "switch",
+                            "layoutType": "inline",
+                            "text": "权限过滤",
+                            "bindKey": "powerActive",
+                            "default": true
+                        },
+                        {
+                            "type": "treeSelect",
+                            "layoutType": "inline",
+                            "text": "权限选择",
+                            "bindKey": "powerList",
+                            "dataSourceUrl": "/ctrl/idm/console/getRoleList",
+                            "display": "@[powerActive]",
+                            "desc":"请选择要显示该布局的权限，如果要使改权限生效，请在“用户权限自定义函数”属性返回当前人的权限ID集合",
+                            "multiple": true
+                        },
+                        {
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "显示隐藏该页面自定义函数",
+                            "bindKey": "isShowFunction",
+                            "desc": "显示隐藏该页面自定义函数",
+                            "multiple": false
+                        }
+                    ]
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "用户权限自定义函数",
+                    "bindKey": "userRoleFunction",
+                    "desc": "用于设置返回当前人的权限ID集合，如果适配布局中设置了权限则此处是必选，否则权限设置无效",
+                    "multiple": false
                 }
             ]
         },
@@ -77,7 +170,7 @@
                             "type": "input",
                             "layoutType": "block",
                             "text": "宽",
-                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等，开启适配菜单后禁止使用calc计算属性。",
                             "bindKey": "width",
                             "width": "60px",
                             "default": "100%"

@@ -1,0 +1,634 @@
+{
+    "classId": "idm.componet.mobilewechat.messageList",
+    "comName": "信息列表",
+    "className": "IMessageList",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "标题",
+                    "bindKey": "title",
+                    "desc": "组件标题文字",
+                    "default": "信息列表",
+                    "display": "@[compStyle !== 'styleFour']"
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "跳转方式",
+                    "bindKey": "jumpStyle",
+                    "desc": "设置组件点击链接跳转方式",
+                    "dictionary": [
+                        {
+                            "label": "智能跳转打开",
+                            "value": "_auto"
+                        },
+                        {
+                            "label": "当前页跳转",
+                            "value": "_self"
+                        },
+                        {
+                            "label": "新窗口打开",
+                            "value": "_blank"
+                        }
+                    ],
+                    "default": "_auto"
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "组件样式",
+                    "bindKey": "compStyle",
+                    "desc": "设置组件显示风格",
+                    "dictionary": [
+                        {
+                            "label": "样式一",
+                            "value": "styleOne"
+                        },
+                        {
+                            "label": "样式二",
+                            "value": "styleTwo"
+                        },
+                        {
+                            "label": "样式三",
+                            "value": "styleThree"
+                        },
+                        {
+                            "label": "样式四",
+                            "value": "styleFour"
+                        }
+                    ],
+                    "default": "styleFour"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示页签",
+                    "desc": "是否显示页签，不显示则默认取第一个",
+                    "bindKey": "showTab",
+                    "default": true
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示更多",
+                    "bindKey": "showMore",
+                    "default": true,
+                    "display": "@[showTab == true]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示图标",
+                    "bindKey": "showIcon",
+                    "desc": "配置是否显示标题图标",
+                    "default": true,
+                    "display": "@[compStyle !== 'styleFour']"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示角标",
+                    "bindKey": "showTotalNumber",
+                    "default": false,
+                    "display": "@[compStyle !== 'styleFour']"
+                },
+                {
+                    "type": "slider",
+                    "layoutType": "inline",
+                    "text": "显示数量",
+                    "bindKey": "limit",
+                    "default": "3"
+                },
+                
+                {
+                    "type": "table",
+                    "layoutType": "inline",
+                    "text": "页签配置",
+                    "desc": "配置信息页签信息，如不显示页签，则取第一个页签数据展示信息列表",
+                    "bindKey": "messageTitleList",
+                    "tabText": "页签[index]",
+                    "openGroup": true,
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "显示名称",
+                            "bindKey": "tabTitle",
+                            "default":"今日信息",
+                            "placeholder":"请输入名称"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "页签标识",
+                            "bindKey": "tabKey",
+                            "desc": "设置当前页签标识，用来获取对应页签数据，例如：今日信息 - todayInfos，工作动态 - workDynamics",
+                            "default": ""
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "更多链接",
+                            "bindKey": "moreListLink",
+                            "desc": "此设置用于点击更多时跳转链接，如果设置了链接地址，则内置的根据数据跳转链接失效。",
+                            "display": "@[showMore == true && showTab == true]"
+                        },
+                        {
+                            "type": "switch",
+                            "layoutType": "inline",
+                            "text": "默认选中",
+                            "bindKey": "isActive",
+                            "desc": "设置此页签是否默认选中，如设置了多个则默认选中第一个",
+                            "default": false,
+                            "display": "@[showTab == true]"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "标题容器样式",
+            "desc": "点击？查看样式设置用法指南",
+            "display": "@[compStyle !== 'styleFour']",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "radio",
+                    "styleType": "radio",
+                    "layoutType": "inline",
+                    "text": "图标位置",
+                    "desc": "设置组件标题图标位置",
+                    "bindKey": "titleIconPosition",
+                    "display": "@[compStyle !== 'styleFour']",
+                    "dictionary": [
+                        {
+                            "label": "左边",
+                            "value": "left"
+                        },
+                        {
+                            "label": "右边",
+                            "value": "right"
+                        }
+                    ],
+                    "default": "right"
+                },
+                {
+                    "type": "group",
+                    "text": "标题图标",
+                    "display": "@[compStyle != 'styleFour']",
+                    "children": [
+                        {
+                            "type": "iconSelect",
+                            "layoutType": "inline",
+                            "text": "标题图标",
+                            "bindKey": "titleIconClass"
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "图标颜色",
+                            "bindKey": "titleIconFontColor"
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "图标大小",
+                            "bindKey": "titleIconFontSize",
+                            "default": 18
+                        }
+                    ]
+                },
+                {
+                    "type": "font",
+                    "layoutType": "inline",
+                    "text": "标题字体",
+                    "bindKey": "titleFontStyle",
+                    "desc": "设置标题字体样式",
+                    "default": {
+                        "fontColors": {
+                            "hex": "#333333"
+                        },
+                        "fontSize": 16,
+                        "fontSizeUnit": "px"
+                    },
+                    "display": "@[compStyle !== 'styleFour']"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "外层容器样式",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "背景色",
+                    "bindKey": "bgColor",
+                    "placeholder": "请选择颜色",
+                    "default": {
+                        "hex": "#FFFFFF",
+                        "hex8": "#FFFFFFFF"
+                    }
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "width",
+                            "width": "60px",
+                            "default": "auto"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "height",
+                            "width": "60px",
+                            "default": "auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "box",
+                    "default": {
+                        "marginTopVal": "",
+                        "marginRightVal": "2%",
+                        "marginBottomVal": "",
+                        "marginLeftVal": "2%",
+                        "paddingTopVal": "",
+                        "paddingRightVal": "",
+                        "paddingBottomVal": "",
+                        "paddingLeftVal": ""
+                    }
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "border",
+                    "default":{
+                        "border": {
+                            "top": {
+                                "style": "solid",
+                                "width": 0,
+                                "widthUnit": "px",
+                                "colors": {
+                                    "hex8":"#000000FF"
+                                }
+                            },
+                            "right": {
+                                "style": "solid",
+                                "width": 0,
+                                "widthUnit": "px",
+                                "colors": {
+                                    "hex8":"#000000FF"
+                                }
+                            },
+                            "bottom": {
+                                "style": "solid",
+                                "width": 0,
+                                "widthUnit": "px",
+                                "colors": {
+                                    "hex8":"#000000FF"
+                                }
+                            },
+                            "left": {
+                                "style": "solid",
+                                "width": 0,
+                                "widthUnit": "px",
+                                "colors": {
+                                    "hex8":"#000000FF"
+                                }
+                            }
+                        },
+                        "radius": {
+                            "leftTop": {
+                                "radius": 8,
+                                "radiusUnit": "px"
+                            },
+                            "rightTop": {
+                                "radius": 8,
+                                "radiusUnit": "px"
+                            },
+                            "leftBottom": {
+                                "radius": 8,
+                                "radiusUnit": "px"
+                            },
+                            "rightBottom": {
+                                "radius": 8,
+                                "radiusUnit": "px"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "内层容器样式",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                
+                {
+                    "type": "font",
+                    "layoutType": "inline",
+                    "text": "页签字体",
+                    "bindKey": "tabFontStyle",
+                    "desc": "设置页签字体样式",
+                    "default": {
+                        "fontColors": {
+                            "hex": "#888888"
+                        },
+                        "fontSize": 16,
+                        "fontSizeUnit": "px"
+                    },
+                    "display": "@[showTab == true]"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "选中页签字体",
+                    "bindKey": "titleFontStyleActive",
+                    "desc": "设置选中页签字体样式",
+                    "default": {
+                        "fontColors": {
+                            "hex": "#333"
+                        },
+                        "fontSize": 16,
+                        "fontWeight": "600",
+                        "fontSizeUnit": "px",
+                        "fontDecoration": "none"
+                    },
+                    "display": "@[showTab == true]"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "信息字体",
+                    "bindKey": "messageItemFontStyle",
+                    "default": {
+                        "fontColors": {
+                            "hex": "#000000"
+                        },
+                        "fontSize": 16,
+                        "fontSizeUnit": "px"
+                    }
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "背景色",
+                    "bindKey": "subBgColor",
+                    "placeholder": "请选择颜色"
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "subWidth",
+                            "width": "60px",
+                            "default": "auto"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "subHeight",
+                            "width": "60px",
+                            "default": "auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "subBox",
+                    "default": {
+                        "marginTopVal": "",
+                        "marginRightVal": "",
+                        "marginBottomVal": "",
+                        "marginLeftVal": "",
+                        "paddingTopVal": "0",
+                        "paddingRightVal": "0",
+                        "paddingBottomVal": "0",
+                        "paddingLeftVal": "0"
+                    }
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "subBorder"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "空白文字",
+                    "desc": "列表为空时，提示文字设置",
+                    "bindKey": "emptyText",
+                    "default": "暂无数据"
+                },
+                {
+                    "type": "inputNumberUnit",
+                    "layoutType": "inline",
+                    "text": "空白高度",
+                    "desc": "列表为空时，显示空白数据高度，设置过小则显示不全，推荐110px",
+                    "bindKey": "emptyBoxHeight",
+                    "dictionary": [
+                        {
+                            "label": "px",
+                            "value": "px"
+                        },
+                        {
+                            "label": "%",
+                            "value": "%"
+                        }
+                    ],
+                    "default": {
+                        "inputVal": 110,
+                        "selectVal": "px"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "text": "主题设置",
+            "desc": "点击？查看主题设置用法指南",
+            "bindKey": "themeList",
+            "tabText": "主题[index]",
+            
+            "default":[
+                {
+                    "key":"blue",
+                    "mainColor":{
+                        "hex": "#0073CA",
+                        "hex8": "#0073CAFF"
+                    }
+                },
+                {
+                    "key":"red",
+                    "mainColor":{
+                        "hex": "#E21A1A",
+                        "hex8": "#E21A1AFF"
+                    }
+                },
+                {
+                    "key":"green",
+                    "mainColor":{
+                        "hex": "#0EAF64",
+                        "hex8": "#0EAF64FF"
+                    }
+                }
+            ],
+            "children": [
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "主题标识",
+                    "bindKey": "key",
+                    "multiple": false,
+                    "desc":"用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里填写为blue",
+                    "default":"",
+                    "placeholder":"例如：blue",
+                    "ctrlAttrObject": {
+                        "mode": "combobox"
+                    },
+                    "dictionary": [
+                        {
+                            "label": "blue",
+                            "value": "blue"
+                        },
+                        {
+                            "label": "red",
+                            "value": "red"
+                        },
+                        {
+                            "label": "green",
+                            "value": "green"
+                        }
+                    ]
+                },{
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "主要颜色",
+                    "bindKey": "mainColor",
+                    "desc":"主题的主要颜色",
+                    "placeholder": "请选择颜色",
+                    "display":"@[key]"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "group",
+                    "text": "适配设置",
+                    "desc":"通过设置属性来适配移动端页面尺寸",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "基准值",
+                            "desc": "此属性用于标记当前组件在显示效果最完美情况下的宽度大小（px），例如：此组件显示效果最佳宽度为414px，则此处设置为414即可，如果此组件最佳效果为当前配置的屏幕宽（px）的一半则只需要除以2即可。",
+                            "bindKey": "baseSize",
+                            "default": 414
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "适配比例",
+                            "desc": "与基准值配合使用，如果在实际预览屏幕宽为基准值的两倍，则此组件所有可适配的内容都会基于此处设置的适配比例相对应的进行放大缩小，例如此处设置1.2，则会相对应的放大至1.2倍",
+                            "bindKey": "adaptationRatio",
+                            "default": 1.2
+                        }
+                    ]
+                },
+                {
+                    "type": "treeSelect",
+                    "layoutType": "inline",
+                    "text": "数据源",
+                    "bindKey": "dataSource",
+                    "dataSourceUrl":"/ctrl/dataSource/getDatasourceByGroup"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "显示字段",
+                    "bindKey": "dataFiled",
+                    "desc": "根据接口返回数据格式指定结果集的字段，比如结果集名为resultData（自定义接口忽略）且它的值为{data:{filedName:[{\"text\":\"\",\"value\":\"\",\"check\":true}]}}，则这里应该填写data.filedName",
+                    "default": "title",
+                    "placeholder": "示例：data.filedName 或者 [0].data[0].filedName"
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "block",
+                    "styleType": "radio",
+                    "text": "数据加载方式",
+                    "bindKey": "dataLoadType",
+                    "desc": "按需加载：一次只加载一个页签的数据; 一次性加载：多个tab页签的数据一次性加载完",
+                    "dictionary": [
+                        {
+                            "label": "一次加载",
+                            "value": "onceLoad"
+                        },
+                        {
+                            "label": "按需加载",
+                            "value": "needLoad"
+                        }
+                    ],
+                    "default": "needLoad"
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "点击单项动作",
+                    "bindKey": "clickMessageItemFunction",
+                    "desc": "此设置用于点击时候执行自定义函数逻辑，如果设置了此函数则内置的根据数据跳转链接则失效",
+                    "multiple": true
+                }
+            ]
+        }
+    ]
+}

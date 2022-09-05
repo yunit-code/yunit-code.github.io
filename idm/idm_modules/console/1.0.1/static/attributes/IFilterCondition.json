@@ -1,0 +1,554 @@
+{
+    "classId": "idm.componet.console.ifiltercondition",
+    "comName": "过滤条件",
+    "className": "IFilterCondition",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [{
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "已选条件",
+                    "bindKey": "selectedDisplay",
+                    "desc":"是否显示已选择的条件",
+                    "default": true
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "已选名称",
+                    "bindKey": "selectedTitle",
+                    "default": "已选条件",
+                    "display":"@[selectedDisplay]"
+                },{
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "右侧按钮",
+                    "bindKey": "showActionMenu",
+                    "desc":"是否显示右上角的操作按钮区域",
+                    "default": true
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "默认条数",
+                    "bindKey": "defaultConditionNumber",
+                    "maxLength": 20,
+                    "minLength": 1,
+                    "desc":"当条件总条数过多时候会根据这里设置的数量进行隐藏并且显示出“全部条件”的按钮",
+                    "default": 3
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "样式设置",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "box"
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "width",
+                            "width": "60px",
+                            "default": "100%"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "height",
+                            "width": "60px",
+                            "default": "auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "背景设置",
+                    "desc": "点击？查看背景设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColor",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "背景图片",
+                            "bindKey": "bgImgUrl",
+                            "placeholder": "可输入图片地址或直接上传"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "横向偏移",
+                            "bindKey": "positionX",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "纵向偏移",
+                            "bindKey": "positionY",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "背景大小",
+                            "bindKey": "bgSize",
+                            "dictionary": [
+                                {
+                                    "label": "裁切显示",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "完全显示",
+                                    "value": "contain"
+                                },
+                                {
+                                    "label": "自定义",
+                                    "value": "custom"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "宽度",
+                            "bindKey": "bgSizeWidth",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "高度",
+                            "bindKey": "bgSizeHeight",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "平铺模式",
+                            "bindKey": "bgRepeat",
+                            "dictionary": [
+                                {
+                                    "label": "双向重复",
+                                    "value": "repeat"
+                                },
+                                {
+                                    "label": "水平重复",
+                                    "value": "repeat-x"
+                                },
+                                {
+                                    "label": "垂直重复",
+                                    "value": "repeat-y"
+                                },
+                                {
+                                    "label": "不重复",
+                                    "value": "no-repeat"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "背景模式",
+                            "bindKey": "bgAttachment",
+                            "dictionary": [
+                                {
+                                    "label": "固定",
+                                    "value": "fixed"
+                                },
+                                {
+                                    "label": "滚动",
+                                    "value": "scroll"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        }
+                    ]
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "border"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "文字",
+                    "bindKey": "font"
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "text": "条件数据源",
+            "bindKey": "conditionDataSource",
+            "tabText": "数据源[index]",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "条件名称",
+                    "bindKey": "conditionName",
+                    "desc":"用于展示条件的名称",
+                    "default": "条件名称"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "条件标识",
+                    "bindKey": "conditionKey",
+                    "desc":"用于作为条件的唯一标识，方便其他组件识别选择的是哪个条件来对列表或数据源进行过滤"
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "数据来源",
+                    "bindKey": "dataSourceType",
+                    "dictionary": [
+                        {
+                            "label": "自定义接口",
+                            "value": "customInterface"
+                        },
+                        {
+                            "label": "页面统一接口",
+                            "value": "pageCommonInterface"
+                        },
+                        {
+                            "label": "自定义函数",
+                            "value": "customFunction"
+                        }
+                    ],
+                    "default": "customInterface"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "接口地址",
+                    "bindKey": "customInterfaceUrl",
+                    "desc":"用于获取数据源的接口地址，请按照统一标准的返回格式返回数组格式的数据，格式如下：{\"code\":\"200\",\"data\":[{\"text\":\"\",\"value\":\"\",\"check\":true}],...}",
+                    "display":"@[dataSourceType=='customInterface']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "结果集名",
+                    "bindKey": "dataName",
+                    "desc": "页面接口设定的结果集名称，位置为：页面设置》高级设置》页面接口",
+                    "default": "",
+                    "placeholder": "示例：resultData",
+                    "display":"@[dataSourceType=='pageCommonInterface']"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "显示字段",
+                    "bindKey": "dataFiled",
+                    "desc": "根据接口返回数据格式指定结果集的字段，比如结果集名为resultData且它的值为{data:{filedName:[{\"text\":\"\",\"value\":\"\",\"check\":true}]}}，则这里应该填写data.filedName",
+                    "default": "",
+                    "placeholder": "示例：data.filedName 或者 [0].data[0].filedName",
+                    "display":"@[dataSourceType=='pageCommonInterface']"
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "自定义函数",
+                    "bindKey": "customFunction",
+                    "desc": "获取选项数据源的时候会调用此方法，返回数据格式如下：[{\"text\":\"\",\"value\":\"\",\"check\":true}]",
+                    "display": "@[dataSourceType=='customFunction']",
+                    "multiple": false
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "自定义渲染选择项",
+                    "bindKey": "renderOptionFunction",
+                    "desc": "自定义格式化每个选项显示的值",
+                    "multiple": false
+                },{
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "是否多选",
+                    "bindKey": "isMultiple",
+                    "desc":"设置条件是否允许选择多个，开启则可以选择多个选项，不开启只能显示单个",
+                    "default": false
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "默认数量",
+                    "bindKey": "defaultOptionNumber",
+                    "maxLength": 200,
+                    "minLength": 1,
+                    "desc":"当选项总数量过多时候会根据这里设置的数量进行隐藏并且显示出“更多”的按钮",
+                    "default": 8
+                },{
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "全部选项",
+                    "bindKey": "showAllOption",
+                    "desc":"是否默认显示全部的选项",
+                    "default": true
+                },{
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "全部名称",
+                    "bindKey": "allOptionName",
+                    "desc":"全部选项的显示名称，可以更改显示的名字",
+                    "default": "全部"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "table",
+                    "text": "右上角操作按钮",
+                    "bindKey": "buttonOptionList",
+                    "tabText": "按钮[index]",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "按钮标识",
+                            "desc":"主要用于标识按钮，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者菜单的英文、拼音作为标识",
+                            "bindKey": "key"
+                        },{
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "按钮名称",
+                            "bindKey": "buttonText",
+                            "default": ""
+                        },{
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "按钮方式",
+                            "bindKey": "type",
+                            "desc":"设置菜单类型将会隐藏再更多的菜单中，以菜单的类型出现，设置为按钮类型将会直接显示在右上角卡片中，以按钮的方式出现，注意按钮不能过多，否则影响使用",
+                            "dictionary": [
+                                {
+                                    "label": "菜单类型",
+                                    "value": "menu"
+                                },
+                                {
+                                    "label": "按钮类型",
+                                    "value": "button"
+                                }
+                            ],
+                            "default": "menu"
+                        },{
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "按钮类型",
+                            "bindKey": "buttoType",
+                            "display":"@[type=='button']",
+                            "dictionary": [
+                                {
+                                    "label": "主要",
+                                    "value": "primary"
+                                },
+                                {
+                                    "label": "次要",
+                                    "value": "default"
+                                },
+                                {
+                                    "label": "虚线",
+                                    "value": "dashed"
+                                },
+                                {
+                                    "label": "危险",
+                                    "value": "danger"
+                                },
+                                {
+                                    "label": "链接",
+                                    "value": "link"
+                                }
+                            ],
+                            "default": "default"
+                        },{
+                            "type": "iconSelect",
+                            "layoutType": "inline",
+                            "text": "显示图标",
+                            "bindKey": "iconSvg",
+                            "desc":"菜单显示名称前面的图标显示",
+                            "placeholder": "请选择"
+                        },
+                        {
+                            "type": "font",
+                            "layoutType": "block",
+                            "text": "图标字体设置",
+                            "bindKey": "iconSvgFont"
+                        },
+                        {
+                            "type": "font",
+                            "layoutType": "block",
+                            "text": "菜单文字字体",
+                            "bindKey": "buttonTextFont"
+                        },{
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "显示方式",
+                            "bindKey": "buttonShowType",
+                            "desc":"可以根据切换显示方式对每个按钮进行更高级的控制，更多使用方法请点击参考更详细的说明",
+                            "dictionary": [
+                                {
+                                    "label": "始终显示",
+                                    "value": "default"
+                                },
+                                {
+                                    "label": "自定义函数显示",
+                                    "value": "custom"
+                                }
+                            ],
+                            "default": "default"
+                        },{
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "自定义函数依据显示",
+                            "bindKey": "buttonDataFunction",
+                            "display":"@[buttonShowType=='custom']",
+                            "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,configObject:当前配置项}",
+                            "multiple": false
+                        },{
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "事件自定义函数",
+                            "bindKey": "buttonCustomFunction",
+                            "desc": "当点击按钮的时候会调用此函数，接收参数格式为{customParam:自定义的,configObject:当前按钮配置项}",
+                            "multiple": true
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "联动组件",
+                    "desc": "当选择的数据有变动会联动这里选择的组件，把当前选中的对象传递给这些组件",
+                    "children": [
+                        {
+                            "type": "pageModuleSelect",
+                            "layoutType": "block",
+                            "text": "已选条件变化组件范围",
+                            "desc": "当前已选条件变化时需要联动其他组件需求值（比如列表检索条件的数据等）的组件范围",
+                            "bindKey": "linkageDemandPageModule",
+                            "multiple": true
+                        }
+                    ]
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "已选条件变化自定义函数",
+                    "bindKey": "changeOptionFunction",
+                    "desc": "已选条件变化的时候会调用设置的自定义函数，接收参数为格式为{...自定义的}",
+                    "multiple": true
+                }
+            ]
+        }
+    ]
+}

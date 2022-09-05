@@ -1306,6 +1306,40 @@
                             "placeholder": "示例：value"
                         }
                     ]
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "异步加载",
+                    "desc":"开启后则将会使用异步加载，在配置异步加载之前请先配置首次加载的数据接口，开启后将强制把数据格式变为简单格式，并且返回结构必须带isLeaf",
+                    "bindKey": "openSyncOption",
+                    "default": false
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "接口地址",
+                    "bindKey": "asyncInterfaceUrl",
+                    "default": "",
+                    "display": "@[openSyncOption]"
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "请求参数格式化自定义函数",
+                    "bindKey": "requestParamFormatFunction",
+                    "desc": "对要请求的参数进行格式化处理，接收参数{...自定义,treeNode：当前节点信息,param:{这里才是最终要请求的参数，给此对象赋值即可}}",
+                    "display": "@[openSyncOption]",
+                    "multiple": false
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "显示结果",
+                    "bindKey": "asyncResultValField",
+                    "desc": "根据结果值的数据格式指定结果集的字段，比如结果值为{data:[{text:'显示值',value:'选项值'}]}，则这里应该填写data，如果不填写则直接使用结果值",
+                    "default": "",
+                    "display": "@[openSyncOption]"
                 }
             ]
         },

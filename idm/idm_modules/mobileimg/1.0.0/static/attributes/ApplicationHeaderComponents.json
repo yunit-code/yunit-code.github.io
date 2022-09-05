@@ -1,0 +1,84 @@
+{
+    "classId": "idm.componet.mobileimg.ApplicationHeaderComponents",
+    "comName": "头部组件",
+    "className": "ApplicationHeaderComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "uploadImage",
+            "layoutType": "inline",
+            "text": "底图地址",
+            "bindKey": "bgImgUrl",
+            "placeholder": "可输入图片地址或直接上传"
+        },
+        {
+            "type": "uploadImage",
+            "layoutType": "inline",
+            "text": "LOGO地址",
+            "bindKey": "logoImgUrl",
+            "placeholder": "可输入图片地址或直接上传"
+        },
+        {
+            "type": "select",
+            "layoutType": "block",
+            "text": "文字模式",
+            "bindKey": "fontType",
+            "placeholder": "请选择",
+            "dictionary": [
+                {
+                    "label": "固定文字",
+                    "value": "固定文字"
+                },
+                {
+                    "label": "变量方式",
+                    "value": "变量方式"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "layoutType": "block",
+            "text": "文字内容",
+            "bindKey": "fontContent",
+            "desc": "可直接输入要显示的文字内容",
+            "display": "@[fontType=='固定文字']"
+        },
+        {
+            "type": "input",
+            "layoutType": "block",
+            "text": "变量内容",
+            "bindKey": "fontExpression",
+            "desc": "可输入变量方式，例如：[username]会替换成用户名，[deptname]会替换成用户部门名称",
+            "display": "@[fontType=='变量方式']"
+        },
+        {
+            "type": "table",
+            "text": "快捷项配置",
+            "bindKey": "quickOptionList",
+            "tabText": "选项[index]",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "block",
+                    "text": "中文名称",
+                    "bindKey": "title"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "block",
+                    "text": "Action",
+                    "bindKey": "action",
+                    "desc": ""
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "参数",
+                    "bindKey": "param",
+                    "desc": "例如：{moduleid:''}"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,958 @@
+{
+    "classId": "idm.componet.mobilewechat.applicationcenter",
+    "comName": "应用中心",
+    "className": "IApplicationCenter",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示标题",
+                    "bindKey": "showTitle",
+                    "default": true
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "标题",
+                    "bindKey": "title",
+                    "desc": "组件标题",
+                    "default": "应用中心",
+                    "display": "@[showTitle]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示图标",
+                    "bindKey": "showTitleIcon",
+                    "default": true,
+                    "display": "@[showTitle]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "左右滑动",
+                    "desc":"设置是否使用左右可滑动模式，如果开启了左右滑动模式则只会在一行内显示图标",
+                    "bindKey": "isSlide",
+                    "default": false
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "block",
+                    "text": "允许自定义",
+                    "desc":"选项打开的时候，允许用户可以自己配置选择组件展示哪些应用",
+                    "bindKey": "isMyApplication",
+                    "default": false,
+                    "display": "@[showTitle]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示角标",
+                    "desc":"设置是否显示角标提示，如果配置了角标服务接口且有数量的时候会显示红色背景的数量角标",
+                    "bindKey": "showTodoNumber",
+                    "default": false
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "展示列数",
+                    "bindKey": "showColumn",
+                    "default": 5,
+                    "display": "@[!isSlide]"
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "最多行数",
+                    "bindKey": "showRows",
+                    "default": 2,
+                    "display": "@[!isSlide]"
+                },
+                {
+                    "type": "table",
+                    "text": "应用配置",
+                    "bindKey": "applicationList",
+                    "tabText": "应用[index]",
+                    "openGroup": true,
+                    "children": [
+                        {
+                            "type": "treeSelect",
+                            "layoutType": "inline",
+                            "text": "选择应用",
+                            "bindKey": "selectApplication",
+                            "dataSourceUrl": "/ctrl/tencentApp/getAllApps",
+                            "default": "",
+                            "openGroup": true
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "应用名称",
+                            "bindKey": "applicationName",
+                            "default": ""
+                        },
+                        {
+                            "type": "switch",
+                            "layoutType": "inline",
+                            "text": "权限过滤",
+                            "desc":"设置应用是否开启权限过滤功能，如果开启，则会根据用户是否有权限来展示应用",
+                            "bindKey": "applicationOpenValid",
+                            "default": true
+                        },
+                        {
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "跳转方式",
+                            "bindKey": "applicationJumpType",
+                            "desc": "设置组件显示风格",
+                            "dictionary": [
+                                {
+                                    "label": "智能跳转",
+                                    "value": "_auto"
+                                    
+                                },
+                                {
+                                    "label": "当前页跳转",
+                                    "value": "_self"
+                                },
+                                {
+                                    "label": "新窗口打开",
+                                    "value": "_blank"
+                                }
+                            ],
+                            "default": "_auto"
+                        },
+                        {
+                            "type": "switch",
+                            "layoutType": "inline",
+                            "text": "显示角标",
+                            "desc":"设置应用待办角标是否显示",
+                            "bindKey": "showTodoNumber",
+                            "default": false
+                        },
+                        {
+                            "type": "switch",
+                            "layoutType": "block",
+                            "text": "是否自定义",
+                            "desc":"当选项打开的时候，允许自定义应用的图标、应用的链接。",
+                            "bindKey": "isUserEditable",
+                            "default": false
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "应用图标",
+                            "bindKey": "applicationIconUrl",
+                            "default": "",
+                            "ctrlAttrObject": {
+                                "width": "40px",
+                                "height": "40px",
+                                "maxSize": 2097152
+                            },
+                            "dictionary": [
+                                "/resource/idm/img/6.png",
+                                "/resource/idm/img/12.png",
+                                "/resource/idm/img/14.png",
+                                "/resource/idm/img/19.png",
+                                "/resource/idm/img/bj.png",
+                                "/resource/idm/img/dywj.png",
+                                "/resource/idm/img/rcap.png",
+                                "/resource/idm/img/wdzx.png",
+                                "/resource/idm/img/wjjh.png",
+                                "/resource/idm/img/yqfk.png",
+                                "/resource/idm/img/zbzs.png",
+                                "/resource/idm/img/zxzys.png",
+                                "/resource/idm/img/zyzx.png",
+                                "/resource/idm/img/ykg1.png",
+                                "/resource/idm/img/ykg2.png",
+                                "/resource/idm/img/ykg3.png",
+                                "/resource/idm/img/ykg4.png",
+                                "/resource/idm/img/ykg5.png",
+                                "/resource/idm/img/ykg6.png",
+                                "/resource/idm/img/ykg7.png",
+                                "/resource/idm/img/ykg8.png",
+                                "/resource/idm/img/ykg9.png",
+                                "/resource/idm/img/ykg10.png"
+                            ],
+                            "display": "@[isUserEditable]"
+
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "应用链接",
+                            "bindKey": "applicationUrl",
+                            "default": "",
+                            "display": "@[isUserEditable]"
+                        }
+                    ],
+                    "display": "@[!isMyApplication]"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "标题容器样式",
+            "desc": "点击？查看标题容器样式设置用法指南",
+            "helpUrl": "",
+            "display": "@[showTitle]",
+            "children": [
+                {
+                    "type": "radio",
+                    "styleType": "radio",
+                    "layoutType": "inline",
+                    "text": "图标位置",
+                    "desc": "设置组件标题图标位置",
+                    "bindKey": "titleIconPosition",
+                    "display": "@[showTitleIcon]",
+                    "dictionary": [
+                        {
+                            "label": "左边",
+                            "value": "left"
+                        },
+                        {
+                            "label": "右边",
+                            "value": "right"
+                        }
+                    ],
+                    "default": "right"
+                },
+                {
+                    "type": "group",
+                    "text": "标题图标设置",
+                    "display": "@[showTitleIcon]",
+                    "children": [
+                        {
+                            "type": "iconSelect",
+                            "layoutType": "inline",
+                            "text": "标题图标",
+                            "bindKey": "titleIconClass",
+                            "default": ""
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "图标颜色",
+                            "bindKey": "titleIconFontColor",
+                            "default": ""
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "图标大小",
+                            "bindKey": "titleIconFontSize",
+                            "default": 14
+                        }
+                    ]
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "标题字体",
+                    "bindKey": "titleFont",
+                    "default": {
+                        "fontColors": {
+                            "hex": "#333333",
+                            "hex8": "#333333FF"
+                        },
+                        "fontSize": 16,
+                        "fontSizeUnit": "px",
+                        "fontWeight": "600"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "外层容器样式",
+            "desc": "点击？查看外层容器样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "box"
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "width",
+                            "width": "60px",
+                            "default": "auto"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "height",
+                            "width": "60px",
+                            "default": "auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "背景色",
+                    "bindKey": "bgColor",
+                    "placeholder": "请选择颜色",
+                    "default": {}
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "border"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "内层容器样式",
+            "desc": "点击？查看内层容器样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "图片宽度",
+                    "desc": "填写应用图片的宽度，单位px",
+                    "bindKey": "applicationImgWidth",
+                    "default": 40
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "字体",
+                    "bindKey": "font",
+                    "default": {
+                        "fontColors": {
+                            "hex": "333333",
+                            "hex8": "#333333FF"
+                        },
+                        "fontSize": 12,
+                        "fontSizeUnit": "px"
+                    }
+                },
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "boxInner"
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "widthInner",
+                            "width": "60px",
+                            "default": "auto"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "heightInner",
+                            "width": "60px",
+                            "default": "auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "背景色",
+                    "bindKey": "bgColorInner",
+                    "placeholder": "请选择颜色",
+                    "default": {}
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "borderInner"
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "text": "主题设置",
+            "desc": "点击？查看主题设置用法指南",
+            "bindKey": "themeList",
+            "tabText": "主题[index]",
+            "default":[
+                {
+                    "key":"blue",
+                    "mainColor":{
+                        "hex": "#0073CA",
+                        "hex8": "#0073CAFF"
+                    }
+                },
+                {
+                    "key":"red",
+                    "mainColor":{
+                        "hex": "#E21A1A",
+                        "hex8": "#E21A1AFF"
+                    }
+                },
+                {
+                    "key":"green",
+                    "mainColor":{
+                        "hex": "#0EAF64",
+                        "hex8": "#0EAF64FF"
+                    }
+                }
+            ],
+            "children": [
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "主题标识",
+                    "bindKey": "key",
+                    "desc":"用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里选择blue",
+                    "default":"",
+                    "placeholder":"例如：blue",
+                    "ctrlAttrObject": {
+                        "mode": "combobox"
+                    },
+                    "dictionary": [
+                        {
+                            "label": "blue",
+                            "value": "blue"
+                        },
+                        {
+                            "label": "red",
+                            "value": "red"
+                        },
+                        {
+                            "label": "green",
+                            "value": "green"
+                        }
+                    ]
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "主要颜色",
+                    "bindKey": "mainColor",
+                    "desc":"主题的主要颜色",
+                    "placeholder": "请选择颜色",
+                    "display":"@[key]"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "group",
+                    "text": "适配设置",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "基准值",
+                            "desc": "此属性用于标记当前组件在显示效果最完美情况下的宽度大小（px），例如：此组件显示效果最佳宽度为414px，则此处设置为414即可，如果此组件最佳效果为当前配置的屏幕宽（px）的一半则只需要除以2即可。",
+                            "bindKey": "adaptationBase",
+                            "default": 414
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "适配比例",
+                            "desc": "与基准值配合使用，如果在实际预览屏幕宽为基准值的两倍，则此组件所有可适配的内容都会基于此处设置的适配比例相对应的进行放大缩小，例如此处设置1.2，则会相对应的放大至1.2倍",
+                            "bindKey": "adaptationPercent",
+                            "default": "1.2"
+                        }
+                    ]
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "角标字段",
+                    "bindKey": "dataFiled",
+                    "desc": "应用显示角标选项打开的时候，根据应用右上角角标接口返回数据格式指定结果集的字段，若它的值为{data:{count:5}}，则这里应该填写count",
+                    "default": "count",
+                    "placeholder": "示例:count"
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "刷新KEY",
+                    "bindKey": "messageRefreshKey",
+                    "desc": "根据组件接收到的消息KEY来刷新数据，可选择多个",
+                    "default": "",
+                    "placeholder": "请选择刷新KEY",
+                    "multiple": true,
+                    "ctrlAttrObject": {
+                        "mode": "tags"
+                    },
+                    "dictionary": [
+                        {
+                            "label": "info",
+                            "value": "info"
+                        },
+                        {
+                            "label": "inbox",
+                            "value": "inbox"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "应用管理配置",
+            "desc": "当显示更多设置打开时，用于应用管理组件配置",
+            "children": [
+                {
+                    "type": "group",
+                    "text": "标题容器样式",
+                    "desc": "点击？查看样式设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "font",
+                            "layoutType": "block",
+                            "text": "字体",
+                            "bindKey": "titleFontManage",
+                            "default": {
+                                "fontColors": {
+                                    "hex": "#333333",
+                                    "hex8": "#333333FF"
+                                },
+                                "fontSize": 16,
+                                "fontSizeUnit": "px",
+                                "fontWeight": "600"
+                            }
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "titleBgColor",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "box",
+                            "layoutType": "block",
+                            "text": "内外边距",
+                            "bindKey": "titleBox"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "内层容器样式",
+                    "desc": "点击？查看样式设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "图片宽度",
+                            "desc": "填写应用图片的宽度，单位px",
+                            "bindKey": "applicationImgWidthManage",
+                            "default": 40
+                        },
+                        {
+                            "type": "font",
+                            "layoutType": "block",
+                            "text": "字体",
+                            "bindKey": "fontManage",
+                            "default": {
+                                "fontColors": {
+                                    "hex": "333333",
+                                    "hex8": "#333333FF"
+                                },
+                                "fontSize": 12,
+                                "fontSizeUnit": "px"
+                            }
+                        },
+                        {
+                            "type": "box",
+                            "layoutType": "block",
+                            "text": "内外边距",
+                            "bindKey": "boxManage"
+                        },
+                        {
+                            "type": "group",
+                            "text": "背景设置",
+                            "desc": "点击？查看背景设置用法指南",
+                            "helpUrl": "",
+                            "children": [
+                                {
+                                    "type": "colorPicker",
+                                    "layoutType": "inline",
+                                    "text": "背景色",
+                                    "bindKey": "bgColorManage",
+                                    "placeholder": "请选择颜色",
+                                    "default": {}
+                                }
+                            ]
+                        },
+                        {
+                            "type": "border",
+                            "layoutType": "block",
+                            "text": "边框",
+                            "bindKey": "borderManage"
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "text": "主题设置",
+                    "desc": "点击？查看主题设置用法指南",
+                    "bindKey": "themeListManage",
+                    "tabText": "主题[index]",
+                    "default":[
+                        {
+                            "key":"blue",
+                            "mainColor":{
+                                "hex": "#0073CA",
+                                "hex8": "#0073CAFF"
+                            }
+                        },
+                        {
+                            "key":"red",
+                            "mainColor":{
+                                "hex": "#E21A1A",
+                                "hex8": "#E21A1AFF"
+                            }
+                        },
+                        {
+                            "key":"green",
+                            "mainColor":{
+                                "hex": "#0EAF64",
+                                "hex8": "#0EAF64FF"
+                            }
+                        }
+                    ],
+                    "children": [
+                        {
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "主题标识",
+                            "bindKey": "key",
+                            "desc":"用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里选择blue",
+                            "default":"",
+                            "placeholder":"例如：blue",
+                            "ctrlAttrObject": {
+                                "mode": "combobox"
+                            },
+                            "dictionary": [
+                                {
+                                    "label": "blue",
+                                    "value": "blue"
+                                },
+                                {
+                                    "label": "red",
+                                    "value": "red"
+                                },
+                                {
+                                    "label": "green",
+                                    "value": "green"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "主要颜色",
+                            "bindKey": "mainColor",
+                            "desc":"主题的主要颜色",
+                            "placeholder": "请选择颜色",
+                            "display":"@[key]"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "高级",
+                    "desc": "点击？查看高级设置用法指南",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "基准值",
+                            "desc": "此属性用于标记当前组件在显示效果最完美情况下的宽度大小（px），例如：此组件显示效果最佳宽度为414px，则此处设置为414即可，如果此组件最佳效果为当前配置的屏幕宽（px）的一半则只需要除以2即可。",
+                            "bindKey": "adaptationBaseManage",
+                            "default": 414
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "适配比例",
+                            "desc": "与基准值配合使用，如果在实际预览屏幕宽为基准值的两倍，则此组件所有可适配的内容都会基于此处设置的适配比例相对应的进行放大缩小，例如此处设置1.2，则会相对应的放大至1.2倍",
+                            "bindKey": "adaptationPercentManage",
+                            "default": "1.2"
+                        }
+                    ]
+                }
+            ],
+            "display": "@[isMyApplication]"
+        },
+        {
+            "type": "group",
+            "text": "应用搜索配置",
+            "desc": "当显示更多设置打开时，用于应用搜索组件配置",
+            "children": [
+                {
+                    "type": "group",
+                    "text": "内层容器样式",
+                    "desc": "点击？查看样式设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "图片宽度",
+                            "desc": "填写应用图片的宽度，单位px",
+                            "bindKey": "applicationImgWidthSearch",
+                            "default": 40
+                        },
+                        {
+                            "type": "font",
+                            "layoutType": "block",
+                            "text": "字体",
+                            "bindKey": "fontSearch",
+                            "default": {
+                                "fontColors": {
+                                    "hex": "#333333",
+                                    "hex8": "#333333FF"
+                                },
+                                "fontSize": 14,
+                                "fontSizeUnit": "px"
+                            }
+                        },
+                        {
+                            "type": "group",
+                            "text": "操作按钮样式",
+                            "children": [
+                                {
+                                    "type": "colorPicker",
+                                    "layoutType": "inline",
+                                    "text": "背景色",
+                                    "bindKey": "bgColorButton",
+                                    "placeholder": "请选择颜色",
+                                    "default": {}
+                                },
+                                {
+                                    "type": "font",
+                                    "layoutType": "block",
+                                    "text": "字体",
+                                    "bindKey": "fontButton",
+                                    "default": {
+                                        "fontColors": {
+                                            "hex": "",
+                                            "hex8": ""
+                                        },
+                                        "fontSize": 12,
+                                        "fontSizeUnit": "px"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "group",
+                            "text": "操作按钮样式(已添加)",
+                            "children": [
+                                {
+                                    "type": "colorPicker",
+                                    "layoutType": "inline",
+                                    "text": "背景色",
+                                    "bindKey": "bgColorButtonDisabled",
+                                    "placeholder": "请选择颜色",
+                                    "default": {}
+                                },
+                                {
+                                    "type": "font",
+                                    "layoutType": "block",
+                                    "text": "文字",
+                                    "bindKey": "fontButtonDisabled",
+                                    "default": {
+                                        "fontColors": {
+                                            "hex": "",
+                                            "hex8": ""
+                                        },
+                                        "fontSize": 12,
+                                        "fontSizeUnit": "px"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "box",
+                            "layoutType": "block",
+                            "text": "内外边距",
+                            "bindKey": "boxSearch"
+                        },
+                        {
+                            "type": "inlineGroup",
+                            "text": "宽高",
+                            "children": [
+                                {
+                                    "type": "input",
+                                    "layoutType": "block",
+                                    "text": "宽",
+                                    "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                                    "bindKey": "widthSearch",
+                                    "width": "60px",
+                                    "default": "auto"
+                                },
+                                {
+                                    "type": "input",
+                                    "layoutType": "block",
+                                    "text": "高",
+                                    "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                                    "bindKey": "heightSearch",
+                                    "width": "60px",
+                                    "default": "auto"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColorSearch",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "border",
+                            "layoutType": "block",
+                            "text": "边框",
+                            "bindKey": "borderSearch"
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "text": "主题设置",
+                    "desc": "点击？查看主题设置用法指南",
+                    "bindKey": "themeListSearch",
+                    "tabText": "主题[index]",
+                    "default":[
+                        {
+                            "key":"blue",
+                            "mainColor":{
+                                "hex": "#0073CA",
+                                "hex8": "#0073CAFF"
+                            }
+                        },
+                        {
+                            "key":"red",
+                            "mainColor":{
+                                "hex": "#E21A1A",
+                                "hex8": "#E21A1AFF"
+                            }
+                        },
+                        {
+                            "key":"green",
+                            "mainColor":{
+                                "hex": "#0EAF64",
+                                "hex8": "#0EAF64FF"
+                            }
+                        }
+                    ],
+                    "children": [
+                        {
+                            "type": "select",
+                            "layoutType": "inline",
+                            "text": "主题标识",
+                            "bindKey": "key",
+                            "desc":"用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里选择blue",
+                            "default":"",
+                            "placeholder":"例如：blue",
+                            "ctrlAttrObject": {
+                                "mode": "combobox"
+                            },
+                            "dictionary": [
+                                {
+                                    "label": "blue",
+                                    "value": "blue"
+                                },
+                                {
+                                    "label": "red",
+                                    "value": "red"
+                                },
+                                {
+                                    "label": "green",
+                                    "value": "green"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "主要颜色",
+                            "bindKey": "mainColor",
+                            "desc":"主题的主要颜色",
+                            "placeholder": "请选择颜色",
+                            "display":"@[key]"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "高级",
+                    "desc": "点击？查看高级设置用法指南",
+                    "children": [
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "基准值",
+                            "desc": "此属性用于标记当前组件在显示效果最完美情况下的宽度大小（px），例如：此组件显示效果最佳宽度为414px，则此处设置为414即可，如果此组件最佳效果为当前配置的屏幕宽（px）的一半则只需要除以2即可。",
+                            "bindKey": "adaptationBaseSearch",
+                            "default": 414
+                        },
+                        {
+                            "type": "inputNumber",
+                            "layoutType": "inline",
+                            "text": "适配比例",
+                            "desc": "与基准值配合使用，如果在实际预览屏幕宽为基准值的两倍，则此组件所有可适配的内容都会基于此处设置的适配比例相对应的进行放大缩小，例如此处设置1.2，则会相对应的放大至1.2倍",
+                            "bindKey": "adaptationPercentSearch",
+                            "default": "1.2"
+                        }
+                    ]
+                }
+            ],
+            "display": "@[isMyApplication]"
+        }
+    ]
+}

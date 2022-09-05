@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.MenuComponents",
+    "comName": "应用菜单",
+    "className": "MenuComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

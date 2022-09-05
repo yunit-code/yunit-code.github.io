@@ -73,6 +73,13 @@
             "className": "ITreeSelect",
             "comType": "common",
             "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.forms.itreetransferselect",
+            "comName": "树选择",
+            "className": "ITreeTransferSelect",
+            "comType": "common",
+            "comLangue": "vue"
         }
     ]
 }

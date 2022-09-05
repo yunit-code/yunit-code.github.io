@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.MeetingCenterComponents",
+    "comName": "会议中心",
+    "className": "MeetingCenterComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

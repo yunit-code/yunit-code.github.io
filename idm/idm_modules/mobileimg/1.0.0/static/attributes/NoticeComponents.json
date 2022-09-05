@@ -1,0 +1,30 @@
+{
+    "classId": "idm.componet.mobileimg.NoticeComponents",
+    "comName": "通知公告",
+    "className": "NoticeComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "select",
+            "layoutType": "block",
+            "text": "显示模式",
+            "bindKey": "showType",
+            "placeholder": "请选择",
+            "dictionary": [
+                {
+                    "label": "一条轮播式",
+                    "value": "一条轮播式"
+                },
+                {
+                    "label": "二条轮播式",
+                    "value": "二条轮播式"
+                },
+                {
+                    "label": "固定式",
+                    "value": "固定式"
+                }
+            ]
+        }
+    ]
+}

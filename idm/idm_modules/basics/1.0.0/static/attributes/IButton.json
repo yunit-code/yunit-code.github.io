@@ -116,6 +116,13 @@
                         }
                     ],
                     "default": "primary"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "加载状态",
+                    "desc":"开启将启用点击出现loading状态，需要在自定义方法中关闭才行（ctx._this.isLoading=false）",
+                    "bindKey": "openLoading"
                 }
             ]
         },
@@ -931,7 +938,7 @@
                     "layoutType": "block",
                     "text": "点击时动作",
                     "bindKey": "clickFunction",
-                    "desc": "点击的时候会调用设置的自定义函数，接收参数为格式为{...自定义的}",
+                    "desc": "点击的时候会调用设置的自定义函数，接收参数为格式为{customParam:自定义的}",
                     "multiple": true
                 },
                 {

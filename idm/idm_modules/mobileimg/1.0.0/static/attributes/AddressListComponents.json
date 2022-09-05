@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.AddressListComponents",
+    "comName": "通讯录",
+    "className": "AddressListComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

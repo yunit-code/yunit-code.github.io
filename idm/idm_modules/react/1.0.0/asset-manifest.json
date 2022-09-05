@@ -1,0 +1,16 @@
+{
+  "files": {
+    "index.css": "/static/css/index.css",
+    "index.js": "/static/js/index.js",
+    "chunk-vendors.js": "/static/js/chunk-vendors.js",
+    "index.html": "/index.html",
+    "index.css.map": "/static/css/index.css.map",
+    "index.js.map": "/static/js/index.js.map",
+    "chunk-vendors.js.map": "/static/js/chunk-vendors.js.map"
+  },
+  "entrypoints": [
+    "static/js/chunk-vendors.js",
+    "static/css/index.css",
+    "static/js/index.js"
+  ]
+}

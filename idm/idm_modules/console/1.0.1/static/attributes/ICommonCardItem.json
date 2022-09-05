@@ -1,0 +1,1039 @@
+{
+  "classId": "idm.componet.console.icommoncarditem",
+  "comName": "通用Item卡片",
+  "className": "ICommonCardItem",
+  "comType": "common",
+  "comLangue": "vue",
+  "compositeAttr": [
+    {
+      "type": "input",
+      "layoutType": "inline",
+      "text": "唯一标识",
+      "bindKey": "ctrlId",
+      "disabled": true,
+      "default": "@[packageid]",
+      "desc": "",
+      "helpUrl": ""
+    },
+    {
+      "type": "group",
+      "text": "基本属性",
+      "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+      "children": [
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "为空描述",
+          "bindKey": "emptyDescription",
+          "desc": "内容为空的时候描述文字提示",
+          "default": "暂无数据",
+          "placeholder": "示例：暂无数据"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "显示当页",
+          "bindKey": "showCurrentPage",
+          "desc": "设置是否只显示当前一页的数据，设置为否则是保留之前加载的数据",
+          "default": true
+        },
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "显示字段",
+          "bindKey": "dataFiled",
+          "desc": "根据其他组件传输的数据格式指定结果集的字段，比如传输的数据格式为{data:{rows:[{}]}}，则这里应该填写data.rows",
+          "default": "",
+          "placeholder": "示例：data.rows 或者 [0].data[0].rows"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "图片容器",
+          "bindKey": "showImageBox",
+          "desc": "设置是否显示卡片标题上面的图片容器",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "子标题",
+          "bindKey": "showSubTitle",
+          "desc": "设置是否显示卡片标题下面的子标题",
+          "default": false
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "子标题高",
+          "bindKey": "subTitleHeight",
+          "maxLength": 300,
+          "minLength": 0,
+          "desc": "子标题占用的高度，即使内容过高也不会自动撑高，内容过少也不会变矮，占高是固定的px值",
+          "default": 42,
+          "display": "@[showSubTitle]"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "操作菜单",
+          "bindKey": "showActionMenu",
+          "desc": "设置是否显示卡片右下角的操作按钮",
+          "default": true
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "卡片选择",
+          "bindKey": "cardIsSelect",
+          "desc": "设置当前卡片是否为选择状态",
+          "default": false
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "初始状态",
+          "bindKey": "cardInitSelected",
+          "desc": "设置当前卡片在加载数据的时候是否应用于数据本身的初始选择状态",
+          "default": false
+        },
+        {
+          "type": "inputNumber",
+          "layoutType": "inline",
+          "text": "最多可选",
+          "bindKey": "maxSelectedNum",
+          "desc": "设置最多能选中的卡片数量，只在大于0时做控制。其他组件传值不受此项影响",
+          "default": 0,
+          "minLength": 0,
+          "display": "@[cardIsSelect]"
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "超选提示",
+          "bindKey": "maxSelectedTip",
+          "desc": "当超出上述设置的最多可选数量时候是否给予提示，如果不提示则会自动移除最开始的一个并且往后追加一条",
+          "default": true,
+          "display": "@[cardIsSelect&&maxSelectedNum>0]"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "超出提示",
+          "bindKey": "selectedOverTips",
+          "desc": "设置当选择数超出时，提示信息的内容",
+          "default": "当前已选中项过多！",
+          "display": "@[cardIsSelect&&maxSelectedNum>0&&maxSelectedTip]"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "数据来源",
+      "desc": "提供设置组件要展示的数据来自哪里",
+      "children": [
+        {
+            "type": "select",
+            "layoutType": "inline",
+            "text": "动态内容",
+            "bindKey": "dataSourceType",
+            "desc": "通过这些方式去动态获取结果值显示成文本内容",
+            "dictionary": [
+                {
+                  "label": "接收联动消息",
+                  "value": "receiveMessage"
+                },
+                {
+                    "label": "自定义接口",
+                    "value": "customInterface"
+                },
+                {
+                    "label": "页面统一接口",
+                    "value": "pageCommonInterface"
+                },
+                {
+                    "label": "自定义函数",
+                    "value": "customFunction"
+                }
+            ],
+            "default": "receiveMessage"
+        },
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "接口地址",
+            "bindKey": "customInterfaceUrl",
+            "desc": "用于获取数据源的接口地址，请按照统一标准的返回格式返回文本数据，格式如下：{\"code\":\"200\",\"data\":\"\",...}",
+            "display": "@[dataSourceType=='customInterface']"
+        },
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "结果集名",
+            "bindKey": "dataName",
+            "desc": "页面接口设定的结果集名称，位置为：页面设置》高级设置》页面接口",
+            "default": "",
+            "placeholder": "示例：resultData",
+            "display": "@[dataSourceType=='pageCommonInterface']"
+        },
+        {
+            "type": "actionSelect",
+            "layoutType": "block",
+            "text": "自定义函数",
+            "bindKey": "customFunction",
+            "desc": "获取动态内容、自定义接口回调、页面统一接口回调的时候会调用此方法，返回数据格式为字符串，接收参数：{...自定义,interfaceData:自定义接口或页面统一接口的返回结果,moduleObject:组件对象,receiveData:接收到的消息数据}",
+            "multiple": false
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "样式设置",
+      "desc": "点击？查看样式设置用法指南",
+      "helpUrl": "",
+      "children": [
+        {
+          "type": "box",
+          "layoutType": "block",
+          "text": "内外边距",
+          "bindKey": "box"
+        },
+        {
+          "type": "inlineGroup",
+          "text": "宽高",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "卡片宽",
+              "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+              "bindKey": "width",
+              "width": "60px",
+              "default": "100%"
+            },
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "图片高",
+              "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+              "bindKey": "height",
+              "width": "60px",
+              "default": "210px"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "背景设置",
+          "desc": "点击？查看背景设置用法指南",
+          "helpUrl": "",
+          "children": [
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "背景色",
+              "bindKey": "bgColor",
+              "placeholder": "请选择颜色",
+              "default": {}
+            },
+            {
+              "type": "uploadImage",
+              "layoutType": "inline",
+              "text": "背景图片",
+              "bindKey": "bgImgUrl",
+              "placeholder": "可输入图片地址或直接上传"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "横向偏移",
+              "bindKey": "positionX",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "纵向偏移",
+              "bindKey": "positionY",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "radio",
+              "layoutType": "block",
+              "text": "背景大小",
+              "bindKey": "bgSize",
+              "dictionary": [
+                {
+                  "label": "裁切显示",
+                  "value": "cover"
+                },
+                {
+                  "label": "完全显示",
+                  "value": "contain"
+                },
+                {
+                  "label": "自定义",
+                  "value": "custom"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "宽度",
+              "bindKey": "bgSizeWidth",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgSize=='custom']"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "高度",
+              "bindKey": "bgSizeHeight",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ],
+              "display": "@[bgSize=='custom']"
+            },
+            {
+              "type": "radio",
+              "layoutType": "block",
+              "text": "平铺模式",
+              "bindKey": "bgRepeat",
+              "dictionary": [
+                {
+                  "label": "双向重复",
+                  "value": "repeat"
+                },
+                {
+                  "label": "水平重复",
+                  "value": "repeat-x"
+                },
+                {
+                  "label": "垂直重复",
+                  "value": "repeat-y"
+                },
+                {
+                  "label": "不重复",
+                  "value": "no-repeat"
+                },
+                {
+                  "label": "继承",
+                  "value": "inherit"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            },
+            {
+              "type": "radio",
+              "layoutType": "inline",
+              "text": "背景模式",
+              "bindKey": "bgAttachment",
+              "dictionary": [
+                {
+                  "label": "固定",
+                  "value": "fixed"
+                },
+                {
+                  "label": "滚动",
+                  "value": "scroll"
+                },
+                {
+                  "label": "继承",
+                  "value": "inherit"
+                }
+              ],
+              "display": "@[bgImgUrl]"
+            }
+          ]
+        },
+        {
+          "type": "border",
+          "layoutType": "block",
+          "text": "边框",
+          "bindKey": "border"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "文字",
+          "bindKey": "font"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "子标题文字",
+          "bindKey": "subFont",
+          "display": "@[showSubTitle]"
+        },
+        {
+          "type": "colorPicker",
+          "layoutType": "inline",
+          "text": "悬浮背景",
+          "bindKey": "hoverBgColor",
+          "placeholder": "请选择颜色",
+          "default": {}
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "模板字段配置",
+      "children": [
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "唯一标识",
+          "desc": "设置每个ITEM数据对象中的唯一标识字段名称",
+          "bindKey": "keyDataFiled",
+          "placeholder": "示例：id",
+          "default":"id"
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "选中标识",
+          "desc": "设置每个ITEM数据对象中的作为选中标识的字段",
+          "bindKey": "checkDataFiled",
+          "placeholder": "示例：idmItemChecked",
+          "default":"idmItemChecked"
+        },
+        {
+          "type": "group",
+          "text": "标题字段配置",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "设置每个ITEM数据对象中的要显示的字段名称",
+              "bindKey": "titleDataFiled",
+              "placeholder": "示例：title"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "titleCustomShowFunction",
+              "desc": "如果需要更加灵活自定义显示内容(支持html)，可以使用此设置自定义函数实现，接收参数为格式为{customParam:自定义的,itemObject:整条数据对象}",
+              "multiple": false
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "子标题字段配置",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "设置每个ITEM数据对象中的要显示的字段名称",
+              "bindKey": "subtitleDataFiled",
+              "placeholder": "示例：title"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "subtitleCustomShowFunction",
+              "desc": "如果需要更加灵活自定义显示内容(支持html)，可以使用此设置自定义函数实现，接收参数为格式为{customParam:自定义的,itemObject:整条数据对象}",
+              "multiple": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "已选结果联动",
+      "desc": "点击？查看结果联动设置用法指南",
+      "display": "@[cardIsSelect]",
+      "children": [
+        {
+          "type": "radio",
+          "layoutType": "inline",
+          "text": "联动响应",
+          "bindKey": "resType",
+          "desc": "选择接收其他组件传值后要执行的后续动作，也就是选择接收到的值的作用是什么，处理完后返回控件所需要的结果",
+          "dictionary": [
+            {
+              "label": "内置处理方式",
+              "value": "none"
+            },
+            {
+              "label": "自定义函数",
+              "value": "customFun"
+            }
+          ],
+          "default": "none",
+          "styleType": "radio"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "自定义函数",
+          "bindKey": "resFunction",
+          "desc": "其他组件传值后会把值传递到此方法并且调用",
+          "display": "@[resType=='customFun']",
+          "multiple": false
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "高级",
+      "desc": "点击？查看高级设置用法指南",
+      "children": [
+        {
+          "type": "table",
+          "text": "右下角操作菜单",
+          "bindKey": "buttonOptionList",
+          "tabText": "菜单[index]",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "菜单标识",
+              "desc": "主要用于标识菜单，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者菜单的英文、拼音作为标识",
+              "bindKey": "key"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "菜单名称",
+              "bindKey": "buttonText",
+              "default": ""
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "菜单方式",
+              "bindKey": "type",
+              "desc": "设置菜单类型将会隐藏再更多的菜单中，以菜单的类型出现，设置为按钮类型将会直接显示在右下角卡片中，以按钮的方式出现，注意按钮不能过多，否则影响使用",
+              "dictionary": [
+                {
+                  "label": "菜单类型",
+                  "value": "menu"
+                },
+                {
+                  "label": "按钮类型",
+                  "value": "button"
+                }
+              ],
+              "default": "menu"
+            },
+            {
+              "type": "radio",
+              "layoutType": "inline",
+              "text": "按钮类型",
+              "bindKey": "buttoType",
+              "display": "@[type=='button']",
+              "dictionary": [
+                {
+                  "label": "主要",
+                  "value": "primary"
+                },
+                {
+                  "label": "次要",
+                  "value": "default"
+                },
+                {
+                  "label": "虚线",
+                  "value": "dashed"
+                },
+                {
+                  "label": "危险",
+                  "value": "danger"
+                },
+                {
+                  "label": "链接",
+                  "value": "link"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "iconSelect",
+              "layoutType": "inline",
+              "text": "显示图标",
+              "bindKey": "iconSvg",
+              "desc": "菜单显示名称前面的图标显示",
+              "placeholder": "请选择"
+            },
+            {
+              "type": "font",
+              "layoutType": "block",
+              "text": "图标字体设置",
+              "bindKey": "iconSvgFont"
+            },
+            {
+              "type": "font",
+              "layoutType": "block",
+              "text": "菜单文字字体",
+              "bindKey": "buttonTextFont"
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "buttonShowType",
+              "desc": "可以根据切换显示方式对每个按钮进行更高级的控制，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "始终显示",
+                  "value": "default"
+                },
+                {
+                  "label": "数据字段依据显示",
+                  "value": "field"
+                },
+                {
+                  "label": "自定义函数显示",
+                  "value": "custom"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示依据",
+              "desc": "当显示方式为“数据字段依据显示”的时候可以在此处填写表达式，表达式可以使用每行的数据对象，返回结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+              "bindKey": "buttonDataFiled",
+              "display": "@[buttonShowType=='field']",
+              "placeholder": "示例：isShow 或者 [0].isShow"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义函数依据显示",
+              "bindKey": "buttonDataFunction",
+              "display": "@[buttonShowType=='custom']",
+              "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,configObject:当前图标配置项,itemObject:整条数据对象}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "事件类型",
+              "bindKey": "buttonHandleType",
+              "desc": "点击按钮触发的操作类型，可以选择内置的处理函数，也可以使用自定义编写函数",
+              "dictionary": [
+                {
+                  "label": "无事件",
+                  "value": "none"
+                },
+                {
+                  "label": "删除",
+                  "value": "delete"
+                },
+                {
+                  "label": "自定义函数",
+                  "value": "custom"
+                }
+              ],
+              "default": "none"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "事件自定义函数",
+              "bindKey": "buttonCustomFunction",
+              "display": "@[buttonHandleType=='custom']",
+              "desc": "当点击按钮的时候会调用此函数，接收参数格式为{customParam:自定义的,currentKey,configObject:当前按钮配置项,fieldConfigObject:当前字段配置项,itemObject:整条数据对象,callback:处理完成要刷新tab的回调方法，调用并传reloadTabKeys即可刷新指定的tab}",
+              "multiple": true
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "text": "标签显示项",
+          "bindKey": "tagsOptionList",
+          "tabText": "标签[index]",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "标签标识",
+              "desc": "主要用于标识标签，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者标识的英文、拼音作为标识",
+              "bindKey": "key"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "标识文字",
+              "bindKey": "tagText",
+              "default": ""
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "tagTextFunction",
+              "desc": "当标识文字不满足要求的时候会使用此函数来执行自定义返回的结果，接收参数为格式为{customParam:自定义的,configObject:当前页签配置项,itemObject:整条数据对象}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "tagShowType",
+              "desc": "可以根据切换显示方式对每个标签进行更高级的控制，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "始终显示",
+                  "value": "default"
+                },
+                {
+                  "label": "数据字段依据显示",
+                  "value": "field"
+                },
+                {
+                  "label": "自定义函数显示",
+                  "value": "custom"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示依据",
+              "desc": "当显示方式为“数据字段依据显示”的时候可以在此处填写表达式，表达式可以使用每行的数据对象，返回结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+              "bindKey": "tagDataFiled",
+              "display": "@[tagShowType=='field']",
+              "placeholder": "示例：isShow 或者 [0].isShow"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义函数依据显示",
+              "bindKey": "tagDataFunction",
+              "display": "@[tagShowType=='custom']",
+              "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,configObject:当前图标配置项,itemObject:整条数据对象}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "标签颜色",
+              "bindKey": "colorType",
+              "dictionary": [
+                {
+                  "label": "default",
+                  "value": ""
+                },
+                {
+                  "label": "blue",
+                  "value": "blue"
+                },
+                {
+                  "label": "red",
+                  "value": "red"
+                },
+                {
+                  "label": "pink",
+                  "value": "pink"
+                },
+                {
+                  "label": "orange",
+                  "value": "orange"
+                },
+                {
+                  "label": "green",
+                  "value": "green"
+                },
+                {
+                  "label": "cyan",
+                  "value": "cyan"
+                },
+                {
+                  "label": "purple",
+                  "value": "purple"
+                },
+                {
+                  "label": "pink",
+                  "value": "pink"
+                },
+                {
+                  "label": "自定义",
+                  "value": "custom"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "颜色选择",
+              "bindKey": "colorValue",
+              "placeholder": "请选择颜色",
+              "default": {},
+              "display": "@[colorType=='custom']"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "text": "提醒显示项",
+          "bindKey": "alertOptionList",
+          "tabText": "提醒[index]",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "提醒标识",
+              "desc": "主要用于标识提醒，可以在需要使用的时候使用此标识进行判断，建议设置为唯一或者标识的英文、拼音作为标识",
+              "bindKey": "key"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "提醒内容",
+              "bindKey": "alertText",
+              "default": ""
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "alertShowType",
+              "desc": "可以根据切换显示方式对每个提醒进行更高级的控制，更多使用方法请点击参考更详细的说明",
+              "dictionary": [
+                {
+                  "label": "始终显示",
+                  "value": "default"
+                },
+                {
+                  "label": "数据字段依据显示",
+                  "value": "field"
+                },
+                {
+                  "label": "自定义函数显示",
+                  "value": "custom"
+                }
+              ],
+              "default": "default"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示依据",
+              "desc": "当显示方式为“数据字段依据显示”的时候可以在此处填写表达式，表达式可以使用每行的数据对象，返回结果为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+              "bindKey": "alertDataFiled",
+              "display": "@[alertShowType=='field']",
+              "placeholder": "示例：isShow 或者 [0].isShow"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义函数依据显示",
+              "bindKey": "alertDataFunction",
+              "display": "@[alertShowType=='custom']",
+              "desc": "当数据加载的时候会调用此处自定义函数返回的值控制是否显示，接收参数为格式为{customParam:自定义的,configObject:当前图标配置项,itemObject:整条数据对象}",
+              "multiple": false
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "提醒类型",
+              "bindKey": "alertType",
+              "dictionary": [
+                {
+                  "label": "success",
+                  "value": "success"
+                },
+                {
+                  "label": "info",
+                  "value": "info"
+                },
+                {
+                  "label": "warning",
+                  "value": "warning"
+                },
+                {
+                  "label": "error",
+                  "value": "error"
+                }
+              ],
+              "default": "warning"
+            },
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "显示关闭",
+              "bindKey": "showCloseButton",
+              "desc": "设置提醒是否有关闭图标",
+              "default": false
+            },
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "显示图标",
+              "bindKey": "showIcon",
+              "desc": "设置提醒前面是否显示图标",
+              "default": true
+            }
+          ]
+        },
+        {
+          "type": "switch",
+          "layoutType": "inline",
+          "text": "显示预览",
+          "bindKey": "showPreviewButton",
+          "desc": "设置是否显示卡片上的预览按钮",
+          "default": true
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "预览自定义函数",
+          "bindKey": "previewClickFunction",
+          "desc": "预览按钮需要自定义的时候可以使用这里设置自定义函数执行动作，接收参数为格式为{...自定义的,itemData:整条数据对象}",
+          "multiple": true
+        },
+        {
+          "type": "group",
+          "text": "删除动作设置",
+          "desc": "点击？查看删除动作设置用法指南",
+          "children": [
+            {
+              "type": "textarea",
+              "layoutType": "inline",
+              "text": "提示内容",
+              "bindKey": "removeConfirmFont",
+              "desc": "设置执行后续动作前的确认弹出框提示的文字内容，如果为空则不弹出直接执行后续动作",
+              "default": "确定要删除吗？",
+              "placeholder": "示例：确定要删除吗？"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "接口地址",
+              "bindKey": "removeInterfaceUrl",
+              "desc": "点击移除按钮调用的POST接口地址，接收参数为格式为{...自定义的,itemData:整条数据对象}"
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "提交类型",
+              "bindKey": "removeInterfaceContentType",
+              "desc": "提交的数据类型，请根据后端需求进行选择",
+              "dictionary": [
+                {
+                  "label": "默认",
+                  "value": ""
+                },
+                {
+                  "label": "JSON",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "label": "FormData",
+                  "value": "multipart/form-data"
+                }
+              ],
+              "default": ""
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "移除动作后自定义函数",
+              "bindKey": "removeRunLaterFunction",
+              "desc": "移除按钮执行逻辑后会调用设置的自定义函数，接收参数为格式为上面执行提交的返回结果{...自定义的，...返回结果的值}",
+              "multiple": false
+            }
+          ]
+        },
+        {
+          "type": "input",
+          "layoutType": "inline",
+          "text": "图片字段",
+          "desc": "设置每个ITEM数据对象中的要显示的图片对象的字段名称",
+          "bindKey": "imageObjectDataFiled",
+          "placeholder": "示例：modulePreviewImgObject",
+          "default": "modulePreviewImgObject",
+          "display": "@[showImageBox]"
+        },
+        {
+          "type": "actionSelect",
+          "layoutType": "block",
+          "text": "卡片点击事件",
+          "bindKey": "cardClickFunction",
+          "desc": "卡片点击的时候需要自定义的时候可以使用这里设置自定义函数执行动作，接收参数为格式为{...自定义的,itemData:整条数据对象}",
+          "multiple": true
+        },
+        {
+          "type": "group",
+          "text": "选择变动联动组件",
+          "desc": "当选择项的数据有变动会联动这里选择的组件，把当前已选的结果对象传递给这些组件",
+          "display": "@[cardIsSelect]",
+          "children": [
+            {
+              "type": "pageModuleSelect",
+              "layoutType": "block",
+              "text": "联动组件范围",
+              "desc": "当前选择项的数据有变动时需要联动其他组件需求值（比如已选的数据等）的组件范围",
+              "bindKey": "linkageDemandPageModule",
+              "multiple": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

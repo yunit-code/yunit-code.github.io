@@ -1,0 +1,16 @@
+{
+    "classId": "idm.componet.mobileimg.CarouselComponents",
+    "comName": "轮播",
+    "className": "CarouselComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "block",
+            "text": "轮播Key值",
+            "bindKey": "lbKey",
+            "desc": "对应轮播组件模块表单拟稿的一个元数据"
+        }
+    ]
+}

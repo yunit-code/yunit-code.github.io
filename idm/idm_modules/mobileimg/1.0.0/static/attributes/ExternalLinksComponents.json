@@ -1,0 +1,16 @@
+{
+    "classId": "idm.componet.mobileimg.ExternalLinksComponents",
+    "comName": "外部链接",
+    "className": "ExternalLinksComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "textarea",
+            "layoutType": "block",
+            "text": "页面url",
+            "bindKey": "url",
+            "placeholder": "请输入页面地址"
+        }
+    ]
+}

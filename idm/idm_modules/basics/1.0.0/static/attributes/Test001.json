@@ -1,0 +1,24 @@
+{
+    "classId": "idm.componet.packagename.test001",
+    "comName": "示例001",
+    "className": "Test001",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]"
+        },
+        {
+            "type": "textarea",
+            "layoutType": "inline",
+            "text": "文本内容",
+            "bindKey": "fontContent",
+            "default": "文本内容"
+        }
+    ]
+}

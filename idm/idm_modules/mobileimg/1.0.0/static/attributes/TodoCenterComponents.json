@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.TodoCenterComponents",
+    "comName": "待办中心",
+    "className": "TodoCenterComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

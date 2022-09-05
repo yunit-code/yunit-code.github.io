@@ -1,0 +1,48 @@
+{
+    "classId": "idm.componet.mobileimg.CommonListComponents",
+    "comName": "通用列表",
+    "className": "CommonListComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "block",
+            "text": "列表ID",
+            "bindKey": "listId",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input",
+            "layoutType": "block",
+            "text": "模块ID",
+            "bindKey": "moduleID",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "select",
+            "layoutType": "block",
+            "text": "列表类型",
+            "bindKey": "listType",
+            "placeholder": "请选择",
+            "dictionary": [
+                {
+                    "label": "卡片式",
+                    "value": "卡片式"
+                },
+                {
+                    "label": "简易式",
+                    "value": "简易式"
+                }
+            ]
+        },
+        {
+            "type": "textarea",
+            "layoutType": "block",
+            "text": "额外参数",
+            "bindKey": "extendParam",
+            "placeholder": "示例：fileType=gw",
+            "desc": "该参数可以用问号拼接在地址后面的列如：http://localhost:8006/#/commonList?fileType=gw，fileType=gw这个即为额外参数"
+        }
+    ]
+}

@@ -1,0 +1,319 @@
+{
+    "classId": "idm.componet.console.ilayoutcomponentcarditem",
+    "comName": "布局Item卡片",
+    "className": "ILayoutComponentCardItem",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "新建标题",
+                    "bindKey": "newCardTitle",
+                    "desc":"新建卡片的标题",
+                    "default": "新建空白页面"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "为空描述",
+                    "bindKey": "emptyDescription",
+                    "desc": "内容为空的时候描述文字提示",
+                    "default": "暂无数据",
+                    "placeholder": "示例：暂无数据"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示新建",
+                    "bindKey": "showNewItemCard",
+                    "desc":"设置是否显示新建卡片",
+                    "default": true
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "显示当页",
+                    "bindKey": "showCurrentPage",
+                    "desc":"设置是否只显示当前一页的数据，设置为否则是保留之前加载的数据",
+                    "default": true
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "显示字段",
+                    "bindKey": "dataFiled",
+                    "desc": "根据其他组件传输的数据格式指定结果集的字段，比如传输的数据格式为{data:{rows:[{}]}}，则这里应该填写data.rows",
+                    "default": "",
+                    "placeholder": "示例：data.rows 或者 [0].data[0].rows"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "样式设置",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "box"
+                },
+                {
+                    "type": "inlineGroup",
+                    "text": "宽高",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "卡片宽",
+                            "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+                            "bindKey": "width",
+                            "width": "60px",
+                            "default": "285px"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "卡片高",
+                            "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+                            "bindKey": "height",
+                            "width": "60px",
+                            "default": "210px"
+                        }
+                    ]
+                },
+                {
+                    "type": "group",
+                    "text": "背景设置",
+                    "desc": "点击？查看背景设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColor",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "背景图片",
+                            "bindKey": "bgImgUrl",
+                            "placeholder": "可输入图片地址或直接上传"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "横向偏移",
+                            "bindKey": "positionX",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "纵向偏移",
+                            "bindKey": "positionY",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "背景大小",
+                            "bindKey": "bgSize",
+                            "dictionary": [
+                                {
+                                    "label": "裁切显示",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "完全显示",
+                                    "value": "contain"
+                                },
+                                {
+                                    "label": "自定义",
+                                    "value": "custom"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "宽度",
+                            "bindKey": "bgSizeWidth",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "高度",
+                            "bindKey": "bgSizeHeight",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "平铺模式",
+                            "bindKey": "bgRepeat",
+                            "dictionary": [
+                                {
+                                    "label": "双向重复",
+                                    "value": "repeat"
+                                },
+                                {
+                                    "label": "水平重复",
+                                    "value": "repeat-x"
+                                },
+                                {
+                                    "label": "垂直重复",
+                                    "value": "repeat-y"
+                                },
+                                {
+                                    "label": "不重复",
+                                    "value": "no-repeat"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "背景模式",
+                            "bindKey": "bgAttachment",
+                            "dictionary": [
+                                {
+                                    "label": "固定",
+                                    "value": "fixed"
+                                },
+                                {
+                                    "label": "滚动",
+                                    "value": "scroll"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        }
+                    ]
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "border"
+                },
+                {
+                    "type": "font",
+                    "layoutType": "block",
+                    "text": "文字",
+                    "bindKey": "font"
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "item点击自定义函数",
+                    "bindKey": "itemClickCustomFunction",
+                    "desc": "item点击需要自定义的时候可以使用这里设置自定义函数执行动作，接收参数为格式为{...自定义的,itemData:整条数据对象}",
+                    "multiple": true
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "新建点击自定义函数",
+                    "bindKey": "newClickCustomFunction",
+                    "desc": "新建点击需要自定义的时候可以使用这里设置自定义函数执行动作，接收参数为格式为{...自定义的}",
+                    "multiple": true
+                }
+            ]
+        }
+    ]
+}

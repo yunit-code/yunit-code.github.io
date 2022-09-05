@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.TabListComponents",
+    "comName": "标签式列表",
+    "className": "TabListComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

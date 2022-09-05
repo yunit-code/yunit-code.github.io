@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.ScheduleReminderComponents",
+    "comName": "日程提醒",
+    "className": "ScheduleReminderComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

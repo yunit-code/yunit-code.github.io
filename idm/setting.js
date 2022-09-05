@@ -1,13 +1,14 @@
 //此处可覆盖核心框架的默认配置文件
 window.$$IDMSetting = {
     webRoot: {
-        default: "/",
+        // default: "/",
         platformNo:"",
         projectNo:"",
         moduleAbsoluteDir:"/idm/idm_modules/"
     },
     // api地址
     api: {
+        userInfoUrl:"/ctrl/api/frame/getApplicationInfo",
         //组件市场地址，带分组结构的
         // componentMarketUrl: "/ctrl/api/frame/getMenuInfo"
         allCodepackageUrl:"",

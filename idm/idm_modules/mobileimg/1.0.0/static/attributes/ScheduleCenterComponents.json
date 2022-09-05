@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.ScheduleCenterComponents",
+    "comName": "日程中心",
+    "className": "ScheduleCenterComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

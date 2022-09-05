@@ -1,0 +1,8 @@
+{
+    "classId": "idm.componet.mobileimg.SearchComponents",
+    "comName": "搜索栏",
+    "className": "SearchComponents",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": []
+}

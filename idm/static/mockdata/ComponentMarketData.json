@@ -986,6 +986,39 @@
               "datetime": "2021-03-23 12:50:14"
             }
           ]
+        },
+        {
+          "comId": "banner123",
+          "comName": "广告轮播",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "广告轮播",
+          "classId": "idm.componet.mobileWechat.banner",
+          "className": "IBanner",
+          "iconClass": "idmicon idm-icon-header",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.0.8",
+            "projectNo": "p1000",
+            "codeSrc": "mobileWechat/1.0.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.8",
+              "projectNo": "p1000",
+              "codeSrc": "mobileWechat/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
         }
       ]
     },

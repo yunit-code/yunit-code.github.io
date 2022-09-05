@@ -1,0 +1,87 @@
+{
+    "version": "1.0.8",
+    "lasttime": "2021-04-05 00:36:27",
+    "author": "申龙",
+    "className": "mobileWechat",
+    "module": [
+        {
+            "classId": "idm.componet.mobileWechat.shortcut",
+            "comName": "快捷方式",
+            "className": "IShortCut",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobileWechat.datasummary",
+            "comName": "数据汇总",
+            "className": "IDataSummary",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobilewechat.applicationcenter",
+            "comName": "应用中心",
+            "className": "IApplicationCenter",
+            "comType": "common",
+            "comLangue": "vue"
+        },{
+            "classId": "idm.componet.mobilewechat.unifiedTodo",
+            "comName": "统一待办",
+            "className": "IUnifiedTodo",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobilewechat.messageList",
+            "comName": "信息列表",
+            "className": "IMessageList",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobileWechat.sort",
+            "comName": "排序组件",
+            "className": "ISort",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobileWechat.schedule",
+            "comName": "日程提醒组件",
+            "className": "ISchedule",
+            "comType": "common",
+            "comLangue": "vue"
+        },
+        {
+            "classId": "idm.componet.mobileWechat.publicaccounts",
+            "comName": "公共账号",
+            "className": "IPublicAccounts",
+            "comType": "common",
+            "comLangue": "vue"
+        },{
+            "classId": "idm.componet.mobileWechat.banner",
+            "comName": "广告轮播",
+            "className": "IBanner",
+            "comType": "common",
+            "comLangue": "vue"
+        },{
+            "classId": "idm.componet.mobileWechat.top",
+            "comName": "头部组件",
+            "className": "ITop",
+            "comType": "common",
+            "comLangue": "vue"
+        },{
+            "classId": "idm.componet.mobilewechat.applicationloginform",
+            "comName": "登录",
+            "className": "IApplicationLoginForm",
+            "comType": "common",
+            "comLangue": "vue"
+        },{
+            "classId": "idm.componet.mobileWechat.popupWorkbench",
+            "comName": "工作台切换",
+            "className": "IPopupWorkbench",
+            "comType": "common",
+            "comLangue": "vue"
+        }
+    ]
+}

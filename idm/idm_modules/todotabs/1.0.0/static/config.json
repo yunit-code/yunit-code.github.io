@@ -1,0 +1,15 @@
+{
+    "version": "1.0.0",
+    "lasttime": "2022年4月7日18:36:15",
+    "author": "申龙",
+    "className": "todotabs",
+    "module": [
+        {
+            "classId": "idm.componet.todotabs.itodotabslist",
+            "comName": "多页签待办列表组件",
+            "className": "ITodoTabsList",
+            "comType": "common",
+            "comLangue": "vue"
+        }
+    ]
+}

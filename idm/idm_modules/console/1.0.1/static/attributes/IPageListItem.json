@@ -1,0 +1,560 @@
+{
+  "classId": "idm.componet.console.ipoagelistitem",
+  "comName": " ",
+  "className": "IPageListItem",
+  "comType": "common",
+  "comLangue": "vue",
+  "compositeAttr": [
+    {
+      "type": "input",
+      "layoutType": "inline",
+      "text": "唯一标识",
+      "bindKey": "ctrlId",
+      "disabled": true,
+      "default": "@[packageid]",
+      "desc": "",
+      "helpUrl": ""
+    },
+    {
+      "type": "group",
+      "text": "基本属性",
+      "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+      "children": [
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "为空描述",
+          "bindKey": "emptyDescription",
+          "desc": "内容为空的时候描述文字提示",
+          "default": "暂无数据",
+          "placeholder": "示例：暂无数据"
+        },
+        {
+          "type": "textarea",
+          "layoutType": "inline",
+          "text": "显示字段",
+          "bindKey": "dataFiled",
+          "desc": "根据其他组件传输的数据格式指定结果集的字段，比如传输的数据格式为{data:{rows:[{}]}}，则这里应该填写data.rows",
+          "default": "data.rows",
+          "placeholder": "示例：data.rows 或者 [0].data[0].rows"
+        },
+        {
+          "type": "group",
+          "text": "图片",
+          "desc": "设置图片相关信息",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "是否显示",
+              "bindKey": "imgShow",
+              "desc":"是否显示图片",
+              "default": true
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "自定义显示的字段，例：url",
+              "placeholder": "例：url",
+              "bindKey": "imgParam",
+              "default": "url"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "imgParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "标题",
+          "desc": "设置标题相关信息",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "是否显示",
+              "bindKey": "titleShow",
+              "desc":"是否显示标题",
+              "default": true
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "titleType",
+              "desc": "设置字段显示的方式，单行溢出隐藏，全部展示，根据字数隐藏",
+              "dictionary": [
+                {
+                  "label": "单行溢出隐藏",
+                  "value": "overflowHidden"
+                },
+                {
+                  "label": "全部展示",
+                  "value": "showContent"
+                },
+                {
+                  "label": "根据字数隐藏",
+                  "value": "hiddenNum"
+                }
+              ],
+              "default": "showContent"
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "字数限制",
+              "desc": "超出字数限制后会隐藏",
+              "bindKey": "titleHiddenNum",
+              "display": "@[titleType=='hiddenNum']",
+              "default": "10"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "自定义显示的字段，例：content 或 title",
+              "placeholder": "例：title",
+              "bindKey": "titleParam",
+              "default": "title"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "titleParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "内容",
+          "desc": "设置内容相关信息",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "是否显示",
+              "bindKey": "contentShow",
+              "desc":"是否显示内容文字",
+              "default": true
+            },
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "显示方式",
+              "bindKey": "contentType",
+              "desc": "设置字段显示的方式，单行溢出隐藏，全部展示，根据字数隐藏",
+              "dictionary": [
+                {
+                  "label": "单行溢出隐藏",
+                  "value": "overflowHidden"
+                },
+                {
+                  "label": "全部展示",
+                  "value": "showContent"
+                },
+                {
+                  "label": "根据字数隐藏",
+                  "value": "hiddenNum"
+                }
+              ],
+              "default": "showContent"
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "字数限制",
+              "desc": "超出字数限制后会隐藏",
+              "bindKey": "contentHiddenNum",
+              "display": "@[contentType=='hiddenNum']",
+              "default": "10"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "自定义显示的字段，例：pageRemark 或 title",
+              "placeholder": "例：pageRemark",
+              "bindKey": "contentParam",
+              "default": "pageRemark"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "contentParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "类名",
+          "desc": "设置类名相关信息",
+          "children": [
+            {
+              "type": "switch",
+              "layoutType": "inline",
+              "text": "是否显示",
+              "bindKey": "componentShow",
+              "desc":"是否显示类名",
+              "default": true
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "显示字段",
+              "desc": "自定义显示的字段，例：moduleClassName",
+              "placeholder": "例：moduleClassName",
+              "bindKey": "componentParam",
+              "default": "moduleClassName"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义显示函数",
+              "bindKey": "componentParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "版本号",
+          "desc": "设置版本号相关信息",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "版本号列表字段",
+              "desc": "自定义显示的字段，例：versionList",
+              "placeholder": "例：versionList",
+              "bindKey": "versionListParam",
+              "default": "versionList"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义版本号列表显示函数",
+              "bindKey": "versionListParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            },
+            {
+              "type": "input",
+              "layoutType": "block",
+              "text": "列表中版本号字段",
+              "desc": "自定义显示的字段，例：versionText 或 title",
+              "placeholder": "例：versionText",
+              "bindKey": "versionParam",
+              "default": "versionText"
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "自定义版本号显示函数",
+              "bindKey": "versionParamFun",
+              "desc": "当点击每一条通知信息的时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "样式设置",
+      "desc": "点击？查看样式设置用法指南",
+      "helpUrl": "",
+      "children": [
+        {
+          "type": "group",
+          "text": "盒子样式",
+          "desc": "宽度，阴影，背景色，背景图，盒子模型，边框，圆角",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "宽度",
+              "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vw等等",
+              "bindKey": "boxWidth",
+              "default": "100%"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "阴影样式",
+              "desc": "填写格式如下：10px 10px 5px #888888，更多请点击查看详细填写说明",
+              "bindKey": "boxShadow",
+              "default": "4px 4px 4px rgba(80, 80, 80, 0.1)"
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "背景色",
+              "bindKey": "boxBgColor",
+              "placeholder": "请选择颜色"
+            },
+            {
+              "type": "uploadImage",
+              "layoutType": "inline",
+              "text": "背景图片",
+              "bindKey": "boxBgImgUrl",
+              "placeholder": "可输入图片地址或直接上传"
+            },
+            {
+              "type": "box",
+              "layoutType": "block",
+              "desc": "内外边距设置",
+              "text": "组件最外层盒子内外边距",
+              "bindKey": "box"
+            },
+            {
+              "type": "border",
+              "layoutType": "block",
+              "text": "边框",
+              "bindKey": "boxBorder"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "图片样式",
+          "desc": "图片宽高，图片距离右侧距离，图片边框圆角",
+          "children": [
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "图片宽度",
+              "desc": "填写auto则为自适应，或者使用px、%、vw等单位，比如100%、100px、100vw等等",
+              "bindKey": "imgWidth",
+              "default": "200px"
+            },
+            {
+              "type": "input",
+              "layoutType": "inline",
+              "text": "图片高度",
+              "desc": "填写auto则为自适应，或者使用px、%、vh等单位，比如100%、100px、100vh等等",
+              "bindKey": "imgHeight",
+              "default": "120px"
+            },
+            {
+              "type": "inputNumber",
+              "layoutType": "inline",
+              "text": "右侧距离",
+              "desc": "只填写数字，单位为px",
+              "bindKey": "imgRight",
+              "default": "20"
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "背景色",
+              "bindKey": "imgBgColor",
+              "placeholder": "请选择颜色"
+            },
+            {
+              "type": "border",
+              "layoutType": "block",
+              "text": "边框",
+              "bindKey": "imgBorder"
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "text": "分割线样式",
+          "desc": "分割线样式，颜色，宽度",
+          "children": [
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "线行",
+              "bindKey": "lineType",
+              "desc": "分割线的类型: 无，实线，双线，点线，虚线",
+              "dictionary": [
+                {
+                  "label": "无",
+                  "value": "none"
+                },
+                {
+                  "label": "实线",
+                  "value": "solid"
+                },
+                {
+                  "label": "双线",
+                  "value": "double"
+                },
+                {
+                  "label": "点线",
+                  "value": "dotted"
+                },
+                {
+                  "label": "虚线",
+                  "value": "dashed"
+                }
+              ],
+              "default": "solid"
+            },
+            {
+              "type": "inputNumberUnit",
+              "layoutType": "inline",
+              "text": "宽",
+              "bindKey": "lineWidth",
+              "dictionary": [
+                {
+                  "label": "px",
+                  "value": "px"
+                },
+                {
+                  "label": "%",
+                  "value": "%"
+                },
+                {
+                  "label": "em",
+                  "value": "em"
+                }
+              ]
+            },
+            {
+              "type": "colorPicker",
+              "layoutType": "inline",
+              "text": "颜色",
+              "bindKey": "lineColor",
+              "placeholder": "请选择颜色"
+            }
+          ]
+        },
+
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "标题文字",
+          "bindKey": "titleFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "内容文字",
+          "bindKey": "contentFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "类名文字",
+          "bindKey": "leiMingFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "类名内容文字",
+          "bindKey": "leiMingContentFont"
+        },
+        {
+          "type": "font",
+          "layoutType": "block",
+          "text": "版本号文字",
+          "bindKey": "versionFont"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "text": "高级",
+      "desc": "点击预览事件",
+      "children": [
+        {
+          "type": "group",
+          "text": "点击预览",
+          "desc": "点击预览后执行的操作",
+          "children": [
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "事件类型",
+              "bindKey": "previewEventType",
+              "desc": "选择联动组件，自定义组件",
+              "dictionary": [
+                {
+                  "label": "选择联动组件",
+                  "value": "linkModules"
+                },
+                {
+                  "label": "自定义事件",
+                  "value": "itemAction"
+                }
+              ],
+              "default": "itemAction"
+            },
+            {
+              "type": "pageModuleSelect",
+              "layoutType": "block",
+              "text": "联动组件范围",
+              "desc": "点击预览需要联动其他组件的范围",
+              "display": "@[previewEventType=='linkModules']",
+              "bindKey": "previewModule",
+              "multiple": true
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "",
+              "bindKey": "clickPreviewFunction",
+              "desc": "当点击预览时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}",
+              "multiple": true,
+              "display": "@[previewEventType=='itemAction']"
+            }
+          ]
+        },
+
+        {
+          "type": "group",
+          "text": "版本号",
+          "desc": "点击每条信息时执行的操作",
+          "children": [
+            {
+              "type": "select",
+              "layoutType": "inline",
+              "text": "事件类型",
+              "bindKey": "versionEventType",
+              "desc": "选择联动组件，自定义组件",
+              "dictionary": [
+                {
+                  "label": "选择联动组件",
+                  "value": "linkModules"
+                },
+                {
+                  "label": "自定义事件",
+                  "value": "itemAction"
+                }
+              ],
+              "default": "linkModules"
+            },
+            {
+              "type": "pageModuleSelect",
+              "layoutType": "block",
+              "text": "联动组件范围",
+              "desc": "点击预览需要联动其他组件的范围",
+              "display": "@[versionEventType=='linkModules']",
+              "bindKey": "versionModule",
+              "multiple": true
+            },
+            {
+              "type": "actionSelect",
+              "layoutType": "block",
+              "text": "",
+              "bindKey": "clickItemFunction",
+              "desc": "当点击预览时候会调用此函数，接收参数为格式为{customParam:自定义的，itemObject:每条数据对象数据，urlData:url数据}",
+              "multiple": true,
+              "display": "@[versionEventType=='itemAction']"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
