@@ -1,0 +1,1 @@
+const e={key:"v-46dc5094",path:"/faq/compatible-ie11.html",title:"IE 11",lang:"en-US",frontmatter:{},excerpt:"",headers:[{level:3,title:"vue",slug:"vue",children:[]},{level:3,title:"react",slug:"react",children:[]}],git:{updatedTime:1666174363e3,contributors:[{name:"chensq",email:"chensq@dreamdt.cn",commits:1}]},filePathRelative:"faq/compatible-ie11.md"};export{e as data};
