@@ -1,8 +1,8 @@
 @font-face {
   font-family: "idmicon"; /* Project id 2443260 */
-  src: url('iconfont.woff2?t=1659611689525') format('woff2'),
-       url('iconfont.woff?t=1659611689525') format('woff'),
-       url('iconfont.ttf?t=1659611689525') format('truetype');
+  src: url('iconfont.woff2?t=1667204082496') format('woff2'),
+       url('iconfont.woff?t=1667204082496') format('woff'),
+       url('iconfont.ttf?t=1667204082496') format('truetype');
 }
 
 .idmicon {
@@ -11,6 +11,54 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.idm-icon-zhiding:before {
+  content: "\e633";
+}
+
+.idm-icon-xiaoxi:before {
+  content: "\e665";
+}
+
+.idm-icon-zhuanfa:before {
+  content: "\e63d";
+}
+
+.idm-icon-28fuwenbenkuang:before {
+  content: "\e62f";
+}
+
+.idm-icon-xiajiantou:before {
+  content: "\eb6d";
+}
+
+.idm-icon-icon-GIS_dizhi:before {
+  content: "\e60f";
+}
+
+.idm-icon-rili:before {
+  content: "\e659";
+}
+
+.idm-icon-right-circle-fill:before {
+  content: "\eb22";
+}
+
+.idm-icon-daibanshixiang1:before {
+  content: "\ec4e";
+}
+
+.idm-icon-jiaohuan:before {
+  content: "\e658";
+}
+
+.idm-icon-guanbi1:before {
+  content: "\eaf2";
+}
+
+.idm-icon-wancheng:before {
+  content: "\e7ed";
 }
 
 .idm-icon-zidingyi:before {

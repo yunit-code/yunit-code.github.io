@@ -985,7 +985,7 @@
 		if(window.$$IDMSetting&&window.$$IDMSetting.applications&&window.$$IDMSetting.applications.openIdmCoreLoadStyle===false){
 			openIdmCoreLoadStyle = false;
 		}
-		document.documentElement.style.setProperty(`--idmCoreLoadColor`,idmCoreLoadColor);
+		document.documentElement.style.setProperty('--idmCoreLoadColor',idmCoreLoadColor);
 		if (options.startOnPageLoad&&openIdmCoreLoadStyle) {
 			idmPace.start();
 		}

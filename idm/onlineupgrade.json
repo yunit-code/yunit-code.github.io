@@ -1,0 +1,4 @@
+{
+    "upgradeFolderList":["static","lib"],
+    "upgradeFileList":["index.html","favicon.ico"]
+}

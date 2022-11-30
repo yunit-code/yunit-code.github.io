@@ -698,28 +698,28 @@
                     styleObject['border-top-width'] = element.border.top.width + element.border.top.widthUnit + importantStr
                     styleObject['border-top-style'] = element.border.top.style + importantStr
                     if (element.border.top.colors.hex8) {
-                        styleObject['border-top-color'] = element.border.top.colors.hex8 + importantStr
+                        styleObject['border-top-color'] = IDM.hex8ToRgbaString(element.border.top.colors.hex8) + importantStr
                     }
                 }
                 if (element.border.right.width > 0) {
                     styleObject['border-right-width'] = element.border.right.width + element.border.right.widthUnit + importantStr
                     styleObject['border-right-style'] = element.border.right.style + importantStr
                     if (element.border.right.colors.hex8) {
-                        styleObject['border-right-color'] = element.border.right.colors.hex8 + importantStr
+                        styleObject['border-right-color'] = IDM.hex8ToRgbaString(element.border.right.colors.hex8) + importantStr
                     }
                 }
                 if (element.border.bottom.width > 0) {
                     styleObject['border-bottom-width'] = element.border.bottom.width + element.border.bottom.widthUnit + importantStr
                     styleObject['border-bottom-style'] = element.border.bottom.style + importantStr
                     if (element.border.bottom.colors.hex8) {
-                        styleObject['border-bottom-color'] = element.border.bottom.colors.hex8 + importantStr
+                        styleObject['border-bottom-color'] = IDM.hex8ToRgbaString(element.border.bottom.colors.hex8) + importantStr
                     }
                 }
                 if (element.border.left.width > 0) {
                     styleObject['border-left-width'] = element.border.left.width + element.border.left.widthUnit + importantStr
                     styleObject['border-left-style'] = element.border.left.style + importantStr
                     if (element.border.left.colors.hex8) {
-                        styleObject['border-left-color'] = element.border.left.colors.hex8 + importantStr
+                        styleObject['border-left-color'] = IDM.hex8ToRgbaString(element.border.left.colors.hex8) + importantStr
                     }
                 }
             
@@ -772,7 +772,7 @@
                 const importantStr = isImportant ? ' !important' : ''
                 styleObject['font-family'] = element.fontFamily + importantStr
                 if (element.fontColors && element.fontColors.hex8) {
-                    styleObject['color'] = element.fontColors.hex8 + importantStr
+                    styleObject['color'] = IDM.hex8ToRgbaString(element.fontColors.hex8) + importantStr
                 }
                 styleObject['font-weight'] = element.fontWeight && element.fontWeight.split(' ')[0] + importantStr
                 styleObject['font-style'] = element.fontStyle + importantStr

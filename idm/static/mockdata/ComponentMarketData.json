@@ -19,6 +19,7 @@
           "className": "Container",
           "iconClass": "idmicon idm-icon-rongqi4",
           "type": "platform",
+          "defaultSize":"600,50",
           "imgList": [
             {
               "src": "~/static/img/demo/dbtablist.jpg",
@@ -54,6 +55,7 @@
           "comType": "common",
           "comLangue": "vue",
           "asName": "行内容器",
+          "defaultSize":"600,50",
           "classId": "idm.componet.layout.inlinecontainer",
           "className": "InlineContainer",
           "iconClass": "idmicon idm-icon-line-layoutleft",
@@ -91,6 +93,7 @@
           "className": "IGrid",
           "iconClass": "idmicon idm-icon-fenlan",
           "type": "platform",
+          "defaultSize":"600,50",
           "imgList": [
             {
               "src": "~/static/img/demo/leftmenu.jpg",
@@ -301,6 +304,7 @@
           "className": "Demo",
           "iconClass": "idmicon idm-icon-wenben",
           "type": "platform",
+          "defaultSize":"300,400",
           "imgList": [
             {
               "src": "~/static/img/demo/dbtablist.jpg",
