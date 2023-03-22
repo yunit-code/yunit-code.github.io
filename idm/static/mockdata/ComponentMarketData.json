@@ -383,6 +383,7 @@
           "className": "IImage",
           "iconClass": "idmicon idm-icon-tupian",
           "type": "platform",
+          "defaultSize":"120,120",
           "imgList": [
             {
               "src": "~/static/img/demo/default_image.svg",
