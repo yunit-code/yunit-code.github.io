@@ -1,8 +1,8 @@
 @font-face {
   font-family: "idmicon"; /* Project id 2443260 */
-  src: url('iconfont.woff2?t=1673536383891') format('woff2'),
-       url('iconfont.woff?t=1673536383891') format('woff'),
-       url('iconfont.ttf?t=1673536383891') format('truetype');
+  src: url('iconfont.woff2?t=1682590078337') format('woff2'),
+       url('iconfont.woff?t=1682590078337') format('woff'),
+       url('iconfont.ttf?t=1682590078337') format('truetype');
 }
 
 .idmicon {
@@ -11,6 +11,114 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.idm-icon-fa:before {
+  content: "\e679";
+}
+
+.idm-icon-zhi:before {
+  content: "\e67a";
+}
+
+.idm-icon-mi:before {
+  content: "\e67b";
+}
+
+.idm-icon-gai:before {
+  content: "\e67d";
+}
+
+.idm-icon-wenda:before {
+  content: "\e671";
+}
+
+.idm-icon-wenhao-yuankuang:before {
+  content: "\e8e9";
+}
+
+.idm-icon-bitianxiang-:before {
+  content: "\e678";
+}
+
+.idm-icon-jiahao:before {
+  content: "\e676";
+}
+
+.idm-icon-a-jifen21:before {
+  content: "\e64d";
+}
+
+.idm-icon-zhuanti:before {
+  content: "\e675";
+}
+
+.idm-icon-shu1:before {
+  content: "\e66b";
+}
+
+.idm-icon-toupiao:before {
+  content: "\e66c";
+}
+
+.idm-icon-wendang:before {
+  content: "\e66f";
+}
+
+.idm-icon-shipin:before {
+  content: "\e670";
+}
+
+.idm-icon-citiao:before {
+  content: "\e674";
+}
+
+.idm-icon-gongwenchuli:before {
+  content: "\e656";
+}
+
+.idm-icon-xitongshouye:before {
+  content: "\e657";
+}
+
+.idm-icon-fangwuguanli:before {
+  content: "\e65b";
+}
+
+.idm-icon-xinxibaosong:before {
+  content: "\e65f";
+}
+
+.idm-icon-hangzhengshiwu:before {
+  content: "\e660";
+}
+
+.idm-icon-gongwenjiaohuan:before {
+  content: "\e662";
+}
+
+.idm-icon-shouwenguanli:before {
+  content: "\e666";
+}
+
+.idm-icon-pingshikaohe:before {
+  content: "\e667";
+}
+
+.idm-icon-youjiantou1:before {
+  content: "\e653";
+}
+
+.idm-icon-gerenzhongxin:before {
+  content: "\e654";
+}
+
+.idm-icon-youjiantou_huaban:before {
+  content: "\e652";
+}
+
+.idm-icon-integral:before {
+  content: "\e646";
 }
 
 .idm-icon-liuchengguanli:before {
