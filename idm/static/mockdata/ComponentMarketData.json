@@ -29,9 +29,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -44,7 +44,7 @@
             {
               "version": "1.1.0",
               "projectNo": "p1000",
-              "codeSrc": "layout/v1.1.0/static/main.js",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -69,9 +69,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -79,6 +79,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -103,9 +109,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -118,7 +124,7 @@
             {
               "version": "1.1.0",
               "projectNo": "p1000",
-              "codeSrc": "layout/v1.1.0/static/main.js",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -142,9 +148,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -152,6 +158,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -175,9 +187,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -185,6 +197,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -208,9 +226,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -218,6 +236,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -241,9 +265,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "layout/1.0.0/static/main.js",
+            "codeSrc": "layout/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -251,6 +275,51 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            }
+          ]
+        },
+        {
+          "comId": "iloopcontainer12345",
+          "comName": "循环容器",
+          "comType": "common",
+          "comLangue": "vue",
+          "asName": "循环容器",
+          "classId": "idm.componet.layout.iloopcontainer",
+          "className": "ILoopContainer",
+          "iconClass": "idmicon idm-icon-iframe",
+          "type": "platform",
+          "imgList": [
+            {
+              "src": "~/static/img/demo/dbtablist.jpg",
+              "width": 1127,
+              "height": 673,
+              "size": "113664"
+            }
+          ],
+          "lastVersion": {
+            "version": "1.1.0",
+            "projectNo": "p1000",
+            "codeSrc": "layout/1.1.0/static/main.js",
+            "datetime": "2021-03-23 12:50:14"
+          },
+          "versionList": [
+            {
+              "version": "1.0.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "layout/1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -314,9 +383,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -353,9 +422,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -393,9 +462,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -432,9 +501,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -442,6 +511,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -465,9 +540,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -475,6 +550,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -498,9 +579,9 @@
             }
           ],
           "lastVersion": {
-            "version": "1.0.0",
+            "version": "1.1.0",
             "projectNo": "p1000",
-            "codeSrc": "basics/1.0.0/static/main.js",
+            "codeSrc": "basics/1.1.0/static/main.js",
             "datetime": "2021-03-23 12:50:14"
           },
           "versionList": [
@@ -508,6 +589,12 @@
               "version": "1.0.0",
               "projectNo": "p1000",
               "codeSrc": "basics/1.0.0/static/main.js",
+              "datetime": "2021-03-23 12:50:14"
+            },
+            {
+              "version": "1.1.0",
+              "projectNo": "p1000",
+              "codeSrc": "basics/v1.1.0/static/main.js",
               "datetime": "2021-03-23 12:50:14"
             }
           ]
@@ -1210,7 +1297,7 @@
           "asName": "组件脚手架下载",
           "classId": "idm.componet.console.iscaffolddownload",
           "className": "IScaffoldDownload",
-          "iconClass": "idmicon idm-icon-zujian",
+          "iconClass": "",
           "type": "platform",
           "imgList": [
             {
@@ -1375,7 +1462,7 @@
           "asName": "在线升级",
           "classId": "idm.componet.console.ionlineupgrade",
           "className": "IOnlineUpgrade",
-          "iconClass": "idmicon idm-icon-shengji",
+          "iconClass": "",
           "type": "platform",
           "imgList": [
             {
@@ -1441,7 +1528,7 @@
           "asName": "组件已选卡片",
           "classId": "idm.componet.console.icomponentselecteddisplay",
           "className": "IComponentSelectedDisplay",
-          "iconClass": "idmicon idm-icon-tubiaojihe04",
+          "iconClass": "",
           "type": "platform",
           "imgList": [
             {

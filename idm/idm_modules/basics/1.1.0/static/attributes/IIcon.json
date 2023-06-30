@@ -1,0 +1,618 @@
+{
+    "classId": "idm.componet.basics.iicon",
+    "comName": "图标",
+    "className": "IIcon",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "desc": "",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "提供设置组件能达到展示效果的基本属性设置信息",
+            "children": [
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "图标类型",
+                    "bindKey": "iconType",
+                    "dictionary": [
+                        {
+                            "label": "直接选择",
+                            "value": "select"
+                        },
+                        {
+                            "label": "引用文件",
+                            "value": "iconfont"
+                        }
+                    ],
+                    "default": "select"
+                },
+                {
+                    "type": "iconSelect",
+                    "layoutType": "inline",
+                    "text": "图标",
+                    "bindKey": "icon",
+                    "placeholder": "请选择",
+                    "display":"@[iconType=='select']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "图标URL",
+                    "bindKey": "iconfontUrl",
+                    "desc": "从iconfont下载的图标库文件夹地址， 不需要具体到文件，比如：图标css文件的路径是【/project/font_1248060_zpcega7i6m9/iconfont.css】，我们这里只需要填写【/project/font_1248060_zpcega7i6m9/】，注意：里面的文件建议不要做任何修改，否则可能读取不正确，为空时默认使用项目自带iconfont，反之设置自定义路径后iconfont类名将从接口获取",
+                    "placeholder": "请输入",
+                    "display":"@[iconType=='iconfont']",
+                    "default":"/external/iconfont/"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "图标前缀",
+                    "bindKey": "iconPrefix",
+                    "desc": "设置iconfont类名前缀，如类名是iconfont icon-shouye前缀为icon-",
+                    "default": "icon-",
+                    "placeholder": "请输入",
+                    "display":"@[iconType=='iconfont']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "图标字体",
+                    "bindKey": "iconFontFamily",
+                    "desc": "设置iconfont字体，如类名是iconfont icon-shouye字体为iconfont",
+                    "default": "iconfont",
+                    "placeholder": "请输入",
+                    "display":"@[iconType=='iconfont']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "图标名称",
+                    "bindKey": "iconFontName",
+                    "desc": "设置iconfont图标的名称，如类名是iconfont icon-shouye则名称为shouye",
+                    "default": "",
+                    "placeholder": "请输入",
+                    "display":"@[iconType=='iconfont']"
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "颜色",
+                    "bindKey": "iconColor",
+                    "placeholder": "请选择颜色",
+                    "default": {}
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "大小",
+                    "bindKey": "iconSize",
+                    "minLength": 0,
+                    "default": "64"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "启用主题",
+                    "bindKey": "openTheme",
+                    "desc": "设置图标是否启用主题颜色跟随主题自动切换颜色，如果单独设置了图标颜色主题也是不生效的",
+                    "disabled": false
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "默认状态",
+                    "bindKey": "defaultStatus",
+                    "dictionary": [
+                        {
+                            "label": "普通",
+                            "value": "default"
+                        },
+                        {
+                            "label": "隐藏",
+                            "value": "hidden"
+                        },
+                        {
+                            "label": "自定义",
+                            "value": "custom"
+                        }
+                    ],
+                    "default": "default"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "状态表达式",
+                    "bindKey": "statusExpression",
+                    "placeholder": "请输入表达式依据",
+                    "desc": "支持IDM表达式，可直接使用IDM变量和联动的消息，结果为true则会以普通的方式展示，否则为隐藏模式，联动消息属性为：linkMessageObject，数据源为自定义函数返回数据的属性为：customFunData，页面统一接口的数据为：pageInterfaceData，数据源的数据为：dataSourceData，填写表达式例如：linkMessageObject.message==1，如果为非对象类型的，比如数组则直接配置 _idm_[0].data.filedName，比如为字符串或者其他的布尔值等则直接 _idm_",
+                    "display": "@[defaultStatus=='custom']"
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "状态自定义函数",
+                    "bindKey": "statusCustomFunction",
+                    "desc": "状态可根据需求实现更复杂的逻辑判断，返回true则会以普通的方式展示，否则为隐藏模式，接收参数格式为{...自定义的，linkMessageObject:联动的消息数据,customFunData:数据源为自定义函数返回数据,pageInterfaceData:页面统一接口的数据,dataSourceData:数据源的数据}",
+                    "display": "@[defaultStatus=='custom']",
+                    "multiple": false
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "样式设置",
+            "desc": "点击？查看样式设置用法指南",
+            "helpUrl": "",
+            "children": [
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "内外边距",
+                    "bindKey": "box"
+                },
+                {
+                    "type": "group",
+                    "text": "背景设置",
+                    "desc": "点击？查看背景设置用法指南",
+                    "helpUrl": "",
+                    "children": [
+                        {
+                            "type": "colorPicker",
+                            "layoutType": "inline",
+                            "text": "背景色",
+                            "bindKey": "bgColor",
+                            "placeholder": "请选择颜色",
+                            "default": {}
+                        },
+                        {
+                            "type": "uploadImage",
+                            "layoutType": "inline",
+                            "text": "背景图片",
+                            "bindKey": "bgImgUrl",
+                            "placeholder": "可输入图片地址或直接上传"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "横向偏移",
+                            "bindKey": "positionX",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "纵向偏移",
+                            "bindKey": "positionY",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "背景大小",
+                            "bindKey": "bgSize",
+                            "dictionary": [
+                                {
+                                    "label": "裁切显示",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "完全显示",
+                                    "value": "contain"
+                                },
+                                {
+                                    "label": "自定义",
+                                    "value": "custom"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "宽度",
+                            "bindKey": "bgSizeWidth",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "inputNumberUnit",
+                            "layoutType": "inline",
+                            "text": "高度",
+                            "bindKey": "bgSizeHeight",
+                            "dictionary": [
+                                {
+                                    "label": "px",
+                                    "value": "px"
+                                },
+                                {
+                                    "label": "%",
+                                    "value": "%"
+                                },
+                                {
+                                    "label": "em",
+                                    "value": "em"
+                                }
+                            ],
+                            "display": "@[bgSize=='custom']"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "block",
+                            "text": "平铺模式",
+                            "bindKey": "bgRepeat",
+                            "dictionary": [
+                                {
+                                    "label": "双向重复",
+                                    "value": "repeat"
+                                },
+                                {
+                                    "label": "水平重复",
+                                    "value": "repeat-x"
+                                },
+                                {
+                                    "label": "垂直重复",
+                                    "value": "repeat-y"
+                                },
+                                {
+                                    "label": "不重复",
+                                    "value": "no-repeat"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        },
+                        {
+                            "type": "radio",
+                            "layoutType": "inline",
+                            "text": "背景模式",
+                            "bindKey": "bgAttachment",
+                            "dictionary": [
+                                {
+                                    "label": "固定",
+                                    "value": "fixed"
+                                },
+                                {
+                                    "label": "滚动",
+                                    "value": "scroll"
+                                },
+                                {
+                                    "label": "继承",
+                                    "value": "inherit"
+                                }
+                            ],
+                            "display": "@[bgImgUrl]"
+                        }
+                    ]
+                },
+                {
+                    "type": "border",
+                    "layoutType": "block",
+                    "text": "边框",
+                    "bindKey": "border"
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "text": "主题设置",
+            "desc": "点击？查看主题设置用法指南",
+            "bindKey": "themeList",
+            "tabText": "主题[index]",
+            "display":"@[openTheme]",
+            "default": [
+                {
+                    "key": "red",
+                    "mainColor": {
+                        "hex": "#E21A1A",
+                        "hex8": "#E21A1AFF"
+                    }
+                },
+                {
+                    "key": "green",
+                    "mainColor": {
+                        "hex": "#0EAF64",
+                        "hex8": "#0EAF64FF"
+                    }
+                },
+                {
+                    "key": "blue",
+                    "mainColor": {
+                        "hex": "#0086D9",
+                        "hex8": "#0086D9FF"
+                    }
+                },
+                {
+                    "key": "inblue",
+                    "mainColor": {
+                        "hex": "#0080FF",
+                        "hex8": "#0080FFFF"
+                    }
+                },
+                {
+                    "key": "ycgreen",
+                    "mainColor": {
+                        "hex": "#026A52",
+                        "hex8": "#026A52FF"
+                    }
+                },
+                {
+                    "key": "black",
+                    "mainColor": {
+                        "hex": "#333333",
+                        "hex8": "#333333FF"
+                    }
+                },
+                {
+                    "key": "orange",
+                    "mainColor": {
+                        "hex": "#ff6a00",
+                        "hex8": "#ff6a00FF"
+                    }
+                },
+                {
+                    "key": "elegant",
+                    "mainColor": {
+                        "hex": "#438eb9",
+                        "hex8": "#438eb9FF"
+                    }
+                }
+            ],
+            "children": [
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "主题标识",
+                    "bindKey": "key",
+                    "desc": "用于设置主题的标识，此项需要搭配自定义开发切换主题的功能，例如：蓝色标识为blue，用户切换主题的时候存储到数据库中的标识为blue，则这里选择blue",
+                    "default": "",
+                    "placeholder": "例如：blue",
+                    "ctrlAttrObject": {
+                        "mode": "combobox"
+                    },
+                    "dictionary": [
+                        {
+                            "label": "red",
+                            "value": "red"
+                        },
+                        {
+                            "label": "green",
+                            "value": "green"
+                        },
+                        {
+                            "label": "blue",
+                            "value": "blue"
+                        },
+                        {
+                            "label": "inblue",
+                            "value": "inblue"
+                        },
+                        {
+                            "label": "ycgreen",
+                            "value": "ycgreen"
+                        },
+                        {
+                            "label": "black",
+                            "value": "black"
+                        },
+                        {
+                            "label": "orange",
+                            "value": "orange"
+                        },
+                        {
+                            "label": "elegant",
+                            "value": "elegant"
+                        }
+                    ]
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "主要颜色",
+                    "bindKey": "mainColor",
+                    "desc": "主题的主要颜色",
+                    "placeholder": "请选择颜色",
+                    "display": "@[key]",
+                    "default":{}
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级",
+            "desc": "点击？查看高级设置用法指南",
+            "children": [
+                {
+                    "type": "group",
+                    "text": "样式自定义函数分组",
+                    "desc": "通过自定义函数实现多色等需求的功能组件分组",
+                    "children": [
+                        {
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "图标颜色自定义函数",
+                            "bindKey": "iconColorCustomFunction",
+                            "desc": "当图标颜色设置无法满足要求的时候可以通过此处的自定义函数来实现图标颜色的动态个性化，接收参数格式为{...自定义的，linkMessageObject:联动的消息数据,customFunData:数据源为自定义函数返回数据,pageInterfaceData:页面统一接口的数据,dataSourceData:数据源的数据}，返回具体的颜色值，比如：#F1F1F1，rgba(0,0,0,0.2)，red 等",
+                            "multiple": false
+                        },
+                        {
+                            "type": "actionSelect",
+                            "layoutType": "block",
+                            "text": "图标大小自定义函数",
+                            "bindKey": "iconSizeCustomFunction",
+                            "desc": "当图标大小设置无法满足要求的时候可以通过此处的自定义函数来实现图标大小的动态个性化，接收参数格式为{...自定义的，linkMessageObject:联动的消息数据,customFunData:数据源为自定义函数返回数据,pageInterfaceData:页面统一接口的数据,dataSourceData:数据源的数据}，返回具体的图标大小，比如：12px，12%，12vw 等",
+                            "multiple": false
+                        }
+                    ]
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "点击时动作",
+                    "bindKey": "clickFunction",
+                    "desc": "点击的时候会调用设置的自定义函数，接收参数格式为{...自定义的，linkMessageObject:联动的消息数据,customFunData:数据源为自定义函数返回数据,pageInterfaceData:页面统一接口的数据,dataSourceData:数据源的数据}",
+                    "multiple": true
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "动态内容",
+                    "bindKey": "dataSourceType",
+                    "desc": "通过这些方式去动态获取结果值显示成文本内容",
+                    "dictionary": [
+                        {
+                            "label": "无",
+                            "value": "none"
+                        },
+                        {
+                            "label": "数据源",
+                            "value": "datasource"
+                        },
+                        {
+                            "label": "自定义接口",
+                            "value": "customInterface"
+                        },
+                        {
+                            "label": "页面统一接口",
+                            "value": "pageCommonInterface"
+                        },
+                        {
+                            "label": "自定义函数",
+                            "value": "customFunction"
+                        },
+                        {
+                            "label": "接收联动消息",
+                            "value": "receiveMessage"
+                        }
+                    ],
+                    "default": "none"
+                },
+                {
+                    "type": "dataSourceSelect",
+                    "layoutType": "inline",
+                    "text": "数据源",
+                    "bindKey": "dataSourceSelectData",
+                    "multiple": false,
+                    "display": "@[dataSourceType=='datasource']",
+                    "ctrlAttrObject": {
+                        "tags": [
+                            "[]",
+                            "[{}]",
+                            "any"
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "接口地址",
+                    "bindKey": "customInterfaceUrl",
+                    "desc": "用于获取数据源的接口地址，请按照统一标准的返回格式返回文本数据，格式如下：{\"code\":\"200\",\"data\":\"\",...}",
+                    "display": "@[dataSourceType=='customInterface']"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline",
+                    "text": "结果集名",
+                    "bindKey": "dataName",
+                    "desc": "页面接口设定的结果集名称，位置为：页面设置》高级设置》页面接口",
+                    "default": "",
+                    "placeholder": "示例：resultData",
+                    "display": "@[dataSourceType=='pageCommonInterface']"
+                },{
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "rMsgKey",
+                    "bindKey": "receiveMessageKey",
+                    "desc": "当接收到联动消息的时候需要通过此处的接收消息MessageKey标识，如果未匹配到则不会应用此次的联动消息数据。",
+                    "dictionary": [
+                        {
+                            "label": "dynamicRenderModule",
+                            "value": "dynamicRenderModule"
+                        }
+                    ],
+                    "multiple":true,
+                    "ctrlAttrObject":{
+                        "mode":"tags"
+                    },
+                    "default": "dynamicRenderModule",
+                    "display": "@[dataSourceType=='receiveMessage']"
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "inline",
+                    "text": "显示字段",
+                    "bindKey": "dataFiled",
+                    "desc": "根据接口返回数据、页面接口结果集或者收到的联动消息数据的指定字段。比如以上获得数据结果的值为{data:{filedName:[{\"text\":\"\",\"value\":\"\",\"check\":true}]}}，则这里应该填写data.filedName；如果为非对象类型的，比如数组则直接配置 _idm_[0].data.filedName，比如为字符串或者其他的布尔值等则直接 _idm_",
+                    "default": "",
+                    "placeholder": "示例：data.filedName 或者 _idm_[0].data.filedName",
+                    "display": "@[dataSourceType!='customFunction'&&dataSourceType!='none']"
+                },
+                {
+                    "type": "actionSelect",
+                    "layoutType": "block",
+                    "text": "自定义函数",
+                    "bindKey": "customFunction",
+                    "desc": "获取动态文本内容、自定义接口回调、页面统一接口、消息联动回调的时候会调用此方法，返回数据格式为字符串，接收参数：{...自定义,interfaceData:自定义接口或页面统一接口的返回结果或接收到的消息数据,expressData:表达式替换后的结果,moduleObject:组件对象}",
+                    "multiple": false,
+                    "display": "@[dataSourceType!='none']"
+                }
+            ]
+        }
+    ]
+}

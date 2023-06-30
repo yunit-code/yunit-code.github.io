@@ -61,6 +61,35 @@
          */
         var util = {
             /**
+            * 通用的获取表达式匹配后的结果
+            * 例1：IDM.getExpressData("data.dataFieldName",{data:{dataFieldName:"1234"}})  // => 1234
+            * 例2：IDM.getExpressData("_idm_[0].data.dataFieldName",[{data:{dataFieldName:"1234"}}])  // => 1234
+            * 例3：IDM.getExpressData("_idm_","这里是字符串1234")  // => 这里是字符串1234
+            * 例4：IDM.getExpressData("mydata[0].data.dataFieldName",[{data:{dataFieldName:"1234"}}],"mydata")  // => 1234
+            * @param {*} expressStr 表达式字符串，不包含@[]
+            * @param {*} objectData 表达式所使用的对象数据，如果为object类型则可直接使用，如果为数组或者其他类型则会默认给添加到 _idm_ 字段中，因此表达式需要带上 _idm_.dataFieldName 这样
+            * @param {*} defaultPrefix 为数组或者其他类型的默认字段名称，默认为 _idm_ ，如果需要定义其他可以传此参数
+            * @returns 
+            */
+            getExpressData: function (expressStr, objectData, defaultPrefix) {
+                //给defaultValue设置dataFiled的值
+                var resultData;
+                if (expressStr) {
+                    var dataObject = { IDM: window.IDM, window };
+                    if (IDM.type(objectData) == "object") {
+                        //直接合并
+                        Object.assign(dataObject, objectData);
+                    } else {
+                        dataObject[defaultPrefix || "_idm_"] = objectData;
+                    }
+                    resultData = window.IDM.express.replace(
+                        "@[" + expressStr + "]",
+                        dataObject
+                    );
+                }
+                return resultData;
+            },
+            /**
              * 更新vue的data
              * @param {*} _this vue对象
              * @param {*} dataName data的名称

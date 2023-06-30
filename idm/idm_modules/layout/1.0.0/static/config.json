@@ -55,6 +55,14 @@
             "comType": "common",
             "comLangue": "vue",
             "innerComName": "格子"
+        },
+        {
+            "classId": "idm.componet.layout.iloopcontainer",
+            "comName": "循环容器",
+            "className": "ILoopContainer",
+            "comType": "common",
+            "comLangue": "vue",
+            "innerComName": "容器"
         }
     ]
 }

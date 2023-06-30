@@ -12,7 +12,7 @@
             vendors:"js/chunk-vendors",
             index:"js/index",
         },
-        css:["css/index"]
+        css:["css/index","css/chunk-vendors"]
     },
     doc = document, config = {},
     //获取当前所在目录
@@ -20,6 +20,9 @@
         var head = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
         var js = head.getElementsByTagName("script"), jsPath = js[js.length - 1].src;
         console.log(jsPath);
+        if(lastMdule){
+            jsPath = IDM.url.getWebPath("@"+lastMdule.codeSrc,"",lastMdule.projectNo);
+        }
         
         return jsPath.substring(0, jsPath.lastIndexOf('/') + 1);
     }(),
@@ -49,6 +52,7 @@
         node.async = true;
         node.charset = 'utf-8';
         node.src = url;
+        node.setAttribute('objectID', "IDM-Module-"+url);
         function onScriptLoad(e, url){
           var readyRegExp = navigator.platform === 'PLaySTATION 3' ? /^complete$/ : /^(complete|loaded)$/
           if (e.type === 'load' || (readyRegExp.test((e.currentTarget || e.srcElement).readyState))) {
@@ -107,8 +111,8 @@
         
         var linkList = head.getElementsByTagName("link");
         var isExists = false;
-        for (let index = 0; index < linkList.length; index++) {
-            const element = linkList[index];
+        for (var index = 0; index < linkList.length; index++) {
+            var element = linkList[index];
             if(element.getAttribute("objectID")=="IDM-Module-"+src){
                 if(reload){
                     element.remove();
@@ -119,7 +123,7 @@
         }
         if(isExists){
             //存在则不再次加载css
-            fun();
+            fun&&fun();
             return;
         }
 
@@ -145,7 +149,7 @@
         head.appendChild(link);
     }
     var jsArray= [];
-    Object.keys(resource.js).forEach(key=>{
+    Object.keys(resource.js).forEach(function(key){
         jsArray.push(key)
     });
     loadjs(jsArray,function(){
@@ -155,7 +159,7 @@
             lastMdule.callback.call(this,lastMdule)
         }
     });
-    resource.css&&resource.css.forEach(item=>{
+    resource.css&&resource.css.forEach(function(item){
         var url = getPath + item + '.css';
         loadcss(url,false);
     })

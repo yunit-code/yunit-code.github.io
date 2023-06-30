@@ -50,6 +50,22 @@
                     "multiple": true
                 },
                 {
+                    "type": "dataSourceSelect",
+                    "layoutType": "inline",
+                    "text": "数据源",
+                    "bindKey": "dataSourceSelectDataMultiple",
+                    "multiple": false
+                },
+                {
+                    "type": "dataSourceFiledSelect",
+                    "layoutType": "inline",
+                    "text": "显示字段",
+                    "bindKey": "dataSourceFiledSelectData",
+                    "ctrlAttrObject":{
+                        "dataSourceBindkey":"dataSourceSelectDataMultiple"
+                    }
+                },
+                {
                     "type": "treeSelect",
                     "layoutType": "inline",
                     "text": "树多选",
@@ -445,6 +461,15 @@
                                     ]
                                 }
                             ]
+                        },
+                        {
+                            "type": "dataSourceFiledSelect",
+                            "layoutType": "inline",
+                            "text": "显示字段",
+                            "bindKey": "dataSourceFiledSelectData1",
+                            "ctrlAttrObject":{
+                                "dataSourceBindkey":"dataSourceSelectDataMultiple"
+                            }
                         }
                     ]
                 }

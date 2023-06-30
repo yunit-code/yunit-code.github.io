@@ -143,6 +143,77 @@
         },
         {
             "type": "group",
+            "text": "悬浮容器属性",
+            "desc": "提供设置组件的悬浮容器属性设置信息",
+            "children": [
+              {
+                "type": "switch",
+                "layoutType": "inline",
+                "text": "悬浮容器",
+                "desc": "是否使用悬浮容器",
+                "bindKey": "showDragContainer",
+                "default": false
+              },
+              {
+                "type": "input",
+                "layoutType": "inline",
+                "text": "坐标(X)",
+                "desc": "对应left属性，以组件左上角为起点，可填%，px",
+                "bindKey": "dragContainerX",
+                "default": "60%"
+              },
+              {
+                "type": "input",
+                "layoutType": "inline",
+                "text": "坐标(Y)",
+                "desc": "对应top属性，以组件左上角为起点，可填%，px",
+                "bindKey": "dragContainerY",
+                "default": "8px"
+              },
+              {
+                "type": "select",
+                "layoutType": "inline",
+                "text": "显示方式",
+                "bindKey": "dragContainerShowType",
+                "desc": "可以根据切换显示方式对悬浮容器进行更高级的控制，更多使用方法请点击参考更详细的说明",
+                "dictionary": [
+                  {
+                    "label": "始终显示",
+                    "value": "default"
+                  },
+                  {
+                    "label": "切换依据显示",
+                    "value": "toggle"
+                  },
+                  {
+                    "label": "自定义函数显示",
+                    "value": "custom"
+                  }
+                ],
+                "default": "default"
+              },
+              {
+                "type": "input",
+                "layoutType": "inline",
+                "text": "显示依据",
+                "desc": "当显示方式为“切换依据显示”的时候代表页签选项卡切换的时候会根据当前填写的依据字段来去匹配结果值，为true则显示，false则不显示，此处填写表达式，更多详细用法点击查看",
+                "bindKey": "dragContainerDataFiled",
+                "display": "@[dragContainerShowType=='toggle']",
+                "placeholder": "示例：moreUrl 或者 [0].showSetting 或者 key==1(页签tab标识，而非索引)"
+              },
+              {
+                "type": "actionSelect",
+                "layoutType": "block",
+                "text": "自定义函数依据显示",
+                "bindKey": "dragContainerDataFunction",
+                "display": "@[dragContainerShowType=='custom']",
+                "desc": "切换选项卡、数据勾选等动作会触发回调来控制是否显示，动态属性模式下也会调用此函数，接收参数为格式为{...url参数,customParam:自定义的,activeKey,allKey,actionType:动作类型,otherData}",
+                "multiple": false
+              }
+            ]
+        },
+        {
+            "type": "group",
             "text": "样式设置",
             "desc": "点击？查看样式设置用法指南",
             "helpUrl": "",
@@ -420,6 +491,13 @@
                     "text": "tab被点击自定义函数",
                     "bindKey": "tabClickFunction",
                     "desc": "tab 被点击的回调函数，接收参数为格式为{...自定义的,activeKey,allKey}",
+                    "multiple": true
+                },
+                {
+                    "type": "pageModuleSelect",
+                    "layoutType": "block",
+                    "text": "数据变化联动组件范围",
+                    "bindKey": "linkageDemandPageModule",
                     "multiple": true
                 }
             ]
