@@ -479,6 +479,12 @@
                     ]
                 },
                 {
+                    "type": "multibackground",
+                    "text": "多背景图设置",
+                    "tabText": "背景_[index]",
+                    "bindKey": "bgListKey"
+                },
+                {
                     "type": "input",
                     "layoutType": "block",
                     "text": "标题",

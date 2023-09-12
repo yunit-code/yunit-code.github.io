@@ -1,0 +1,847 @@
+{
+    "classId": "idm.componet.basics.attrdemo",
+    "comName": "属性",
+    "className": "Demo",
+    "comType": "common",
+    "comLangue": "vue",
+    "compositeAttr": [
+        {
+            "type": "input",
+            "layoutType": "inline",
+            "text": "唯一标识",
+            "bindKey": "ctrlId",
+            "disabled": true,
+            "default": "@[packageid]",
+            "maxLength": 250,
+            "desc": "这里是注解，点击能跳转到helpUrl",
+            "helpUrl": ""
+        },
+        {
+            "type": "group",
+            "text": "基本属性",
+            "desc": "注解v1.1.0",
+            "helpUrl": "帮助的跳转链接",
+            "children": [
+                {
+                    "type": "input",
+                    "layoutType": "block",
+                    "text": "标题测试",
+                    "bindKey": "testtitle",
+                    "disabled": false,
+                    "default": "",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "inputNumber",
+                    "layoutType": "inline",
+                    "text": "数字框",
+                    "bindKey": "number",
+                    "disabled": false,
+                    "maxLength": 250,
+                    "minLength": 2,
+                    "default": "123",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "slider",
+                    "layoutType": "inline",
+                    "text": "数字框",
+                    "bindKey": "sliderNumber",
+                    "disabled": false,
+                    "maxLength": 250,
+                    "minLength": 2,
+                    "default": "11",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "pageModuleSelect",
+                    "layoutType": "inline",
+                    "text": "组件选择",
+                    "bindKey": "pageModuleSelectDataMultiple",
+                    "multiple": true,
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "treeSelect",
+                    "layoutType": "inline",
+                    "text": "树多选",
+                    "bindKey": "treeSelectDataMultiple",
+                    "multiple": true,
+                    "disabled": false,
+                    "placeholder": "请选择提示",
+                    "dictionary": [
+                        {
+                            "title": "Node1",
+                            "value": "0-0",
+                            "key": "0-0",
+                            "children": [
+                                {
+                                    "value": "0-0-1",
+                                    "key": "0-0-1",
+                                    "title": "Child Node1",
+                                    "disabled": true
+                                },
+                                {
+                                    "title": "Child Node2",
+                                    "value": "0-0-2",
+                                    "key": "0-0-2"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Node2",
+                            "value": "0-1",
+                            "key": "0-1"
+                        }
+                    ],
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "treeSelect",
+                    "layoutType": "inline",
+                    "text": "树单选",
+                    "bindKey": "treeSelectData",
+                    "disabled": false,
+                    "placeholder": "请选择提示",
+                    "dictionary": [
+                        {
+                            "title": "Node1",
+                            "value": "0-0",
+                            "key": "0-0",
+                            "children": [
+                                {
+                                    "value": "0-0-1",
+                                    "key": "0-0-1",
+                                    "title": "Child Node1",
+                                    "disabled": true
+                                },
+                                {
+                                    "title": "Child Node2",
+                                    "value": "0-0-2",
+                                    "key": "0-0-2"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Node2",
+                            "value": "0-1",
+                            "key": "0-1"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "layoutType": "inline",
+                    "text": "下拉框",
+                    "bindKey": "selectData",
+                    "disabled": false,
+                    "placeholder": "请选择提示",
+                    "dictionary": [
+                        {
+                            "label": "选项1",
+                            "value": "选项值1"
+                        },
+                        {
+                            "label": "选项2",
+                            "value": "选项值2"
+                        },
+                        {
+                            "label": "选项3",
+                            "value": "选项值3"
+                        }
+                    ],
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "colorPicker",
+                    "layoutType": "inline",
+                    "text": "颜色选择",
+                    "bindKey": "colorPicker",
+                    "placeholder": "请选择颜色",
+                    "disabled": false,
+                    "default": {
+                        "hsl": {
+                            "h": 0,
+                            "s": 1,
+                            "l": 0.5,
+                            "a": 1
+                        },
+                        "hex": "#FF0000",
+                        "hex8": "#FF0000FF",
+                        "rgba": {
+                            "r": 255,
+                            "g": 0,
+                            "b": 0,
+                            "a": 1
+                        },
+                        "hsv": {
+                            "h": 0,
+                            "s": 1,
+                            "v": 1,
+                            "a": 1
+                        },
+                        "oldHue": 0,
+                        "source": "hsva",
+                        "a": 1
+                    },
+                    "display": "@[selectData=='选项值2']",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "uploadImage",
+                    "layoutType": "inline",
+                    "text": "图片上传",
+                    "bindKey": "uploadImageUrl",
+                    "placeholder": "可输入图片地址或直接上传",
+                    "disabled": false,
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "radio",
+                    "layoutType": "inline",
+                    "text": "单选",
+                    "bindKey": "radio",
+                    "disabled": false,
+                    "dictionary": [
+                        {
+                            "label": "选项1",
+                            "value": "选项值1"
+                        },
+                        {
+                            "label": "选项2",
+                            "value": "选项值2"
+                        },
+                        {
+                            "label": "选项3",
+                            "value": "选项值3"
+                        }
+                    ],
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "checkbox",
+                    "layoutType": "inline",
+                    "text": "复选",
+                    "bindKey": "checkbox",
+                    "disabled": false,
+                    "dictionary": [
+                        {
+                            "label": "选项1",
+                            "value": "选项值1"
+                        },
+                        {
+                            "label": "选项2",
+                            "value": "选项值2"
+                        },
+                        {
+                            "label": "选项3",
+                            "value": "选项值3"
+                        }
+                    ],
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "layout",
+                    "layoutType": "inline",
+                    "text": "布局组件",
+                    "bindKey": "layout",
+                    "disabled": false,
+                    "display": "@[switch]"
+                },
+                {
+                    "type": "switch",
+                    "layoutType": "inline",
+                    "text": "开关",
+                    "bindKey": "switch",
+                    "disabled": false,
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "inputNumberUnit",
+                    "layoutType": "inline",
+                    "text": "数字单位",
+                    "bindKey": "inputNumberUnit",
+                    "disabled": false,
+                    "dictionary": [
+                        {
+                            "label": "px",
+                            "value": "px"
+                        },
+                        {
+                            "label": "%",
+                            "value": "%"
+                        },
+                        {
+                            "label": "em",
+                            "value": "em"
+                        }
+                    ],
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "grid",
+                    "layoutType": "inline",
+                    "text": "栅格配置",
+                    "bindKey": "grid",
+                    "disabled": false
+                },
+                {
+                    "type": "box",
+                    "layoutType": "block",
+                    "text": "",
+                    "bindKey": "box",
+                    "disabled": false
+                },
+                {
+                    "type": "border",
+                    "layoutType": "inline",
+                    "text": "边框",
+                    "bindKey": "border",
+                    "disabled": false
+                },
+                {
+                    "type": "font",
+                    "layoutType": "inline",
+                    "text": "文字组合",
+                    "bindKey": "font",
+                    "disabled": false
+                },
+                {
+                    "type": "richText",
+                    "layoutType": "inline",
+                    "text": "富文本编辑",
+                    "bindKey": "richText",
+                    "disabled": false,
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "datePicker",
+                    "layoutType": "inline",
+                    "text": "日期选择",
+                    "bindKey": "datePicker",
+                    "disabled": false,
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "textarea",
+                    "layoutType": "block",
+                    "text": "内容",
+                    "bindKey": "content",
+                    "disabled": false,
+                    "default": "文本",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"functionTest(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "group",
+                    "text": "子分组",
+                    "desc": "子分组的注解",
+                    "helpUrl": "帮助的跳转链接",
+                    "display": "true",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "inline",
+                            "text": "唯一标识",
+                            "bindKey": "ctrlId",
+                            "disabled": true,
+                            "default": "@[packageid]",
+                            "display": "@[true]",
+                            "desc": "",
+                            "helpUrl": ""
+                        },
+                        {
+                            "type": "textarea",
+                            "layoutType": "inline",
+                            "text": "内容",
+                            "bindKey": "content",
+                            "disabled": false,
+                            "default": "文本"
+                        },
+                        {
+                            "type": "inlineGroup",
+                            "text": "单行显示",
+                            "children": [
+                                {
+                                    "type": "input",
+                                    "layoutType": "inline",
+                                    "text": "宽",
+                                    "bindKey": "width",
+                                    "disabled": false,
+                                    "width": "60px",
+                                    "default": "100"
+                                },
+                                {
+                                    "type": "input",
+                                    "layoutType": "inline",
+                                    "text": "高",
+                                    "bindKey": "height",
+                                    "disabled": false,
+                                    "width": "60px",
+                                    "default": "100"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "table",
+                    "text": "表格多行",
+                    "bindKey": "tableKey",
+                    "tabText": "标签[index]",
+                    "children": [
+                        {
+                            "type": "inlineGroup",
+                            "text": "单行显示",
+                            "children": [
+                                {
+                                    "type": "input",
+                                    "layoutType": "block",
+                                    "text": "宽",
+                                    "bindKey": "width",
+                                    "disabled": false,
+                                    "default": "100",
+                                    "varBind":{
+                                        "prefixName":"prefixTest",
+                                        "usableVarList":[
+                                            {
+                                                "varStr":"varName",
+                                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                                "helpUrl":"",
+                                                "type":"var"
+                                            },
+                                            {
+                                                "varStr":"functionTest(var1,var2)",
+                                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                                "helpUrl":"",
+                                                "type":"function"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "type": "input",
+                                    "layoutType": "block",
+                                    "text": "高",
+                                    "bindKey": "height",
+                                    "disabled": false,
+                                    "default": "100",
+                                    "varBind":{
+                                        "prefixName":"prefixTest",
+                                        "usableVarList":[
+                                            {
+                                                "varStr":"varName",
+                                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                                "helpUrl":"",
+                                                "type":"var"
+                                            },
+                                            {
+                                                "varStr":"functionTest(var1,var2)",
+                                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                                "helpUrl":"",
+                                                "type":"function"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "标题",
+                            "bindKey": "title",
+                            "disabled": false,
+                            "default": ""
+                        },
+                        {
+                            "type": "group",
+                            "text": "子分组",
+                            "desc": "子分组的注解",
+                            "helpUrl": "帮助的跳转链接",
+                            "display": "true",
+                            "children": [
+                                {
+                                    "type": "input",
+                                    "layoutType": "inline",
+                                    "text": "唯一标识",
+                                    "bindKey": "ctrlId",
+                                    "disabled": true,
+                                    "default": "@[packageid]",
+                                    "display": "@[true]",
+                                    "desc": "",
+                                    "helpUrl": ""
+                                },
+                                {
+                                    "type": "textarea",
+                                    "layoutType": "inline",
+                                    "text": "内容",
+                                    "bindKey": "content",
+                                    "disabled": false,
+                                    "default": "文本"
+                                },
+                                {
+                                    "type": "inlineGroup",
+                                    "text": "单行显示",
+                                    "children": [
+                                        {
+                                            "type": "input",
+                                            "layoutType": "block",
+                                            "text": "宽",
+                                            "bindKey": "width",
+                                            "disabled": false,
+                                            "default": "100"
+                                        },
+                                        {
+                                            "type": "input",
+                                            "layoutType": "block",
+                                            "text": "高",
+                                            "bindKey": "height",
+                                            "disabled": false,
+                                            "default": "100"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "text": "表格多行",
+            "tabText": "标签[index]",
+            "bindKey": "tableKey1",
+            "children": [
+                {
+                    "type": "inlineGroup",
+                    "text": "单行显示",
+                    "children": [
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "宽",
+                            "bindKey": "width",
+                            "disabled": false,
+                            "default": "100"
+                        },
+                        {
+                            "type": "input",
+                            "layoutType": "block",
+                            "text": "高",
+                            "bindKey": "height",
+                            "disabled": false,
+                            "default": "100"
+                        }
+                    ]
+                },
+                {
+                    "type": "multibackground",
+                    "text": "多背景图设置",
+                    "tabText": "背景_[index]",
+                    "bindKey": "bgListKey"
+                },
+                {
+                    "type": "input",
+                    "layoutType": "block",
+                    "text": "标题",
+                    "bindKey": "title",
+                    "disabled": false,
+                    "default": "",
+                    "varBind":{
+                        "prefixName":"prefixTest",
+                        "usableVarList":[
+                            {
+                                "varStr":"varName",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"var"
+                            },
+                            {
+                                "varStr":"function(var1,var2)",
+                                "desc":"这个是注释，是该变量或方法的提示，varStr为字符串类型的变量名称或带参数的方法名，其中var1和var2甚至更多的都是该方法所需要的参数，在实际使用过程中需要把变量名称[var1,...]替换成正确的常量或者变量，type有var和function两个值，如果是function则会在变量列表显示fx字符",
+                                "helpUrl":"",
+                                "type":"function"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "input",
+                    "layoutType": "inline或者block两种",
+                    "text": "显示的名称",
+                    "bindKey": "绑定的标识key",
+                    "disabled": "是否禁用",
+                    "default": "这里可以写默认值，可以取组件的信息，比如：@[packageid]",
+                    "display": "@[1 == 2]",
+                    "width": "宽度，px或%",
+                    "desc": "注解",
+                    "helpUrl": "帮助的跳转链接",
+                    "dictionary": [
+                        {
+                            "label": "",
+                            "value": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "group",
+            "text": "高级属性",
+            "children":[
+                {
+                    "type": "styleEditor",
+                    "layoutType": "block",
+                    "text": "样式编辑",
+                    "bindKey": "styleList",
+                    "desc": "组件整体样式自定义编写，IDM表达式可使用的参数对象为：{_this:当前组件this对象,moduleObject：当前组件信息对象,IDM：IDM全局变量,window:当前window对象,组件传递的其他参数}",
+                    "multiple": true,
+                    "ctrlAttrObject":{
+                        "idmCoreLoad":true
+                    }
+                }
+            ]
+        }
+    ]
+}
